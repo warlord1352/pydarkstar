@@ -15,3 +15,6 @@ gh-pages:
 	mv -fv ./doc/build/html/* ./
 	rm -rf ${GH_PAGES_SOURCES}
 
+publish:
+	git add -A
+	git c -m "Update gh-page"
