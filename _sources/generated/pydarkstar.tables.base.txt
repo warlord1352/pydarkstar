@@ -1,0 +1,6 @@
+tables.base
+=============================
+
+.. automodule:: pydarkstar.tables.base
+    :members:
+    :undoc-members:

@@ -1,0 +1,19 @@
+auction
+==========================
+
+.. automodule:: pydarkstar.auction
+    :members:
+    :undoc-members:
+
+Submodules
+----------
+
+.. toctree::
+
+   pydarkstar.auction.browser
+   pydarkstar.auction.buyer
+   pydarkstar.auction.cleaner
+   pydarkstar.auction.manager
+   pydarkstar.auction.seller
+   pydarkstar.auction.worker
+

@@ -1,0 +1,6 @@
+itemlist
+==========================
+
+.. automodule:: pydarkstar.itemlist
+    :members:
+    :undoc-members:

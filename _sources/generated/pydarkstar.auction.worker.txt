@@ -1,0 +1,6 @@
+auction.worker
+================================
+
+.. automodule:: pydarkstar.auction.worker
+    :members:
+    :undoc-members:

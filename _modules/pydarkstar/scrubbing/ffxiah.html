@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>pydarkstar.scrubbing.ffxiah &mdash; pydarkstar 3.0.0 documentation</title>
+    
+    <link rel="stylesheet" href="../../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/bootswatch-3.3.4/cerulean/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/bootstrap-sphinx.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '3.0.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../../../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../../../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../../../_static/bootstrap-3.3.4/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../../_static/bootstrap-sphinx.js"></script>
+    <link rel="top" title="pydarkstar 3.0.0 documentation" href="../../../index.html" />
+    <link rel="up" title="Module code" href="../../index.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head>
+  <body role="document">
+
+  <div id="navbar" class="navbar navbar-inverse navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../../../index.html">
+          Home</a>
+        <span class="navbar-text navbar-version pull-left"><b>3.0.0</b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+                <li><a href="https://github.com/AdamGagorik/pydarkstar">pydarkstar</a></li>
+                <li><a href="https://github.com/DarkstarProject/darkstar">darkstar</a></li>
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../../../index.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../generated/setup.html">Setup</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../generated/setup.html#linux">Linux</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../generated/setup.html#windows">Windows</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../generated/usage.html">Usage</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../generated/usage.html#basic">Basic</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../generated/usage.html#apps">Apps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../generated/usage.html#parameters">Parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../generated/usage.html#item-database">Item Database</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../generated/requirements.html">Requirements</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../generated/requirements.html#pip">pip</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../generated/requirements.html#anaconda">Anaconda</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../generated/advanced.html">Advanced</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../generated/advanced.html#pythonpath">PYTHONPATH</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../generated/advanced.html#apps">Apps</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../generated/pydarkstar.html">Code</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../generated/pydarkstar.html#subpackages">Subpackages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../generated/pydarkstar.html#submodules">Submodules</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"></ul>
+</li>
+              
+            
+            
+              
+                
+              
+            
+            
+            
+            
+              <li class="hidden-sm"></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="../../../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      
+  <h1>Source code for pydarkstar.scrubbing.ffxiah</h1><div class="highlight"><pre>
+<span class="kn">from</span> <span class="nn">.scrubber</span> <span class="kn">import</span> <span class="n">Scrubber</span>
+<span class="kn">import</span> <span class="nn">warnings</span>
+<span class="kn">import</span> <span class="nn">pickle</span>
+<span class="kn">import</span> <span class="nn">re</span>
+<span class="kn">import</span> <span class="nn">os</span>
+
+
+<div class="viewcode-block" id="FFXIAHScrubber"><a class="viewcode-back" href="../../../generated/pydarkstar.scrubbing.ffxiah.html#pydarkstar.scrubbing.ffxiah.FFXIAHScrubber">[docs]</a><span class="k">class</span> <span class="nc">FFXIAHScrubber</span><span class="p">(</span><span class="n">Scrubber</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Get item data from ffxiah.com</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">FFXIAHScrubber</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">__init__</span><span class="p">()</span>
+
+        <span class="c"># regular expressions</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_regex_category</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="s">r&#39;/browse/(\d+)/?.*&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_regex_item</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="s">r&#39;/item/(\d+)&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_regex_name</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="s">r&#39;(.*?)\s*-?\s*(FFXIAH)?\.(com)?&#39;</span><span class="p">)</span>
+
+        <span class="c"># pickled file names</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_pkl_item_ids</span> <span class="o">=</span> <span class="s">&#39;scrub_item_list.pkl&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_pkl_item_dat</span> <span class="o">=</span> <span class="s">&#39;scrub_item_info.pkl&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_save</span> <span class="o">=</span> <span class="bp">True</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">save</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_save</span>
+
+    <span class="nd">@save.setter</span>
+    <span class="k">def</span> <span class="nf">save</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_save</span> <span class="o">=</span> <span class="nb">bool</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+
+<div class="viewcode-block" id="FFXIAHScrubber.scrub"><a class="viewcode-back" href="../../../generated/pydarkstar.scrubbing.ffxiah.html#pydarkstar.scrubbing.ffxiah.FFXIAHScrubber.scrub">[docs]</a>    <span class="k">def</span> <span class="nf">scrub</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">force</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span> <span class="n">threads</span><span class="o">=-</span><span class="mi">1</span><span class="p">,</span> <span class="n">urls</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">ids</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Get item metadata main function.</span>
+
+<span class="sd">        If the pkl files exist (from a previous run of this function), then the ids and/or data</span>
+<span class="sd">        will just be loaded from those pkl files.  The force option allows you to ignore the</span>
+<span class="sd">        pkl files and just redownload the data.</span>
+
+<span class="sd">        The item ids can be loaded from category urls or simply passed as a list.  The urls</span>
+<span class="sd">        can be generated automatically, in which case all possible items will be downloaded.</span>
+
+<span class="sd">        :param force: ignore existing data and redownload</span>
+<span class="sd">        :param threads: number of cpu threads to use while downloading</span>
+<span class="sd">        :param urls: list of category urls</span>
+<span class="sd">        :param ids: set of item ids</span>
+
+<span class="sd">        :type force: bool</span>
+<span class="sd">        :type threads: int</span>
+<span class="sd">        :type urls: list, None</span>
+<span class="sd">        :type ids: set, list, None</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c"># force a redownload of all data</span>
+        <span class="k">if</span> <span class="n">force</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s">&#39;forcing redownload of data&#39;</span><span class="p">)</span>
+
+            <span class="c"># get ids</span>
+            <span class="k">if</span> <span class="n">ids</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+                <span class="c"># get urls</span>
+                <span class="k">if</span> <span class="n">urls</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+                    <span class="n">urls</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_category_urls</span><span class="p">()</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s">&#39;# urls = </span><span class="si">%d</span><span class="s">&#39;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">urls</span><span class="p">))</span>
+
+                <span class="n">ids</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_itemids</span><span class="p">(</span><span class="n">urls</span><span class="p">)</span>
+
+                <span class="c"># save to file</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">_save_item_ids</span><span class="p">(</span><span class="n">ids</span><span class="p">)</span>
+
+            <span class="k">else</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s">&#39;using passed ids&#39;</span><span class="p">)</span>
+                <span class="n">ids</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">ids</span><span class="p">)</span>
+
+                <span class="k">if</span> <span class="n">urls</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">:</span>
+                    <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="s">&#39;passed urls ignored&#39;</span><span class="p">)</span>
+
+            <span class="c"># from internet</span>
+            <span class="n">data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_item_data</span><span class="p">(</span><span class="n">ids</span><span class="p">,</span> <span class="n">threads</span><span class="o">=</span><span class="n">threads</span><span class="p">)</span>
+
+            <span class="c"># save to file</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_save_item_dat</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+
+            <span class="bp">self</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s">&#39;item count = </span><span class="si">%d</span><span class="s">&#39;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">ids</span><span class="p">))</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s">&#39;data count = </span><span class="si">%d</span><span class="s">&#39;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">))</span>
+            <span class="k">return</span> <span class="n">data</span>
+
+        <span class="k">else</span><span class="p">:</span>
+            <span class="c"># data exists already</span>
+            <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_pkl_item_dat</span><span class="p">):</span>
+                <span class="n">data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_load_item_dat</span><span class="p">()</span>
+
+                <span class="k">if</span> <span class="n">ids</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">:</span>
+                    <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="s">&#39;passed ids ignored&#39;</span><span class="p">)</span>
+
+                <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_pkl_item_ids</span><span class="p">):</span>
+                    <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="s">&#39;</span><span class="si">%s</span><span class="s"> ignored&#39;</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">_pkl_item_ids</span><span class="p">)</span>
+
+                <span class="bp">self</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s">&#39;data count = </span><span class="si">%d</span><span class="s">&#39;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">))</span>
+                <span class="k">return</span> <span class="n">data</span>
+
+            <span class="c"># get ids</span>
+            <span class="k">if</span> <span class="n">ids</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+
+                <span class="c"># from file</span>
+                <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_pkl_item_ids</span><span class="p">):</span>
+                    <span class="n">ids</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_load_item_ids</span><span class="p">()</span>
+
+                <span class="c"># from internet</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="c"># get urls</span>
+                    <span class="k">if</span> <span class="n">urls</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+                        <span class="n">urls</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_category_urls</span><span class="p">()</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s">&#39;# urls = </span><span class="si">%d</span><span class="s">&#39;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">urls</span><span class="p">))</span>
+
+                    <span class="n">ids</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_itemids</span><span class="p">(</span><span class="n">urls</span><span class="p">)</span>
+
+                    <span class="c"># save to file</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">_save_item_ids</span><span class="p">(</span><span class="n">ids</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s">&#39;using passed ids&#39;</span><span class="p">)</span>
+                <span class="n">ids</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">ids</span><span class="p">)</span>
+
+                <span class="k">if</span> <span class="n">urls</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">:</span>
+                    <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="s">&#39;passed urls ignored&#39;</span><span class="p">)</span>
+
+            <span class="c"># from file</span>
+            <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_pkl_item_dat</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="s">&#39;</span><span class="si">%s</span><span class="s"> exists&#39;</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">_pkl_item_dat</span><span class="p">)</span>
+
+            <span class="c"># from internet</span>
+            <span class="n">data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_item_data</span><span class="p">(</span><span class="n">ids</span><span class="p">,</span> <span class="n">threads</span><span class="o">=</span><span class="n">threads</span><span class="p">)</span>
+
+            <span class="c"># save to file</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_save_item_dat</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+
+            <span class="bp">self</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s">&#39;item count = </span><span class="si">%d</span><span class="s">&#39;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">ids</span><span class="p">))</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s">&#39;data count = </span><span class="si">%d</span><span class="s">&#39;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">))</span>
+            <span class="k">return</span> <span class="n">data</span>
+</div>
+    <span class="k">def</span> <span class="nf">_load_item_ids</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Load item ids from pkl file.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_pkl_item_ids</span><span class="p">):</span>
+            <span class="k">return</span> <span class="nb">set</span><span class="p">()</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s">&#39;load </span><span class="si">%s</span><span class="s">&#39;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_pkl_item_ids</span><span class="p">)</span>
+        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_pkl_item_ids</span><span class="p">,</span> <span class="s">&#39;rb&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">handle</span><span class="p">:</span>
+            <span class="n">ids</span> <span class="o">=</span> <span class="n">pickle</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">handle</span><span class="p">)</span>
+        <span class="k">return</span> <span class="nb">set</span><span class="p">(</span><span class="n">ids</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">_load_item_dat</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Load item dat from pkl file.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_pkl_item_dat</span><span class="p">):</span>
+            <span class="k">return</span> <span class="nb">dict</span><span class="p">()</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s">&#39;load </span><span class="si">%s</span><span class="s">&#39;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_pkl_item_dat</span><span class="p">)</span>
+        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_pkl_item_dat</span><span class="p">,</span> <span class="s">&#39;rb&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">handle</span><span class="p">:</span>
+            <span class="n">dat</span> <span class="o">=</span> <span class="n">pickle</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">handle</span><span class="p">)</span>
+        <span class="k">return</span> <span class="nb">dict</span><span class="p">(</span><span class="n">dat</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">_save_item_ids</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ids</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        save item ids to pkl file.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_save</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s">&#39;save </span><span class="si">%s</span><span class="s">&#39;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_pkl_item_ids</span><span class="p">)</span>
+            <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_pkl_item_ids</span><span class="p">,</span> <span class="s">&#39;wb&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">handle</span><span class="p">:</span>
+                <span class="n">pickle</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">ids</span><span class="p">,</span> <span class="n">handle</span><span class="p">,</span> <span class="n">pickle</span><span class="o">.</span><span class="n">HIGHEST_PROTOCOL</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">_save_item_dat</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dat</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        save item dat to pkl file.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_save</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s">&#39;save </span><span class="si">%s</span><span class="s">&#39;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_pkl_item_dat</span><span class="p">)</span>
+            <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_pkl_item_dat</span><span class="p">,</span> <span class="s">&#39;wb&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">handle</span><span class="p">:</span>
+                <span class="n">pickle</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">dat</span><span class="p">,</span> <span class="n">handle</span><span class="p">,</span> <span class="n">pickle</span><span class="o">.</span><span class="n">HIGHEST_PROTOCOL</span><span class="p">)</span>
+
+    <span class="c"># step 1</span>
+    <span class="k">def</span> <span class="nf">_get_category_urls</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Parse http://www.ffxiah.com/browse to get URLs of the</span>
+<span class="sd">         form http://www.ffxiah.com/{CategoryNumber}</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s">&#39;getting category urls&#39;</span><span class="p">)</span>
+
+        <span class="c"># the browse section of FFXIAH has a list of urls with category numbers</span>
+        <span class="n">path</span> <span class="o">=</span> <span class="s">&#39;http://www.ffxiah.com/browse&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s">&#39;open </span><span class="si">%s</span><span class="s">&#39;</span><span class="p">,</span> <span class="n">path</span><span class="p">)</span>
+        <span class="n">soup</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">soup</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+        <span class="n">urls</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">tag</span> <span class="ow">in</span> <span class="n">soup</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s">&#39;a&#39;</span><span class="p">):</span>
+            <span class="k">if</span> <span class="n">tag</span><span class="o">.</span><span class="n">has_attr</span><span class="p">(</span><span class="s">&#39;href&#39;</span><span class="p">):</span>
+                <span class="n">href</span> <span class="o">=</span> <span class="n">tag</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">&#39;href&#39;</span><span class="p">)</span>
+                <span class="n">match</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_regex_category</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="n">href</span><span class="p">)</span>
+                <span class="k">if</span> <span class="n">match</span><span class="p">:</span>
+                    <span class="k">try</span><span class="p">:</span>
+                        <span class="n">category</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">match</span><span class="o">.</span><span class="n">group</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span>
+
+                        <span class="k">if</span> <span class="n">category</span> <span class="o">&lt;</span> <span class="mi">240</span><span class="p">:</span>
+                            <span class="n">urls</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s">&#39;http://www.ffxiah.com{href}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">href</span><span class="o">=</span><span class="n">href</span><span class="p">))</span>
+                            <span class="bp">self</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s">&#39;category </span><span class="si">%s</span><span class="s">&#39;</span><span class="p">,</span> <span class="n">href</span><span class="p">)</span>
+                        <span class="k">else</span><span class="p">:</span>
+                            <span class="bp">self</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s">&#39;skipping </span><span class="si">%s</span><span class="s">&#39;</span><span class="p">,</span> <span class="n">href</span><span class="p">)</span>
+
+                    <span class="k">except</span> <span class="p">(</span><span class="ne">ValueError</span><span class="p">,</span> <span class="ne">IndexError</span><span class="p">):</span>
+                        <span class="bp">self</span><span class="o">.</span><span class="n">exception</span><span class="p">(</span><span class="s">&#39;failed to extract category&#39;</span><span class="p">)</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s">&#39;ignoring </span><span class="si">%s</span><span class="s">&#39;</span><span class="p">,</span> <span class="n">href</span><span class="p">)</span>
+
+        <span class="c"># sort the urls</span>
+        <span class="n">urls</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="nb">list</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="nb">float</span><span class="p">,</span> <span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="s">&#39;\d+&#39;</span><span class="p">,</span> <span class="n">x</span><span class="p">))))</span>
+
+        <span class="k">return</span> <span class="n">urls</span>
+
+    <span class="c"># step 2</span>
+    <span class="k">def</span> <span class="nf">_get_itemids</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">urls</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Scrub urls of the form http://www.ffxiah.com/{CategoryNumber} for itemids.</span>
+
+<span class="sd">        :param urls: category urls</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s">&#39;getting itemids&#39;</span><span class="p">)</span>
+
+        <span class="n">items</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
+        <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">url</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">urls</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s">&#39;category </span><span class="si">%02d</span><span class="s">/</span><span class="si">%02d</span><span class="s"> : </span><span class="si">%s</span><span class="s">&#39;</span><span class="p">,</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">urls</span><span class="p">),</span> <span class="n">url</span><span class="p">)</span>
+            <span class="n">items</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_get_itemids_for_category_url</span><span class="p">(</span><span class="n">url</span><span class="p">))</span>
+
+        <span class="k">return</span> <span class="n">items</span>
+
+    <span class="c"># step 2.1</span>
+    <span class="k">def</span> <span class="nf">_get_itemids_for_category_url</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">url</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Scrub url of the form http://www.ffxiah.com/{CategoryNumber} for itemids.</span>
+
+<span class="sd">        :param url: category url</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c"># create tag soup</span>
+        <span class="n">soup</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">soup</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+
+        <span class="c"># look for table class</span>
+        <span class="n">table</span> <span class="o">=</span> <span class="n">soup</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s">&#39;table&#39;</span><span class="p">,</span> <span class="n">class_</span><span class="o">=</span><span class="s">&#39;stdlist&#39;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">table</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="s">&#39;failed to parse &lt;table&gt;&#39;</span><span class="p">)</span>
+            <span class="k">return</span> <span class="nb">set</span><span class="p">()</span>
+
+        <span class="c"># look for table body</span>
+        <span class="n">tbody</span> <span class="o">=</span> <span class="n">table</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s">&#39;tbody&#39;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">tbody</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="s">&#39;failed to parse &lt;tbody&gt;&#39;</span><span class="p">)</span>
+            <span class="k">return</span> <span class="nb">set</span><span class="p">()</span>
+
+        <span class="c"># look for table rows</span>
+        <span class="n">trs</span> <span class="o">=</span> <span class="n">tbody</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s">&#39;tr&#39;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">trs</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="s">&#39;failed to parse &lt;tr&gt;&#39;</span><span class="p">)</span>
+            <span class="k">return</span> <span class="nb">set</span><span class="p">()</span>
+
+        <span class="c"># loop table rows</span>
+        <span class="n">items</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
+        <span class="k">for</span> <span class="n">j</span><span class="p">,</span> <span class="n">row</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">trs</span><span class="p">):</span>
+            <span class="c"># look for &#39;a&#39; tag</span>
+            <span class="n">a</span> <span class="o">=</span> <span class="n">row</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s">&#39;a&#39;</span><span class="p">)</span>
+
+            <span class="k">if</span> <span class="n">a</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">:</span>
+                <span class="c"># look for href attr</span>
+                <span class="n">href</span> <span class="o">=</span> <span class="n">a</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">&#39;href&#39;</span><span class="p">)</span>
+
+                <span class="k">if</span> <span class="n">href</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">:</span>
+                    <span class="c"># make sure href matches /item/{number}</span>
+                    <span class="k">try</span><span class="p">:</span>
+                        <span class="n">item</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_regex_item</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="n">href</span><span class="p">)</span><span class="o">.</span><span class="n">group</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span>
+                        <span class="n">items</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">item</span><span class="p">)</span>
+                        <span class="c"># logging.debug(&#39;found %s&#39;, href)</span>
+
+                    <span class="k">except</span> <span class="p">(</span><span class="ne">ValueError</span><span class="p">,</span> <span class="ne">IndexError</span><span class="p">):</span>
+                        <span class="bp">self</span><span class="o">.</span><span class="n">exception</span><span class="p">(</span><span class="s">&#39;failed to extract itemid!</span><span class="se">\n\n\t</span><span class="s">row </span><span class="si">%d</span><span class="s"> of </span><span class="si">%s</span><span class="se">\n\n</span><span class="si">%s</span><span class="se">\n\n</span><span class="s">&#39;</span><span class="p">,</span>
+                                       <span class="n">j</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="n">row</span><span class="p">)</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="s">&#39;failed to extract href!</span><span class="se">\n\n\t</span><span class="s">row </span><span class="si">%d</span><span class="s"> of </span><span class="si">%s</span><span class="se">\n\n</span><span class="si">%s</span><span class="se">\n\n</span><span class="s">&#39;</span><span class="p">,</span>
+                               <span class="n">j</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="n">row</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="s">&quot;failed to extract &#39;a&#39; tag!</span><span class="se">\n\n\t</span><span class="s">row </span><span class="si">%d</span><span class="s"> of </span><span class="si">%s</span><span class="se">\n\n</span><span class="si">%s</span><span class="se">\n\n</span><span class="s">&quot;</span><span class="p">,</span>
+                           <span class="n">j</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="n">row</span><span class="p">)</span>
+
+        <span class="c"># make sure we found something</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">items</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="s">&#39;could not find any itemids!&#39;</span><span class="p">)</span>
+            <span class="k">return</span> <span class="nb">set</span><span class="p">()</span>
+
+        <span class="k">return</span> <span class="n">items</span>
+
+    <span class="c"># step 3</span>
+    <span class="k">def</span> <span class="nf">_get_item_data</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">itemids</span><span class="p">,</span> <span class="n">threads</span><span class="o">=-</span><span class="mi">1</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Get metadata for many items.</span>
+
+<span class="sd">        :param itemids: item numbers</span>
+<span class="sd">        :param threads: number of cpu threads to use</span>
+
+<span class="sd">        :type itemids: list, set</span>
+<span class="sd">        :type threads: int</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s">&#39;getting data&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s">&#39;threads = </span><span class="si">%d</span><span class="s">&#39;</span><span class="p">,</span> <span class="n">threads</span><span class="p">)</span>
+
+        <span class="c"># threads make it faster but I&#39;ve seen it freeze so disabling this for now</span>
+        <span class="k">if</span> <span class="n">threads</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="n">threads</span> <span class="o">=</span> <span class="mi">0</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="s">&#39;multiprocessing seems fishy&#39;</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="s">&#39;setting threads=1&#39;</span><span class="p">)</span>
+
+        <span class="c"># get data from itemids</span>
+        <span class="k">if</span> <span class="n">threads</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="kn">from</span> <span class="nn">multiprocessing.dummy</span> <span class="kn">import</span> <span class="n">Pool</span> <span class="k">as</span> <span class="n">ThreadPool</span>
+            <span class="kn">import</span> <span class="nn">itertools</span>
+
+            <span class="n">params</span> <span class="o">=</span> <span class="nb">zip</span><span class="p">(</span><span class="n">itemids</span><span class="p">,</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">itemids</span><span class="p">)),</span> <span class="n">itertools</span><span class="o">.</span><span class="n">repeat</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">itemids</span><span class="p">)))</span>
+            <span class="n">pool</span> <span class="o">=</span> <span class="n">ThreadPool</span><span class="p">(</span><span class="n">threads</span><span class="p">)</span>
+            <span class="n">data</span> <span class="o">=</span> <span class="n">pool</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_get_item_data_for_itemid_map</span><span class="p">,</span> <span class="n">params</span><span class="p">)</span>
+            <span class="n">data</span> <span class="o">=</span> <span class="p">{</span><span class="n">d</span><span class="p">[</span><span class="s">&#39;itemid&#39;</span><span class="p">]:</span> <span class="n">d</span> <span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="n">data</span><span class="p">}</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">data</span> <span class="o">=</span> <span class="p">{}</span>
+            <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">itemid</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">itemids</span><span class="p">):</span>
+                <span class="n">data</span><span class="p">[</span><span class="n">itemid</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_item_data_for_itemid</span><span class="p">(</span><span class="n">itemid</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="n">i</span><span class="p">,</span> <span class="n">total</span><span class="o">=</span><span class="nb">len</span><span class="p">(</span><span class="n">itemids</span><span class="p">))</span>
+
+        <span class="k">return</span> <span class="n">data</span>
+
+    <span class="c"># step 3.1</span>
+    <span class="k">def</span> <span class="nf">_get_item_data_for_itemid</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">itemid</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">total</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Get metadata for single item.</span>
+
+<span class="sd">        :param itemid: item number</span>
+<span class="sd">        :type itemid: int</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">total</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">percent</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">index</span><span class="p">)</span> <span class="o">/</span> <span class="nb">float</span><span class="p">(</span><span class="n">total</span><span class="p">)</span> <span class="o">*</span> <span class="mf">100.0</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">percent</span> <span class="o">=</span> <span class="mf">0.0</span>
+
+        <span class="n">data</span> <span class="o">=</span> <span class="p">{</span><span class="s">&#39;name&#39;</span><span class="p">:</span> <span class="bp">None</span><span class="p">,</span> <span class="s">&#39;itemid&#39;</span><span class="p">:</span> <span class="n">itemid</span><span class="p">}</span>
+        <span class="n">url</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_create_item_url</span><span class="p">(</span><span class="n">itemid</span><span class="p">)</span>
+
+        <span class="c"># create tag soup</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s">&#39;open (</span><span class="si">%06d</span><span class="s">/</span><span class="si">%06d</span><span class="s">,</span><span class="si">%6.2f</span><span class="s">) </span><span class="si">%s</span><span class="s">&#39;</span><span class="p">,</span> <span class="n">index</span><span class="p">,</span> <span class="n">total</span><span class="p">,</span> <span class="n">percent</span><span class="p">,</span> <span class="n">url</span><span class="p">)</span>
+        <span class="n">soup</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">soup</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+
+        <span class="c"># extract name</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">data</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_regex_name</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="n">soup</span><span class="o">.</span><span class="n">title</span><span class="o">.</span><span class="n">text</span><span class="p">)</span><span class="o">.</span><span class="n">group</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span>
+        <span class="k">except</span> <span class="ne">AttributeError</span><span class="p">:</span>
+            <span class="n">data</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="bp">None</span><span class="p">)</span>
+
+        <span class="c"># extract numbers</span>
+        <span class="k">for</span> <span class="n">tag</span> <span class="ow">in</span> <span class="n">soup</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s">&#39;span&#39;</span><span class="p">,</span> <span class="s">&#39;number-format&#39;</span><span class="p">):</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="n">key</span> <span class="o">=</span> <span class="n">tag</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">find_previous_sibling</span><span class="p">()</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+                <span class="n">data</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">tag</span><span class="o">.</span><span class="n">text</span><span class="p">))</span>
+            <span class="k">except</span> <span class="p">(</span><span class="ne">AttributeError</span><span class="p">,</span> <span class="ne">ValueError</span><span class="p">):</span>
+                <span class="k">pass</span>
+
+        <span class="c"># extract rate</span>
+        <span class="k">for</span> <span class="n">tag</span> <span class="ow">in</span> <span class="n">soup</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s">&#39;span&#39;</span><span class="p">,</span> <span class="s">&#39;sales-rate&#39;</span><span class="p">):</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="n">data</span><span class="p">[</span><span class="s">&#39;rate&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">tag</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+            <span class="k">except</span> <span class="p">(</span><span class="ne">AttributeError</span><span class="p">,</span> <span class="ne">ValueError</span><span class="p">):</span>
+                <span class="k">pass</span>
+
+        <span class="c"># fix key</span>
+        <span class="n">data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_fix_stack_price_key</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">data</span>
+
+    <span class="k">def</span> <span class="nf">_get_item_data_for_itemid_map</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">args</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_item_data_for_itemid</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">)</span>
+
+    <span class="c"># step 3.1.1</span>
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">_create_item_url</span><span class="p">(</span><span class="n">itemid</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Create URL from itemid.</span>
+
+<span class="sd">        :param itemid: item number</span>
+<span class="sd">        :type itemid: int</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="s">&#39;http://www.ffxiah.com/item/{item}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">item</span><span class="o">=</span><span class="n">itemid</span><span class="p">)</span>
+
+    <span class="c"># step 3.1.2</span>
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">_fix_stack_price_key</span><span class="p">(</span><span class="n">data</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Fix dictionary key.</span>
+
+<span class="sd">        :param data: dictionary</span>
+<span class="sd">        :type data: dict</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">new_key</span> <span class="o">=</span> <span class="s">r&#39;stack price&#39;</span>
+
+        <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="nb">list</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">keys</span><span class="p">()):</span>
+            <span class="k">if</span> <span class="s">&#39;stack&#39;</span> <span class="ow">in</span> <span class="n">key</span><span class="o">.</span><span class="n">lower</span><span class="p">():</span>
+                <span class="n">data</span><span class="p">[</span><span class="n">new_key</span><span class="p">]</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="n">key</span><span class="p">]</span>
+
+        <span class="k">return</span> <span class="n">data</span>
+
+</div>
+<div class="viewcode-block" id="extract"><a class="viewcode-back" href="../../../generated/pydarkstar.scrubbing.ffxiah.html#pydarkstar.scrubbing.ffxiah.extract">[docs]</a><span class="k">def</span> <span class="nf">extract</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">itemid</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Extract item data from scrubbed info.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c"># singles</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">price01</span><span class="p">,</span> <span class="n">sell01</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="n">itemid</span><span class="p">][</span><span class="s">&#39;median&#39;</span><span class="p">],</span> <span class="bp">True</span>
+
+        <span class="c"># do not sell items without a price</span>
+        <span class="k">if</span> <span class="n">price01</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">price01</span><span class="p">,</span> <span class="n">sell01</span> <span class="o">=</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">False</span>
+
+    <span class="k">except</span> <span class="ne">KeyError</span><span class="p">:</span>
+        <span class="n">price01</span><span class="p">,</span> <span class="n">sell01</span> <span class="o">=</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">False</span>
+
+    <span class="c"># stacks</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">price12</span><span class="p">,</span> <span class="n">sell12</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="n">itemid</span><span class="p">][</span><span class="s">&#39;stack price&#39;</span><span class="p">],</span> <span class="bp">True</span>
+
+        <span class="c"># do not sell items without a price</span>
+        <span class="k">if</span> <span class="n">price12</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">price12</span><span class="p">,</span> <span class="n">sell12</span> <span class="o">=</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">False</span>
+
+    <span class="k">except</span> <span class="ne">KeyError</span><span class="p">:</span>
+        <span class="n">price12</span><span class="p">,</span> <span class="n">sell12</span> <span class="o">=</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">False</span>
+
+    <span class="c"># the name doesn&#39;t really matter</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">name</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="n">itemid</span><span class="p">][</span><span class="s">&#39;name&#39;</span><span class="p">]</span>
+    <span class="k">except</span> <span class="ne">KeyError</span><span class="p">:</span>
+        <span class="n">name</span> <span class="o">=</span> <span class="bp">None</span>
+
+    <span class="n">result</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">,</span>
+                  <span class="n">price01</span><span class="o">=</span><span class="n">price01</span><span class="p">,</span> <span class="n">stock01</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">sell01</span><span class="o">=</span><span class="n">sell01</span><span class="p">,</span> <span class="n">buy01</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">rate01</span><span class="o">=</span><span class="mf">1.0</span><span class="p">,</span>
+                  <span class="n">price12</span><span class="o">=</span><span class="n">price12</span><span class="p">,</span> <span class="n">stock12</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">sell12</span><span class="o">=</span><span class="n">sell12</span><span class="p">,</span> <span class="n">buy12</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">rate12</span><span class="o">=</span><span class="mf">1.0</span><span class="p">)</span>
+    <span class="n">result</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">result</span>
+
+</div>
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="k">pass</span>
+</pre></div>
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2015, Adam Gagorik.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

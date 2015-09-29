@@ -1,0 +1,6 @@
+options.input
+===============================
+
+.. automodule:: pydarkstar.options.input
+    :members:
+    :undoc-members:

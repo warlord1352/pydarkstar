@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Setup &mdash; pydarkstar 3.0.0 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootswatch-3.3.4/cerulean/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '3.0.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.3.4/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <link rel="top" title="pydarkstar 3.0.0 documentation" href="../index.html" />
+    <link rel="next" title="Usage" href="usage.html" />
+    <link rel="prev" title="pydarkstar" href="../index.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head>
+  <body role="document">
+
+  <div id="navbar" class="navbar navbar-inverse navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../index.html">
+          Home</a>
+        <span class="navbar-text navbar-version pull-left"><b>3.0.0</b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+                <li><a href="https://github.com/AdamGagorik/pydarkstar">pydarkstar</a></li>
+                <li><a href="https://github.com/DarkstarProject/darkstar">darkstar</a></li>
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../index.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="">Setup</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#linux">Linux</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#windows">Windows</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="usage.html">Usage</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="usage.html#basic">Basic</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usage.html#apps">Apps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usage.html#parameters">Parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usage.html#item-database">Item Database</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="requirements.html">Requirements</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="requirements.html#pip">pip</a></li>
+<li class="toctree-l2"><a class="reference internal" href="requirements.html#anaconda">Anaconda</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="advanced.html">Advanced</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="advanced.html#pythonpath">PYTHONPATH</a></li>
+<li class="toctree-l2"><a class="reference internal" href="advanced.html#apps">Apps</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="pydarkstar.html">Code</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="pydarkstar.html#subpackages">Subpackages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydarkstar.html#submodules">Submodules</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">Setup</a><ul>
+<li><a class="reference internal" href="#linux">Linux</a></li>
+<li><a class="reference internal" href="#windows">Windows</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li>
+    <a href="../index.html" title="Previous Chapter: pydarkstar"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; pydarkstar</span>
+    </a>
+  </li>
+  <li>
+    <a href="usage.html" title="Next Chapter: Usage"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">Usage &raquo;</span>
+    </a>
+  </li>
+              
+            
+            
+            
+            
+              <li class="hidden-sm">
+<div id="sourcelink">
+  <a href="../_sources/generated/setup.txt"
+     rel="nofollow">Source</a>
+</div></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      
+  <div class="section" id="setup">
+<h1>Setup<a class="headerlink" href="#setup" title="Permalink to this headline">¶</a></h1>
+<p>This is a quick giude to getting pydarkstar running. For more detail, as
+well as understanding how pydarkstar works, <strong>please read the usage
+section</strong>.</p>
+<div class="section" id="linux">
+<h2>Linux<a class="headerlink" href="#linux" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Linux already comes with python. You should use <strong>python3</strong>, which is
+not the default.</li>
+</ul>
+<div class="code bash highlight-python"><div class="highlight"><pre>bash:~$ sudo apt-get install git
+bash:~$ sudo apt-get install pip
+
+bash:~$ sudo pip install sqlalchemy
+bash:~$ sudo pip install pymysql
+bash:~$ sudo pip install beautifulsoup4
+bash:~$ sudo pip install pyyaml
+
+bash:~$ git clone git@github.com:AdamGagorik/pydarkstar.git
+
+# enter the correct path!
+
+bash:~$ cd ./path/to/pydarkstar
+bash:~$ python3 ./makebin.py
+</pre></div>
+</div>
+<ul class="simple">
+<li>Edit the config.yaml in &#8220;/path/to/pydarkstar/bin&#8221; with your settings
+(use a text editor).</li>
+</ul>
+<div class="code bash highlight-python"><div class="highlight"><pre>bash:~$ cd /path/to/pydarkstar/bin
+
+# to download new data from ffxiah.com (takes forever)
+bash:~$ ./scrub.sh
+
+# to start the broker
+bash:~$ ./broker.sh
+</pre></div>
+</div>
+</div>
+<div class="section" id="windows">
+<h2>Windows<a class="headerlink" href="#windows" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Setting up Python on Windows can be painful.</li>
+<li>It is easier to install a Python distribution such as Anaconda
+(<a class="reference external" href="http://continuum.io/downloads">http://continuum.io/downloads</a>).</li>
+<li>Install Git.</li>
+<li>Install Python Anaconda.</li>
+<li>Open the Anaconda command prompt from the start menu (search for it
+using the start menu).</li>
+</ul>
+<div class="code bash highlight-python"><div class="highlight"><pre>&gt; conda update conda
+
+# when prompted, enter &#39;y&#39; for yes
+
+&gt; conda install sqlalchemy
+&gt; conda install pymysql
+&gt; conda install beautiful-soup
+&gt; conda install pyyaml
+</pre></div>
+</div>
+<ul class="simple">
+<li>Clone pydarkstar repository.</li>
+<li>Run the <em>makebin.py</em> script.</li>
+</ul>
+<p><strong>You need to open a command prompt at the root directory of
+pydarkstar.</strong></p>
+<div class="code bash highlight-python"><div class="highlight"><pre># enter the correct path!
+
+&gt; cd &quot;C:\path\to\pydarkstar&quot;
+&gt; &quot;C:\path\to\python3&quot; .\makebin.py
+</pre></div>
+</div>
+<ul class="simple">
+<li>Edit the config.yaml in &#8220;C:\path\to\pydarkstar\bin&#8221; with your
+settings (use a text editor).</li>
+</ul>
+<div class="code bash highlight-python"><div class="highlight"><pre>&gt; cd &quot;C:\path\to\pydarkstar\bin&quot;
+
+# to download new data from ffxiah.com (takes forever)
+&gt; .\scrub.bat
+
+# to start the broker
+&gt; .\broker.bat
+</pre></div>
+</div>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2015, Adam Gagorik.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

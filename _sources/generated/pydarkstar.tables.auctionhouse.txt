@@ -1,0 +1,6 @@
+tables.auctionhouse
+=====================================
+
+.. automodule:: pydarkstar.tables.auctionhouse
+    :members:
+    :undoc-members:

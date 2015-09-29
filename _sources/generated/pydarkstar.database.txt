@@ -1,0 +1,6 @@
+database
+==========================
+
+.. automodule:: pydarkstar.database
+    :members:
+    :undoc-members:

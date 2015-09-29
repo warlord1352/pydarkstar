@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>pydarkstar.timeutils &mdash; pydarkstar 3.0.0 documentation</title>
+    
+    <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/bootswatch-3.3.4/cerulean/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/bootstrap-sphinx.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '3.0.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../../_static/bootstrap-3.3.4/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../_static/bootstrap-sphinx.js"></script>
+    <link rel="top" title="pydarkstar 3.0.0 documentation" href="../../index.html" />
+    <link rel="up" title="Module code" href="../index.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head>
+  <body role="document">
+
+  <div id="navbar" class="navbar navbar-inverse navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../../index.html">
+          Home</a>
+        <span class="navbar-text navbar-version pull-left"><b>3.0.0</b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+                <li><a href="https://github.com/AdamGagorik/pydarkstar">pydarkstar</a></li>
+                <li><a href="https://github.com/DarkstarProject/darkstar">darkstar</a></li>
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../../index.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/setup.html">Setup</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../generated/setup.html#linux">Linux</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generated/setup.html#windows">Windows</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/usage.html">Usage</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../generated/usage.html#basic">Basic</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generated/usage.html#apps">Apps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generated/usage.html#parameters">Parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generated/usage.html#item-database">Item Database</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/requirements.html">Requirements</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../generated/requirements.html#pip">pip</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generated/requirements.html#anaconda">Anaconda</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/advanced.html">Advanced</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../generated/advanced.html#pythonpath">PYTHONPATH</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generated/advanced.html#apps">Apps</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/pydarkstar.html">Code</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../generated/pydarkstar.html#subpackages">Subpackages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generated/pydarkstar.html#submodules">Submodules</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"></ul>
+</li>
+              
+            
+            
+              
+                
+              
+            
+            
+            
+            
+              <li class="hidden-sm"></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="../../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      
+  <h1>Source code for pydarkstar.timeutils</h1><div class="highlight"><pre>
+<span class="kn">import</span> <span class="nn">datetime</span> <span class="kn">as</span> <span class="nn">_datetime</span>
+<span class="kn">import</span> <span class="nn">random</span> <span class="kn">as</span> <span class="nn">_random</span>
+
+
+<div class="viewcode-block" id="randomdt"><a class="viewcode-back" href="../../generated/pydarkstar.timeutils.html#pydarkstar.timeutils.randomdt">[docs]</a><span class="k">def</span> <span class="nf">randomdt</span><span class="p">(</span><span class="n">month</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">day</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">year</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">hour</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">minute</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">second</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span>
+             <span class="n">microsecond</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">tzinfo</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">month_range</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">12</span><span class="p">),</span> <span class="n">day_range</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">31</span><span class="p">),</span>
+             <span class="n">year_range</span><span class="o">=</span><span class="p">(</span><span class="mi">1900</span><span class="p">,</span> <span class="mi">2000</span><span class="p">),</span> <span class="n">hour_range</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">23</span><span class="p">),</span> <span class="n">minute_range</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">59</span><span class="p">),</span>
+             <span class="n">second_range</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">59</span><span class="p">),</span> <span class="n">microsecond_range</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Create a random datetime object.</span>
+
+<span class="sd">    :param month: month</span>
+<span class="sd">    :param day: day</span>
+<span class="sd">    :param year: year</span>
+<span class="sd">    :param hour: hour</span>
+<span class="sd">    :param minute: minute</span>
+<span class="sd">    :param second: second</span>
+<span class="sd">    :param microsecond: microsecond</span>
+<span class="sd">    :param tzinfo: time zone info</span>
+<span class="sd">    :param month_range: (min, max) month</span>
+<span class="sd">    :param day_range: (min, max) day</span>
+<span class="sd">    :param year_range: (min, max) year</span>
+<span class="sd">    :param hour_range: (min, max) hour</span>
+<span class="sd">    :param minute_range: (min, max) minute</span>
+<span class="sd">    :param second_range: (min, max) second</span>
+<span class="sd">    :param microsecond_range: (min, max) microsecond</span>
+<span class="sd">    :return: datetime</span>
+<span class="sd">    :rtype: py:class:`datetime.datetime`</span>
+
+<span class="sd">    .. seealso:: py:class:`datetime.datetime`</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">month</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+        <span class="n">month</span> <span class="o">=</span> <span class="n">_random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="o">*</span><span class="n">month_range</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">day</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+        <span class="n">day</span> <span class="o">=</span> <span class="n">_random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="o">*</span><span class="n">day_range</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">year</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+        <span class="n">year</span> <span class="o">=</span> <span class="n">_random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="o">*</span><span class="n">year_range</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">hour</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+        <span class="n">hour</span> <span class="o">=</span> <span class="n">_random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="o">*</span><span class="n">hour_range</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">minute</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+        <span class="n">minute</span> <span class="o">=</span> <span class="n">_random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="o">*</span><span class="n">minute_range</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">second</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+        <span class="n">second</span> <span class="o">=</span> <span class="n">_random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="o">*</span><span class="n">second_range</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">microsecond</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+        <span class="n">microsecond</span> <span class="o">=</span> <span class="n">_random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="o">*</span><span class="n">microsecond_range</span><span class="p">)</span>
+
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">_datetime</span><span class="o">.</span><span class="n">datetime</span><span class="p">(</span><span class="n">year</span><span class="p">,</span> <span class="n">month</span><span class="p">,</span> <span class="n">day</span> <span class="o">-</span> <span class="n">i</span><span class="p">,</span> <span class="n">hour</span><span class="p">,</span> <span class="n">minute</span><span class="p">,</span> <span class="n">second</span><span class="p">,</span> <span class="n">microsecond</span><span class="p">,</span> <span class="n">tzinfo</span><span class="p">)</span>
+        <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+            <span class="k">pass</span>
+
+    <span class="k">return</span> <span class="n">_datetime</span><span class="o">.</span><span class="n">datetime</span><span class="p">(</span><span class="n">year</span><span class="p">,</span> <span class="n">month</span><span class="p">,</span> <span class="n">day</span> <span class="o">-</span> <span class="mi">3</span><span class="p">,</span> <span class="n">hour</span><span class="p">,</span> <span class="n">minute</span><span class="p">,</span> <span class="n">second</span><span class="p">,</span> <span class="n">microsecond</span><span class="p">)</span>
+
+</div>
+<div class="viewcode-block" id="str_to_datetime"><a class="viewcode-back" href="../../generated/pydarkstar.timeutils.html#pydarkstar.timeutils.str_to_datetime">[docs]</a><span class="k">def</span> <span class="nf">str_to_datetime</span><span class="p">(</span><span class="n">date_string</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Convert string to datetime object.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">_datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">strptime</span><span class="p">(</span><span class="n">date_string</span><span class="p">,</span> <span class="s">&#39;%m/</span><span class="si">%d</span><span class="s">/%Y %H:%M:%S&#39;</span><span class="p">)</span>
+
+</div>
+<div class="viewcode-block" id="datetime_to_str"><a class="viewcode-back" href="../../generated/pydarkstar.timeutils.html#pydarkstar.timeutils.datetime_to_str">[docs]</a><span class="k">def</span> <span class="nf">datetime_to_str</span><span class="p">(</span><span class="n">datetime_obj</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Convert datetime object to string.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="s">&#39;{dt.month:&gt;02}/{dt.day:&gt;02}/{dt.year} {dt.hour:&gt;02}:{dt.minute:&gt;02}:{dt.second:&gt;02}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">dt</span><span class="o">=</span><span class="n">datetime_obj</span><span class="p">)</span>
+
+</div>
+<div class="viewcode-block" id="DatetimeToTimestamp"><a class="viewcode-back" href="../../generated/pydarkstar.timeutils.html#pydarkstar.timeutils.DatetimeToTimestamp">[docs]</a><span class="k">class</span> <span class="nc">DatetimeToTimestamp</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Convert datetime object to timestamp.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">epoch</span> <span class="o">=</span> <span class="n">_datetime</span><span class="o">.</span><span class="n">datetime</span><span class="p">(</span><span class="mi">1970</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">datetime_obj</span><span class="p">):</span>
+        <span class="k">return</span> <span class="nb">float</span><span class="p">((</span><span class="n">datetime_obj</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">epoch</span><span class="p">)</span><span class="o">.</span><span class="n">total_seconds</span><span class="p">())</span>
+
+</div>
+<span class="n">datetime_to_timestamp</span> <span class="o">=</span> <span class="n">DatetimeToTimestamp</span><span class="p">()</span>
+
+
+<div class="viewcode-block" id="timestamp_to_datetime"><a class="viewcode-back" href="../../generated/pydarkstar.timeutils.html#pydarkstar.timeutils.timestamp_to_datetime">[docs]</a><span class="k">def</span> <span class="nf">timestamp_to_datetime</span><span class="p">(</span><span class="n">stamp</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Convert timestamp to datetime object.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">_datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">utcfromtimestamp</span><span class="p">(</span><span class="n">stamp</span><span class="p">)</span>
+
+</div>
+<div class="viewcode-block" id="datetime"><a class="viewcode-back" href="../../generated/pydarkstar.timeutils.html#pydarkstar.timeutils.datetime">[docs]</a><span class="k">def</span> <span class="nf">datetime</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Convert anything (within reason) to a datetime object.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">args</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">1</span> <span class="ow">or</span> <span class="n">kwargs</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">_datetime</span><span class="o">.</span><span class="n">datetime</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">obj</span> <span class="o">=</span> <span class="n">args</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="k">except</span> <span class="ne">IndexError</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s">&#39;expecting argument&#39;</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="n">_datetime</span><span class="o">.</span><span class="n">datetime</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">obj</span>
+
+    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">str_to_datetime</span><span class="p">(</span><span class="n">obj</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="nb">int</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">timestamp_to_datetime</span><span class="p">(</span><span class="n">obj</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="nb">float</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">timestamp_to_datetime</span><span class="p">(</span><span class="n">obj</span><span class="p">)</span>
+
+    <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s">&#39;unknown type: </span><span class="si">%s</span><span class="s">&#39;</span> <span class="o">%</span> <span class="nb">type</span><span class="p">(</span><span class="n">obj</span><span class="p">))</span>
+
+</div>
+<div class="viewcode-block" id="timestamp"><a class="viewcode-back" href="../../generated/pydarkstar.timeutils.html#pydarkstar.timeutils.timestamp">[docs]</a><span class="k">def</span> <span class="nf">timestamp</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Convert anything (within reason) to a timestamp.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">datetime_to_timestamp</span><span class="p">(</span><span class="n">datetime</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">))</span>
+
+</div>
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="k">pass</span>
+</pre></div>
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2015, Adam Gagorik.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

@@ -1,0 +1,6 @@
+darkobject
+============================
+
+.. automodule:: pydarkstar.darkobject
+    :members:
+    :undoc-members:

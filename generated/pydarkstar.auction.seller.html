@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>auction.seller &mdash; pydarkstar 3.0.0 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootswatch-3.3.4/cerulean/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '3.0.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.3.4/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <link rel="top" title="pydarkstar 3.0.0 documentation" href="../index.html" />
+    <link rel="up" title="auction" href="pydarkstar.auction.html" />
+    <link rel="next" title="auction.worker" href="pydarkstar.auction.worker.html" />
+    <link rel="prev" title="auction.manager" href="pydarkstar.auction.manager.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head>
+  <body role="document">
+
+  <div id="navbar" class="navbar navbar-inverse navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../index.html">
+          Home</a>
+        <span class="navbar-text navbar-version pull-left"><b>3.0.0</b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+                <li><a href="https://github.com/AdamGagorik/pydarkstar">pydarkstar</a></li>
+                <li><a href="https://github.com/DarkstarProject/darkstar">darkstar</a></li>
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../index.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="setup.html">Setup</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="setup.html#linux">Linux</a></li>
+<li class="toctree-l2"><a class="reference internal" href="setup.html#windows">Windows</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="usage.html">Usage</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="usage.html#basic">Basic</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usage.html#apps">Apps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usage.html#parameters">Parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usage.html#item-database">Item Database</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="requirements.html">Requirements</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="requirements.html#pip">pip</a></li>
+<li class="toctree-l2"><a class="reference internal" href="requirements.html#anaconda">Anaconda</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="advanced.html">Advanced</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="advanced.html#pythonpath">PYTHONPATH</a></li>
+<li class="toctree-l2"><a class="reference internal" href="advanced.html#apps">Apps</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="pydarkstar.html">Code</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="pydarkstar.html#subpackages">Subpackages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydarkstar.html#submodules">Submodules</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">auction.seller</a></li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li>
+    <a href="pydarkstar.auction.manager.html" title="Previous Chapter: auction.manager"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; auction.manager</span>
+    </a>
+  </li>
+  <li>
+    <a href="pydarkstar.auction.worker.html" title="Next Chapter: auction.worker"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">auction.worker &raquo;</span>
+    </a>
+  </li>
+              
+            
+            
+            
+            
+              <li class="hidden-sm">
+<div id="sourcelink">
+  <a href="../_sources/generated/pydarkstar.auction.seller.txt"
+     rel="nofollow">Source</a>
+</div></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      
+  <div class="section" id="module-pydarkstar.auction.seller">
+<span id="auction-seller"></span><h1>auction.seller<a class="headerlink" href="#module-pydarkstar.auction.seller" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="pydarkstar.auction.seller.Seller">
+<em class="property">class </em><code class="descclassname">pydarkstar.auction.seller.</code><code class="descname">Seller</code><span class="sig-paren">(</span><em>db</em>, <em>seller=0</em>, <em>seller_name='Zissou'</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pydarkstar/auction/seller.html#Seller"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pydarkstar.auction.seller.Seller" title="Permalink to this definition">¶</a></dt>
+<dd><p>Auction House seller.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>db</strong> &#8211; database object</li>
+<li><strong>seller</strong> &#8211; auction house seller id</li>
+<li><strong>seller_name</strong> &#8211; auction house seller name</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="pydarkstar.auction.seller.Seller.sell_item">
+<code class="descname">sell_item</code><span class="sig-paren">(</span><em>itemid</em>, <em>stack</em>, <em>date</em>, <em>price</em>, <em>count</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pydarkstar/auction/seller.html#Seller.sell_item"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pydarkstar.auction.seller.Seller.sell_item" title="Permalink to this definition">¶</a></dt>
+<dd><p>Put up a particular item for sale.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>itemid</strong> &#8211; item number</li>
+<li><strong>stack</strong> &#8211; stack 0|1</li>
+<li><strong>date</strong> &#8211; timestamp</li>
+<li><strong>price</strong> &#8211; price</li>
+<li><strong>count</strong> &#8211; rows</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydarkstar.auction.seller.Seller.set_history">
+<code class="descname">set_history</code><span class="sig-paren">(</span><em>itemid</em>, <em>stack</em>, <em>price</em>, <em>date</em>, <em>count=1</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pydarkstar/auction/seller.html#Seller.set_history"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pydarkstar.auction.seller.Seller.set_history" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the history of a particular item.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>itemid</strong> &#8211; item number</li>
+<li><strong>stack</strong> &#8211; stack 0|1</li>
+<li><strong>date</strong> &#8211; timestamp</li>
+<li><strong>price</strong> &#8211; price</li>
+<li><strong>count</strong> &#8211; rows</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2015, Adam Gagorik.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

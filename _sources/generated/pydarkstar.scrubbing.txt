@@ -1,0 +1,15 @@
+scrubbing
+============================
+
+.. automodule:: pydarkstar.scrubbing
+    :members:
+    :undoc-members:
+
+Submodules
+----------
+
+.. toctree::
+
+   pydarkstar.scrubbing.ffxiah
+   pydarkstar.scrubbing.scrubber
+

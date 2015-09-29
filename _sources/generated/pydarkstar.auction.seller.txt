@@ -1,0 +1,6 @@
+auction.seller
+================================
+
+.. automodule:: pydarkstar.auction.seller
+    :members:
+    :undoc-members:

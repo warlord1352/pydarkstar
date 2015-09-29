@@ -1,0 +1,6 @@
+scrubbing.ffxiah
+==================================
+
+.. automodule:: pydarkstar.scrubbing.ffxiah
+    :members:
+    :undoc-members:

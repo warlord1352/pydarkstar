@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Usage &mdash; pydarkstar 3.0.0 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootswatch-3.3.4/cerulean/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '3.0.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.3.4/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <link rel="top" title="pydarkstar 3.0.0 documentation" href="../index.html" />
+    <link rel="next" title="Requirements" href="requirements.html" />
+    <link rel="prev" title="Setup" href="setup.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head>
+  <body role="document">
+
+  <div id="navbar" class="navbar navbar-inverse navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../index.html">
+          Home</a>
+        <span class="navbar-text navbar-version pull-left"><b>3.0.0</b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+                <li><a href="https://github.com/AdamGagorik/pydarkstar">pydarkstar</a></li>
+                <li><a href="https://github.com/DarkstarProject/darkstar">darkstar</a></li>
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../index.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="setup.html">Setup</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="setup.html#linux">Linux</a></li>
+<li class="toctree-l2"><a class="reference internal" href="setup.html#windows">Windows</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">Usage</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#basic">Basic</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#apps">Apps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#parameters">Parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#item-database">Item Database</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="requirements.html">Requirements</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="requirements.html#pip">pip</a></li>
+<li class="toctree-l2"><a class="reference internal" href="requirements.html#anaconda">Anaconda</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="advanced.html">Advanced</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="advanced.html#pythonpath">PYTHONPATH</a></li>
+<li class="toctree-l2"><a class="reference internal" href="advanced.html#apps">Apps</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="pydarkstar.html">Code</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="pydarkstar.html#subpackages">Subpackages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydarkstar.html#submodules">Submodules</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">Usage</a><ul>
+<li><a class="reference internal" href="#basic">Basic</a></li>
+<li><a class="reference internal" href="#apps">Apps</a></li>
+<li><a class="reference internal" href="#parameters">Parameters</a></li>
+<li><a class="reference internal" href="#item-database">Item Database</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li>
+    <a href="setup.html" title="Previous Chapter: Setup"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; Setup</span>
+    </a>
+  </li>
+  <li>
+    <a href="requirements.html" title="Next Chapter: Requirements"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">Requirements &raquo;</span>
+    </a>
+  </li>
+              
+            
+            
+            
+            
+              <li class="hidden-sm">
+<div id="sourcelink">
+  <a href="../_sources/generated/usage.txt"
+     rel="nofollow">Source</a>
+</div></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      
+  <div class="section" id="usage">
+<h1>Usage<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="basic">
+<h2>Basic<a class="headerlink" href="#basic" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Use pydarkstar from the command line.</li>
+</ul>
+<p>Windows</p>
+<div class="code bash highlight-python"><div class="highlight"><pre>&gt; cd &quot;C:\path\to\pydarkstar\bin&quot;
+&gt; .\broker.bat
+</pre></div>
+</div>
+<p>Linux</p>
+<div class="code bash highlight-python"><div class="highlight"><pre>bash:~$ cd /path/to/pydarkstar/bin
+bash:~$ ./broker.sh
+</pre></div>
+</div>
+</div>
+<div class="section" id="apps">
+<h2>Apps<a class="headerlink" href="#apps" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>There are many apps.</li>
+</ul>
+<table border="1" class="docutils">
+<colgroup>
+<col width="12%" />
+<col width="88%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">app</th>
+<th class="head">description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>scrub</td>
+<td>download data from the web to create a database of items and prices</td>
+</tr>
+<tr class="row-odd"><td>broker</td>
+<td>server that buys and sells items on the AH from players</td>
+</tr>
+<tr class="row-even"><td>buyer</td>
+<td>server that buys items on the AH from players</td>
+</tr>
+<tr class="row-odd"><td>seller</td>
+<td>server that sells items on the AH to players</td>
+</tr>
+<tr class="row-even"><td>clear</td>
+<td>clear the AH of all transactions</td>
+</tr>
+<tr class="row-odd"><td>refill</td>
+<td>fill the AH with items for sale and exit</td>
+</tr>
+<tr class="row-even"><td>alter</td>
+<td>alter the item database</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="parameters">
+<h2>Parameters<a class="headerlink" href="#parameters" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Configure the apps by passing command line arguments.</li>
+<li>Use the &#8211;help flag for a list of options.</li>
+</ul>
+<p>Windows</p>
+<div class="code bash highlight-python"><div class="highlight"><pre>&gt; cd &quot;C:\path\to\pydarkstar\bin&quot;
+&gt; .\broker.bat --help
+</pre></div>
+</div>
+<p>Linux</p>
+<div class="code bash highlight-python"><div class="highlight"><pre>bash:~$ cd /path/to/pydarkstar/bin
+bash:~$ ./broker.sh --help
+</pre></div>
+</div>
+<ul class="simple">
+<li>Parameters can also be set in the config.yaml file.</li>
+<li>You should set your mysql parameters.</li>
+</ul>
+<div class="code python highlight-python"><div class="highlight"><pre># ah
+name: Zissou          # Name that appears on AH when buying and selling
+
+# basic
+verbose: true         # ERROR, INFO, DEBUG in log file
+silent: false         # ERROR
+
+# input
+data: [&#39;items.csv&#39;]   # comma seperated list of CSV files
+
+# output
+stub: items           # output name when scrubbing
+overwrite: false      # overwrite existing output?
+backup: true          # backup existing output?
+
+# sql
+hostname: 127.0.0.1   # SQL parameter
+database: dspdb       # SQL parameter
+username: root        # SQL parameter
+password: ????        # SQL parameter
+fail: true            # fail on SQL database errors?
+
+# broker/seller
+restock: 3600         # seconds between selling
+
+# broker/buyer
+tick: 30              # seconds between buying
+
+# scrub
+itemids: []           # list of itemids to scrub
+stock01: 5            # default stock01 when scrubbing
+stock12: 5            # default stock12 when scrubbing
+urls: []              # list of category urls to scrub
+</pre></div>
+</div>
+<ul class="simple">
+<li>The order of precedence is <em>defaults &lt; config file &lt; command line</em>.</li>
+<li>Please do not edit source code files to configure your apps.</li>
+</ul>
+</div>
+<div class="section" id="item-database">
+<h2>Item Database<a class="headerlink" href="#item-database" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Item data is stored in <em>items.csv</em>.</li>
+<li><em>items.csv</em> is just a simple text file that you can edit with excel.</li>
+<li>The <em>items.csv</em> can be created with the scrub app.</li>
+<li>There is an already generated <em>items.csv</em> in the bin folder for you.</li>
+<li>You do not need to run the <em>scrub</em> app unless you want to recreate
+the database.</li>
+<li>You can change many properties be editing the <em>items.csv.</em> manually.</li>
+</ul>
+<table border="1" class="docutils">
+<colgroup>
+<col width="16%" />
+<col width="52%" />
+<col width="31%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">column</th>
+<th class="head">description</th>
+<th class="head">value</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>itemid</td>
+<td>unique item id</td>
+<td>integer &gt;=0</td>
+</tr>
+<tr class="row-odd"><td>name</td>
+<td>item name</td>
+<td>string</td>
+</tr>
+<tr class="row-even"><td>sell01</td>
+<td>sell single?</td>
+<td>0=false 1=true</td>
+</tr>
+<tr class="row-odd"><td>buy01</td>
+<td>buy single?</td>
+<td>0=false 1=true</td>
+</tr>
+<tr class="row-even"><td>price01</td>
+<td>price for single</td>
+<td>integer &gt;=1</td>
+</tr>
+<tr class="row-odd"><td>stock01</td>
+<td>restock count (single)</td>
+<td>integer &gt;=0</td>
+</tr>
+<tr class="row-even"><td>rate01</td>
+<td>sell rate (single) <strong>not used</strong></td>
+<td>float 0 &lt;= x &lt;= 1</td>
+</tr>
+<tr class="row-odd"><td>sell12</td>
+<td>sell stack?</td>
+<td>0=false 1=true</td>
+</tr>
+<tr class="row-even"><td>buy12</td>
+<td>buy stack?</td>
+<td>0=false 1=true</td>
+</tr>
+<tr class="row-odd"><td>price12</td>
+<td>price for stack</td>
+<td>integer &gt;=1</td>
+</tr>
+<tr class="row-even"><td>stock12</td>
+<td>restock count (stack)</td>
+<td>integer &gt;=0</td>
+</tr>
+<tr class="row-odd"><td>rate12</td>
+<td>sell rate (stack) <strong>not used</strong></td>
+<td>float 0 &lt;= x &lt;= 1</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2015, Adam Gagorik.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

@@ -1,0 +1,16 @@
+tables
+=========================
+
+.. automodule:: pydarkstar.tables
+    :members:
+    :undoc-members:
+
+Submodules
+----------
+
+.. toctree::
+
+   pydarkstar.tables.auctionhouse
+   pydarkstar.tables.base
+   pydarkstar.tables.deliverybox
+

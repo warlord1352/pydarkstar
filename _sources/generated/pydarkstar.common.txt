@@ -1,0 +1,6 @@
+common
+========================
+
+.. automodule:: pydarkstar.common
+    :members:
+    :undoc-members:

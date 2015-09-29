@@ -1,0 +1,6 @@
+auction.browser
+=================================
+
+.. automodule:: pydarkstar.auction.browser
+    :members:
+    :undoc-members:

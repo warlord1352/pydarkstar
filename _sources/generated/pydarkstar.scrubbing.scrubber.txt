@@ -1,0 +1,6 @@
+scrubbing.scrubber
+====================================
+
+.. automodule:: pydarkstar.scrubbing.scrubber
+    :members:
+    :undoc-members:

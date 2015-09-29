@@ -1,0 +1,6 @@
+options.base
+==============================
+
+.. automodule:: pydarkstar.options.base
+    :members:
+    :undoc-members:

@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>pydarkstar.item &mdash; pydarkstar 3.0.0 documentation</title>
+    
+    <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/bootswatch-3.3.4/cerulean/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/bootstrap-sphinx.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '3.0.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../../_static/bootstrap-3.3.4/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../_static/bootstrap-sphinx.js"></script>
+    <link rel="top" title="pydarkstar 3.0.0 documentation" href="../../index.html" />
+    <link rel="up" title="Module code" href="../index.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head>
+  <body role="document">
+
+  <div id="navbar" class="navbar navbar-inverse navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../../index.html">
+          Home</a>
+        <span class="navbar-text navbar-version pull-left"><b>3.0.0</b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+                <li><a href="https://github.com/AdamGagorik/pydarkstar">pydarkstar</a></li>
+                <li><a href="https://github.com/DarkstarProject/darkstar">darkstar</a></li>
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../../index.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/setup.html">Setup</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../generated/setup.html#linux">Linux</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generated/setup.html#windows">Windows</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/usage.html">Usage</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../generated/usage.html#basic">Basic</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generated/usage.html#apps">Apps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generated/usage.html#parameters">Parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generated/usage.html#item-database">Item Database</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/requirements.html">Requirements</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../generated/requirements.html#pip">pip</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generated/requirements.html#anaconda">Anaconda</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/advanced.html">Advanced</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../generated/advanced.html#pythonpath">PYTHONPATH</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generated/advanced.html#apps">Apps</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/pydarkstar.html">Code</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../generated/pydarkstar.html#subpackages">Subpackages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generated/pydarkstar.html#submodules">Submodules</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"></ul>
+</li>
+              
+            
+            
+              
+                
+              
+            
+            
+            
+            
+              <li class="hidden-sm"></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="../../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      
+  <h1>Source code for pydarkstar.item</h1><div class="highlight"><pre>
+<span class="kn">from</span> <span class="nn">.darkobject</span> <span class="kn">import</span> <span class="n">DarkObject</span>
+<span class="kn">import</span> <span class="nn">collections</span>
+
+<span class="n">fmt</span> <span class="o">=</span> <span class="n">collections</span><span class="o">.</span><span class="n">OrderedDict</span><span class="p">()</span>
+<span class="n">fmt</span><span class="p">[</span><span class="s">&#39;itemid&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s">&#39;{:&gt;8}&#39;</span>
+<span class="n">fmt</span><span class="p">[</span><span class="s">&#39;name&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s">&#39;{:&gt;24}&#39;</span>
+<span class="n">fmt</span><span class="p">[</span><span class="s">&#39;sell01&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s">&#39;{:&gt;6}&#39;</span>
+<span class="n">fmt</span><span class="p">[</span><span class="s">&#39;buy01&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s">&#39;{:&gt;6}&#39;</span>
+<span class="n">fmt</span><span class="p">[</span><span class="s">&#39;price01&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s">&#39;{:&gt;16}&#39;</span>
+<span class="n">fmt</span><span class="p">[</span><span class="s">&#39;stock01&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s">&#39;{:&gt;7}&#39;</span>
+<span class="n">fmt</span><span class="p">[</span><span class="s">&#39;rate01&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s">&#39;{:&gt;7}&#39;</span>
+<span class="n">fmt</span><span class="p">[</span><span class="s">&#39;sell12&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s">&#39;{:&gt;6}&#39;</span>
+<span class="n">fmt</span><span class="p">[</span><span class="s">&#39;buy12&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s">&#39;{:&gt;6}&#39;</span>
+<span class="n">fmt</span><span class="p">[</span><span class="s">&#39;price12&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s">&#39;{:&gt;16}&#39;</span>
+<span class="n">fmt</span><span class="p">[</span><span class="s">&#39;stock12&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s">&#39;{:&gt;7}&#39;</span>
+<span class="n">fmt</span><span class="p">[</span><span class="s">&#39;rate12&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s">&#39;{:&gt;7}&#39;</span>
+
+
+<div class="viewcode-block" id="title_str"><a class="viewcode-back" href="../../generated/pydarkstar.item.html#pydarkstar.item.title_str">[docs]</a><span class="k">def</span> <span class="nf">title_str</span><span class="p">():</span>
+    <span class="n">objs</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">fmt</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+        <span class="n">objs</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">fmt</span><span class="p">[</span><span class="n">key</span><span class="p">]</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">key</span><span class="p">))</span>
+
+    <span class="k">return</span> <span class="s">&#39;, &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">objs</span><span class="p">)</span> <span class="o">+</span> <span class="s">&#39;</span><span class="se">\n</span><span class="s">&#39;</span>
+
+</div>
+<div class="viewcode-block" id="value_str"><a class="viewcode-back" href="../../generated/pydarkstar.item.html#pydarkstar.item.value_str">[docs]</a><span class="k">def</span> <span class="nf">value_str</span><span class="p">(</span><span class="n">item</span><span class="p">):</span>
+    <span class="n">objs</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">fmt</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+        <span class="n">value</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">item</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="bp">None</span><span class="p">)</span>
+        <span class="n">objs</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">fmt</span><span class="p">[</span><span class="n">key</span><span class="p">]</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">value</span><span class="p">))</span>
+
+    <span class="k">return</span> <span class="s">&#39;, &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">objs</span><span class="p">)</span> <span class="o">+</span> <span class="s">&#39;</span><span class="se">\n</span><span class="s">&#39;</span>
+
+</div>
+<span class="n">_template</span> <span class="o">=</span> \
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">[Item]</span>
+<span class="sd">    addr        = {addr}</span>
+<span class="sd">    itemid      = {self.itemid}</span>
+<span class="sd">    name        = {self.name}</span>
+<span class="sd">    sell01      = {self.sell01}</span>
+<span class="sd">    buy01       = {self.buy01}</span>
+<span class="sd">    price01     = {self.price01}</span>
+<span class="sd">    stock01     = {self.stock01}</span>
+<span class="sd">    rate01      = {self.rate01}</span>
+<span class="sd">    sell12      = {self.sell12}</span>
+<span class="sd">    buy12       = {self.buy12}</span>
+<span class="sd">    price12     = {self.price12}</span>
+<span class="sd">    stock12     = {self.stock12}</span>
+<span class="sd">    rate12      = {self.rate12}</span>
+<span class="sd">&quot;&quot;&quot;</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+
+
+<div class="viewcode-block" id="Item"><a class="viewcode-back" href="../../generated/pydarkstar.item.html#pydarkstar.item.Item">[docs]</a><span class="k">class</span> <span class="nc">Item</span><span class="p">(</span><span class="n">DarkObject</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Item properties.</span>
+
+<span class="sd">    :param itemid: unique item id</span>
+<span class="sd">    :param name: item name</span>
+
+<span class="sd">    :param sell01: sell single</span>
+<span class="sd">    :param buy01: buy single</span>
+<span class="sd">    :param price01: price (&gt;= 1) for single</span>
+<span class="sd">    :param stock01: restock count (&gt;= 0) for single</span>
+
+<span class="sd">    :param sell12: sell stack</span>
+<span class="sd">    :param buy12: buy stack</span>
+<span class="sd">    :param price12: price (&gt;= 1) for stack</span>
+<span class="sd">    :param stock12: restock count (&gt;= 0) for stack</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">keys</span> <span class="o">=</span> <span class="p">[</span><span class="s">&#39;itemid&#39;</span><span class="p">,</span> <span class="s">&#39;name&#39;</span><span class="p">,</span>
+            <span class="s">&#39;sell01&#39;</span><span class="p">,</span> <span class="s">&#39;buy01&#39;</span><span class="p">,</span> <span class="s">&#39;price01&#39;</span><span class="p">,</span> <span class="s">&#39;stock01&#39;</span><span class="p">,</span> <span class="s">&#39;rate01&#39;</span><span class="p">,</span>
+            <span class="s">&#39;sell12&#39;</span><span class="p">,</span> <span class="s">&#39;buy12&#39;</span><span class="p">,</span> <span class="s">&#39;price12&#39;</span><span class="p">,</span> <span class="s">&#39;stock12&#39;</span><span class="p">,</span> <span class="s">&#39;rate12&#39;</span><span class="p">]</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">values</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">itemid</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">sell01</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">buy01</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">price01</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">stock01</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">rate01</span><span class="p">,</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">sell12</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">buy12</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">price12</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">stock12</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">rate12</span><span class="p">]</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">itemid</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span>
+                 <span class="n">sell01</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">buy01</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">price01</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">stock01</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">rate01</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span>
+                 <span class="n">sell12</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">buy12</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">price12</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">stock12</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">rate12</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">Item</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">__init__</span><span class="p">()</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_itemid</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">itemid</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_name</span> <span class="o">=</span> <span class="bp">None</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_sell01</span> <span class="o">=</span> <span class="bp">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_sell12</span> <span class="o">=</span> <span class="bp">None</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_buy01</span> <span class="o">=</span> <span class="bp">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_buy12</span> <span class="o">=</span> <span class="bp">None</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_price01</span> <span class="o">=</span> <span class="bp">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_price12</span> <span class="o">=</span> <span class="bp">None</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_stock01</span> <span class="o">=</span> <span class="bp">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_stock12</span> <span class="o">=</span> <span class="bp">None</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_rate01</span> <span class="o">=</span> <span class="bp">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_rate12</span> <span class="o">=</span> <span class="bp">None</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">sell01</span> <span class="o">=</span> <span class="n">sell01</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">buy01</span> <span class="o">=</span> <span class="n">buy01</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">price01</span> <span class="o">=</span> <span class="n">price01</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">stock01</span> <span class="o">=</span> <span class="n">stock01</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">rate01</span> <span class="o">=</span> <span class="n">rate01</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">sell12</span> <span class="o">=</span> <span class="n">sell12</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">buy12</span> <span class="o">=</span> <span class="n">buy12</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">price12</span> <span class="o">=</span> <span class="n">price12</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">stock12</span> <span class="o">=</span> <span class="n">stock12</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">rate12</span> <span class="o">=</span> <span class="n">rate12</span>
+
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">_itemid</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s">&#39;itemid must be positive: </span><span class="si">%d</span><span class="s">&#39;</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">_itemid</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">_init_notify</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">pass</span>
+
+    <span class="k">def</span> <span class="nf">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">_template</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">=</span><span class="bp">self</span><span class="p">,</span> <span class="n">addr</span><span class="o">=</span><span class="nb">hex</span><span class="p">(</span><span class="nb">id</span><span class="p">(</span><span class="bp">self</span><span class="p">)))</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">itemid</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_itemid</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">name</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_name</span>
+
+    <span class="nd">@name.setter</span>
+    <span class="k">def</span> <span class="nf">name</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">value</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+            <span class="n">value</span> <span class="o">=</span> <span class="s">&#39;?&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_name</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">sell01</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_sell01</span>
+
+    <span class="nd">@sell01.setter</span>
+    <span class="k">def</span> <span class="nf">sell01</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">value</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+            <span class="n">value</span> <span class="o">=</span> <span class="bp">True</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_sell01</span> <span class="o">=</span> <span class="nb">bool</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">buy01</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_buy01</span>
+
+    <span class="nd">@buy01.setter</span>
+    <span class="k">def</span> <span class="nf">buy01</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">value</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+            <span class="n">value</span> <span class="o">=</span> <span class="bp">True</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_buy01</span> <span class="o">=</span> <span class="nb">bool</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">price01</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_price01</span>
+
+    <span class="nd">@price01.setter</span>
+    <span class="k">def</span> <span class="nf">price01</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">value</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+            <span class="n">value</span> <span class="o">=</span> <span class="mi">1</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_price01</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_price01</span> <span class="o">&lt;</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s">&#39;price01 must be positive definite: </span><span class="si">%d</span><span class="s">&#39;</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">_price01</span><span class="p">)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">stock01</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_stock01</span>
+
+    <span class="nd">@stock01.setter</span>
+    <span class="k">def</span> <span class="nf">stock01</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">value</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+            <span class="n">value</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_stock01</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_stock01</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s">&#39;stock01 must be positive: </span><span class="si">%d</span><span class="s">&#39;</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">_stock01</span><span class="p">)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">rate01</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_rate01</span>
+
+    <span class="nd">@rate01.setter</span>
+    <span class="k">def</span> <span class="nf">rate01</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">value</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+            <span class="n">value</span> <span class="o">=</span> <span class="mf">1.0</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_rate01</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_rate01</span> <span class="o">&lt;</span> <span class="mf">0.0</span> <span class="ow">or</span> <span class="bp">self</span><span class="o">.</span><span class="n">_rate01</span> <span class="o">&gt;</span> <span class="mf">1.0</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s">&#39;rate01 must be between 0 and 1: </span><span class="si">%d</span><span class="s">&#39;</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">_rate01</span><span class="p">)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">sell12</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_sell12</span>
+
+    <span class="nd">@sell12.setter</span>
+    <span class="k">def</span> <span class="nf">sell12</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">value</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+            <span class="n">value</span> <span class="o">=</span> <span class="bp">True</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_sell12</span> <span class="o">=</span> <span class="nb">bool</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">buy12</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_buy12</span>
+
+    <span class="nd">@buy12.setter</span>
+    <span class="k">def</span> <span class="nf">buy12</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">value</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+            <span class="n">value</span> <span class="o">=</span> <span class="bp">True</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_buy12</span> <span class="o">=</span> <span class="nb">bool</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">price12</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_price12</span>
+
+    <span class="nd">@price12.setter</span>
+    <span class="k">def</span> <span class="nf">price12</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">value</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+            <span class="n">value</span> <span class="o">=</span> <span class="mi">1</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_price12</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_price12</span> <span class="o">&lt;</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s">&#39;price12 must be positive definite: </span><span class="si">%d</span><span class="s">&#39;</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">_price12</span><span class="p">)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">stock12</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_stock12</span>
+
+    <span class="nd">@stock12.setter</span>
+    <span class="k">def</span> <span class="nf">stock12</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">value</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+            <span class="n">value</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_stock12</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_stock12</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s">&#39;stock12 must be positive: </span><span class="si">%d</span><span class="s">&#39;</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">_stock12</span><span class="p">)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">rate12</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_rate12</span>
+
+    <span class="nd">@rate12.setter</span>
+    <span class="k">def</span> <span class="nf">rate12</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">value</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+            <span class="n">value</span> <span class="o">=</span> <span class="mf">1.0</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_rate12</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_rate12</span> <span class="o">&lt;</span> <span class="mf">0.0</span> <span class="ow">or</span> <span class="bp">self</span><span class="o">.</span><span class="n">_rate12</span> <span class="o">&gt;</span> <span class="mf">1.0</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s">&#39;rate12 must be between 0 and 1: </span><span class="si">%d</span><span class="s">&#39;</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">_rate12</span><span class="p">)</span>
+
+</div>
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="k">pass</span>
+</pre></div>
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2015, Adam Gagorik.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

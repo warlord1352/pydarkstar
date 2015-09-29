@@ -1,0 +1,30 @@
+pydarkstar
+==================
+
+.. automodule:: pydarkstar
+    :members:
+    :undoc-members:
+
+Subpackages
+-----------
+
+.. toctree::
+
+    pydarkstar.auction
+    pydarkstar.options
+    pydarkstar.scrubbing
+    pydarkstar.tables
+
+Submodules
+----------
+
+.. toctree::
+
+   pydarkstar.common
+   pydarkstar.darkobject
+   pydarkstar.database
+   pydarkstar.item
+   pydarkstar.itemlist
+   pydarkstar.logutils
+   pydarkstar.timeutils
+

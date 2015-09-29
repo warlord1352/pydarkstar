@@ -1,0 +1,6 @@
+auction.cleaner
+=================================
+
+.. automodule:: pydarkstar.auction.cleaner
+    :members:
+    :undoc-members:
