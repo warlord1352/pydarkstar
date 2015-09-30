@@ -15,6 +15,7 @@ gh-pages:
 	$(MAKE) -C ./doc html
 	mv -fv ./doc/build/html/* ./
 	rm -rf ${GH_PAGES_SOURCES}
+	git checkout .nojekyll
 
 publish:
 	git add -A
