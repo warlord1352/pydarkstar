@@ -6,6 +6,7 @@ gh-pages:
 	find . -not -name index.html -and \
            -not -name .git       -and \
            -not -name Makefile   -and \
+           -not -name .jeykyll   -and \
            -not -name .             | \
 	xargs -I xxx rm -rf xxx
 	rm -rf ${GH_PAGES_SOURCES}
