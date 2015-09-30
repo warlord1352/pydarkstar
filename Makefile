@@ -9,7 +9,7 @@ gh-pages:
            -not -name .             | \
 	xargs -I xxx rm -rf xxx
 	rm -rf ${GH_PAGES_SOURCES}
-	git checkout dev ${GH_PAGES_SOURCES}
+	git checkout master ${GH_PAGES_SOURCES}
 	git reset HEAD
 	$(MAKE) -C ./doc html
 	mv -fv ./doc/build/html/* ./

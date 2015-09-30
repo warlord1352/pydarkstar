@@ -1,0 +1,208 @@
+Apps
+====
+
+broker
+^^^^^^
+
+.. code:: python
+
+    usage: run.py [-h] [--verbose] [--silent] [--hostname str] [--database str]
+                  [--username str] [--password str] [--fail] [--name str]
+                  [--restock int] [--tick int]
+                  [str [str ...]]
+    
+    Buy and sell items on the auction house.
+    
+    positional arguments:
+      str             item data CSV file(s)
+    
+    optional arguments:
+      -h, --help      show this help message and exit
+      --verbose       report debug, info, and error
+      --silent        report error only
+      --hostname str  SQL address
+      --database str  SQL database
+      --username str  SQL username
+      --password str  SQL password
+      --fail          fail on SQL errors
+      --name str      seller name
+      --restock int   restock interval (seconds)
+      --tick int      buying interval (seconds)
+    
+
+
+seller
+^^^^^^
+
+.. code:: python
+
+    usage: run.py [-h] [--verbose] [--silent] [--hostname str] [--database str]
+                  [--username str] [--password str] [--fail] [--name str]
+                  [--restock int]
+                  [str [str ...]]
+    
+    Sell items on the auction house.
+    
+    positional arguments:
+      str             item data CSV file(s)
+    
+    optional arguments:
+      -h, --help      show this help message and exit
+      --verbose       report debug, info, and error
+      --silent        report error only
+      --hostname str  SQL address
+      --database str  SQL database
+      --username str  SQL username
+      --password str  SQL password
+      --fail          fail on SQL errors
+      --name str      seller name
+      --restock int   restock interval (seconds)
+    
+
+
+buyer
+^^^^^
+
+.. code:: python
+
+    usage: run.py [-h] [--verbose] [--silent] [--hostname str] [--database str]
+                  [--username str] [--password str] [--fail] [--name str]
+                  [--tick int]
+                  [str [str ...]]
+    
+    Buy items on the auction house.
+    
+    positional arguments:
+      str             item data CSV file(s)
+    
+    optional arguments:
+      -h, --help      show this help message and exit
+      --verbose       report debug, info, and error
+      --silent        report error only
+      --hostname str  SQL address
+      --database str  SQL database
+      --username str  SQL username
+      --password str  SQL password
+      --fail          fail on SQL errors
+      --name str      seller name
+      --tick int      buying interval (seconds)
+    
+
+
+clear
+^^^^^
+
+.. code:: python
+
+    usage: run.py [-h] [--verbose] [--silent] [--hostname str] [--database str]
+                  [--username str] [--password str] [--fail] [--name str] [--all]
+                  [--force]
+    
+    Clear the auction house.
+    
+    optional arguments:
+      -h, --help      show this help message and exit
+      --verbose       report debug, info, and error
+      --silent        report error only
+      --hostname str  SQL address
+      --database str  SQL database
+      --username str  SQL username
+      --password str  SQL password
+      --fail          fail on SQL errors
+      --name str      seller name
+      --all           clear *all* items
+      --force         force the item clear
+    
+
+
+refill
+^^^^^^
+
+.. code:: python
+
+    usage: run.py [-h] [--verbose] [--silent] [--hostname str] [--database str]
+                  [--username str] [--password str] [--fail] [--name str]
+                  [--force]
+                  [str [str ...]]
+    
+    Refill the auction house.
+    
+    positional arguments:
+      str             item data CSV file(s)
+    
+    optional arguments:
+      -h, --help      show this help message and exit
+      --verbose       report debug, info, and error
+      --silent        report error only
+      --hostname str  SQL address
+      --database str  SQL database
+      --username str  SQL username
+      --password str  SQL password
+      --fail          fail on SQL errors
+      --name str      seller name
+      --force         force the item refill
+    
+
+
+scrub
+^^^^^
+
+.. code:: python
+
+    usage: run.py [-h] [--verbose] [--silent] [--overwrite] [--backup]
+                  [--urls [url [url ...]]] [--itemids [itemids [itemids ...]]]
+                  [--stock01 5] [--stock12 5]
+                  [stub]
+    
+    Create item database.
+    
+    positional arguments:
+      stub                  output file stub
+    
+    optional arguments:
+      -h, --help            show this help message and exit
+      --verbose             report debug, info, and error
+      --silent              report error only
+      --overwrite           overwrite output file
+      --backup              backup output file
+      --urls [url [url ...]]
+                            a list of category urls
+      --itemids [itemids [itemids ...]]
+                            a list of item ids
+      --stock01 5           default stock for singles
+      --stock12 5           default stock for stacks
+    
+
+
+alter
+^^^^^
+
+.. code:: python
+
+    usage: run.py [-h] [--verbose] [--silent] [--overwrite] [--backup]
+                  [--all | --lambda lambda : True | --match .* | --itemids [itemids [itemids ...]]]
+                  [--show | --scrub | --set key=value]
+                  [str [str ...]] [stub]
+    
+    Alter item database.
+    
+    positional arguments:
+      str                   item data CSV file(s)
+      stub                  output file stub
+    
+    optional arguments:
+      -h, --help            show this help message and exit
+      --verbose             report debug, info, and error
+      --silent              report error only
+      --overwrite           overwrite output file
+      --backup              backup output file
+      --all                 select all itemids
+      --lambda lambda : True
+                            select itemids where lambda evaluates to True
+      --match .*            select itemids where name matches regex
+      --itemids [itemids [itemids ...]]
+                            a list of item ids
+      --show                show itemids and exit
+      --scrub               redownload data for item
+      --set key=value       set column to value for item
+    
