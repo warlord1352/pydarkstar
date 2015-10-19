@@ -3,12 +3,7 @@ GH_PAGES_SOURCES=README.md doc pydarkstar
 gh-pages:
 	git checkout gh-pages
 	git reset HEAD
-	find . -not -name index.html -and \
-           -not -name .git       -and \
-           -not -name Makefile   -and \
-           -not -name .jeykyll   -and \
-           -not -name .             | \
-	xargs -I xxx rm -rf xxx
+	./clean.py
 	rm -rf ${GH_PAGES_SOURCES}
 	git checkout master ${GH_PAGES_SOURCES}
 	git reset HEAD
