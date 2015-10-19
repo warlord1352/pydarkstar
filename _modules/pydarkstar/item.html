@@ -9,7 +9,7 @@
     
     <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/bootswatch-3.3.4/cyborg/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/bootswatch-3.3.4/cerulean/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/bootstrap-sphinx.css" type="text/css" />
     
     <script type="text/javascript">
@@ -275,9 +275,9 @@
         <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">_itemid</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">:</span>
             <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s">&#39;itemid must be positive: </span><span class="si">%d</span><span class="s">&#39;</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">_itemid</span><span class="p">)</span>
 
-    <span class="k">def</span> <span class="nf">_init_notify</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="Item._init_notify"><a class="viewcode-back" href="../../generated/pydarkstar.item.html#pydarkstar.item.Item._init_notify">[docs]</a>    <span class="k">def</span> <span class="nf">_init_notify</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">pass</span>
-
+</div>
     <span class="k">def</span> <span class="nf">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="n">_template</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">=</span><span class="bp">self</span><span class="p">,</span> <span class="n">addr</span><span class="o">=</span><span class="nb">hex</span><span class="p">(</span><span class="nb">id</span><span class="p">(</span><span class="bp">self</span><span class="p">)))</span>
 

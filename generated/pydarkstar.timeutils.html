@@ -9,7 +9,7 @@
     
     <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/bootswatch-3.3.4/cyborg/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootswatch-3.3.4/cerulean/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
     
     <script type="text/javascript">
@@ -120,7 +120,12 @@
   <ul class="dropdown-menu localtoc"
       role="menu"
       aria-labelledby="dLabelLocalToc"><ul>
-<li><a class="reference internal" href="#">timeutils</a></li>
+<li><a class="reference internal" href="#">timeutils</a><ul>
+<li><a class="reference internal" href="#classes">Classes</a></li>
+<li><a class="reference internal" href="#functions">Functions</a></li>
+<li><a class="reference internal" href="#documentation">Documentation</a></li>
+</ul>
+</li>
 </ul>
 </ul>
 </li>
@@ -166,88 +171,292 @@
       
   <div class="section" id="module-pydarkstar.timeutils">
 <span id="timeutils"></span><h1>timeutils<a class="headerlink" href="#module-pydarkstar.timeutils" title="Permalink to this headline">¶</a></h1>
-<dl class="class">
-<dt id="pydarkstar.timeutils.DatetimeToTimestamp">
-<em class="property">class </em><code class="descclassname">pydarkstar.timeutils.</code><code class="descname">DatetimeToTimestamp</code><a class="reference internal" href="../_modules/pydarkstar/timeutils.html#DatetimeToTimestamp"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pydarkstar.timeutils.DatetimeToTimestamp" title="Permalink to this definition">¶</a></dt>
-<dd><p>Convert datetime object to timestamp.</p>
-<dl class="attribute">
-<dt id="pydarkstar.timeutils.DatetimeToTimestamp.epoch">
-<code class="descname">epoch</code><em class="property"> = datetime.datetime(1970, 1, 1, 0, 0)</em><a class="headerlink" href="#pydarkstar.timeutils.DatetimeToTimestamp.epoch" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<p>Functions for handling dates and times.</p>
+<div class="highlight-ipython"><div class="highlight"><pre><span class="gp">In [1]: </span><span class="kn">import</span> <span class="nn">pydarkstar.timeutils</span>
+</pre></div>
+</div>
+<dl class="docutils">
+<dt>The most useful functions are:</dt>
+<dd><ul class="first last simple">
+<li><a class="reference internal" href="#pydarkstar.timeutils.timestamp" title="pydarkstar.timeutils.timestamp"><code class="xref py py-func docutils literal"><span class="pre">pydarkstar.timeutils.timestamp()</span></code></a></li>
+<li><a class="reference internal" href="#pydarkstar.timeutils.datetime" title="pydarkstar.timeutils.datetime"><code class="xref py py-func docutils literal"><span class="pre">pydarkstar.timeutils.datetime()</span></code></a></li>
+</ul>
+</dd>
+</dl>
+<div class="highlight-ipython"><div class="highlight"><pre><span class="gp">In [2]: </span><span class="n">pydarkstar</span><span class="o">.</span><span class="n">timeutils</span><span class="o">.</span><span class="n">timestamp</span><span class="p">(</span><span class="s">&#39;01/01/2015 00:00:00&#39;</span><span class="p">)</span>
+<span class="gh">Out[2]: </span><span class="go">1420070400.0</span>
 
-</dd></dl>
-
+<span class="gp">In [3]: </span><span class="n">pydarkstar</span><span class="o">.</span><span class="n">timeutils</span><span class="o">.</span><span class="n">datetime</span><span class="p">(</span><span class="s">&#39;01/01/2015 00:00:00&#39;</span><span class="p">)</span>
+<span class="gh">Out[3]: </span><span class="go">datetime.datetime(2015, 1, 1)</span>
+</pre></div>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><a class="reference external" href="https://docs.python.org/library/datetime.html#module-datetime" title="(in Python v2.7)"><code class="xref py py-mod docutils literal"><span class="pre">datetime</span></code></a>, <a class="reference external" href="https://docs.python.org/library/datetime.html#datetime.datetime" title="(in Python v2.7)"><code class="xref py py-class docutils literal"><span class="pre">datetime.datetime</span></code></a></p>
+</div>
+<div class="section" id="classes">
+<h2>Classes<a class="headerlink" href="#classes" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#pydarkstar.timeutils.DatetimeToTimestamp" title="pydarkstar.timeutils.DatetimeToTimestamp"><code class="xref py py-obj docutils literal"><span class="pre">pydarkstar.timeutils.DatetimeToTimestamp</span></code></a></td>
+<td>Convert datetime object to timestamp.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="functions">
+<h2>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#pydarkstar.timeutils.str_to_datetime" title="pydarkstar.timeutils.str_to_datetime"><code class="xref py py-obj docutils literal"><span class="pre">pydarkstar.timeutils.str_to_datetime</span></code></a></td>
+<td>Convert string to datetime object.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#pydarkstar.timeutils.datetime_to_str" title="pydarkstar.timeutils.datetime_to_str"><code class="xref py py-obj docutils literal"><span class="pre">pydarkstar.timeutils.datetime_to_str</span></code></a></td>
+<td>Convert datetime object to string.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#pydarkstar.timeutils.datetime_to_timestamp" title="pydarkstar.timeutils.datetime_to_timestamp"><code class="xref py py-obj docutils literal"><span class="pre">pydarkstar.timeutils.datetime_to_timestamp</span></code></a></td>
+<td>Convert datetime object to timestamp.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#pydarkstar.timeutils.timestamp_to_datetime" title="pydarkstar.timeutils.timestamp_to_datetime"><code class="xref py py-obj docutils literal"><span class="pre">pydarkstar.timeutils.timestamp_to_datetime</span></code></a></td>
+<td>Convert timestamp to datetime object.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#pydarkstar.timeutils.datetime" title="pydarkstar.timeutils.datetime"><code class="xref py py-obj docutils literal"><span class="pre">pydarkstar.timeutils.datetime</span></code></a></td>
+<td>Convert anything (within reason) to a datetime object.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#pydarkstar.timeutils.timestamp" title="pydarkstar.timeutils.timestamp"><code class="xref py py-obj docutils literal"><span class="pre">pydarkstar.timeutils.timestamp</span></code></a></td>
+<td>Convert anything (within reason) to a timestamp.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="documentation">
+<h2>Documentation<a class="headerlink" href="#documentation" title="Permalink to this headline">¶</a></h2>
 <dl class="function">
-<dt id="pydarkstar.timeutils.datetime">
-<code class="descclassname">pydarkstar.timeutils.</code><code class="descname">datetime</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pydarkstar/timeutils.html#datetime"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pydarkstar.timeutils.datetime" title="Permalink to this definition">¶</a></dt>
-<dd><p>Convert anything (within reason) to a datetime object.</p>
+<dt id="pydarkstar.timeutils.str_to_datetime">
+<code class="descclassname">pydarkstar.timeutils.</code><code class="descname">str_to_datetime</code><span class="sig-paren">(</span><em>date_string</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pydarkstar/timeutils.html#str_to_datetime"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pydarkstar.timeutils.str_to_datetime" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convert string to datetime object.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>date_string</strong> (<a class="reference external" href="https://docs.python.org/library/functions.html#str" title="(in Python v2.7)"><em>str</em></a>) &#8211; string with format <code class="code docutils literal"><span class="pre">'%m/%d/%Y</span> <span class="pre">%H:%M:%S'</span></code></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">datetime object</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/library/datetime.html#datetime.datetime" title="(in Python v2.7)"><code class="xref py py-class docutils literal"><span class="pre">datetime.datetime</span></code></a></td>
+</tr>
+</tbody>
+</table>
+<div class="highlight-ipython"><div class="highlight"><pre><span class="gp">In [1]: </span><span class="n">pydarkstar</span><span class="o">.</span><span class="n">timeutils</span><span class="o">.</span><span class="n">str_to_datetime</span><span class="p">(</span><span class="s">&#39;01/01/2015 00:00:00&#39;</span><span class="p">)</span>
+<span class="gh">Out[1]: </span><span class="go">datetime.datetime(2015, 1, 1, 0, 0)</span>
+</pre></div>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><a class="reference external" href="https://docs.python.org/library/datetime.html#datetime.datetime.strptime" title="(in Python v2.7)"><code class="xref py py-meth docutils literal"><span class="pre">datetime.datetime.strptime()</span></code></a></p>
+</div>
 </dd></dl>
 
 <dl class="function">
 <dt id="pydarkstar.timeutils.datetime_to_str">
 <code class="descclassname">pydarkstar.timeutils.</code><code class="descname">datetime_to_str</code><span class="sig-paren">(</span><em>datetime_obj</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pydarkstar/timeutils.html#datetime_to_str"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pydarkstar.timeutils.datetime_to_str" title="Permalink to this definition">¶</a></dt>
 <dd><p>Convert datetime object to string.</p>
-</dd></dl>
-
-<dl class="function">
-<dt id="pydarkstar.timeutils.randomdt">
-<code class="descclassname">pydarkstar.timeutils.</code><code class="descname">randomdt</code><span class="sig-paren">(</span><em>month=None</em>, <em>day=None</em>, <em>year=None</em>, <em>hour=None</em>, <em>minute=None</em>, <em>second=None</em>, <em>microsecond=None</em>, <em>tzinfo=None</em>, <em>month_range=(1</em>, <em>12)</em>, <em>day_range=(1</em>, <em>31)</em>, <em>year_range=(1900</em>, <em>2000)</em>, <em>hour_range=(0</em>, <em>23)</em>, <em>minute_range=(0</em>, <em>59)</em>, <em>second_range=(0</em>, <em>59)</em>, <em>microsecond_range=(0</em>, <em>0)</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pydarkstar/timeutils.html#randomdt"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pydarkstar.timeutils.randomdt" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a random datetime object.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>month</strong> &#8211; month</li>
-<li><strong>day</strong> &#8211; day</li>
-<li><strong>year</strong> &#8211; year</li>
-<li><strong>hour</strong> &#8211; hour</li>
-<li><strong>minute</strong> &#8211; minute</li>
-<li><strong>second</strong> &#8211; second</li>
-<li><strong>microsecond</strong> &#8211; microsecond</li>
-<li><strong>tzinfo</strong> &#8211; time zone info</li>
-<li><strong>month_range</strong> &#8211; (min, max) month</li>
-<li><strong>day_range</strong> &#8211; (min, max) day</li>
-<li><strong>year_range</strong> &#8211; (min, max) year</li>
-<li><strong>hour_range</strong> &#8211; (min, max) hour</li>
-<li><strong>minute_range</strong> &#8211; (min, max) minute</li>
-<li><strong>second_range</strong> &#8211; (min, max) second</li>
-<li><strong>microsecond_range</strong> &#8211; (min, max) microsecond</li>
-</ul>
-</td>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>datetime_obj</strong> (<a class="reference external" href="https://docs.python.org/library/datetime.html#datetime.datetime" title="(in Python v2.7)"><code class="xref py py-class docutils literal"><span class="pre">datetime.datetime</span></code></a>) &#8211; datetime object</td>
 </tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">datetime</p>
-</td>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">datetime as string</td>
 </tr>
-<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">py:class:<cite>datetime.datetime</cite></p>
-</td>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/library/functions.html#str" title="(in Python v2.7)">str</a></td>
 </tr>
 </tbody>
 </table>
+<div class="highlight-ipython"><div class="highlight"><pre><span class="gp">In [1]: </span><span class="n">pydarkstar</span><span class="o">.</span><span class="n">timeutils</span><span class="o">.</span><span class="n">datetime_to_str</span><span class="p">(</span><span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="p">(</span><span class="mi">2015</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
+<span class="gh">Out[1]: </span><span class="go">&#39;01/01/2015 00:00:00&#39;</span>
+</pre></div>
+</div>
 <div class="admonition seealso">
 <p class="first admonition-title">See also</p>
-<p class="last">py:class:<cite>datetime.datetime</cite></p>
+<p class="last"><a class="reference external" href="https://docs.python.org/library/datetime.html#datetime.datetime.strftime" title="(in Python v2.7)"><code class="xref py py-meth docutils literal"><span class="pre">datetime.datetime.strftime()</span></code></a></p>
 </div>
 </dd></dl>
 
-<dl class="function">
-<dt id="pydarkstar.timeutils.str_to_datetime">
-<code class="descclassname">pydarkstar.timeutils.</code><code class="descname">str_to_datetime</code><span class="sig-paren">(</span><em>date_string</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pydarkstar/timeutils.html#str_to_datetime"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pydarkstar.timeutils.str_to_datetime" title="Permalink to this definition">¶</a></dt>
-<dd><p>Convert string to datetime object.</p>
+<dl class="class">
+<dt id="pydarkstar.timeutils.DatetimeToTimestamp">
+<em class="property">class </em><code class="descclassname">pydarkstar.timeutils.</code><code class="descname">DatetimeToTimestamp</code><a class="reference internal" href="../_modules/pydarkstar/timeutils.html#DatetimeToTimestamp"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pydarkstar.timeutils.DatetimeToTimestamp" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convert datetime object to timestamp.</p>
+<p>Calculates the total seconds since 01/01/1970.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">Don&#8217;t use this class directly.</p>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><a class="reference internal" href="#pydarkstar.timeutils.datetime_to_timestamp" title="pydarkstar.timeutils.datetime_to_timestamp"><code class="xref py py-data docutils literal"><span class="pre">pydarkstar.timeutils.datetime_to_timestamp</span></code></a></p>
+</div>
+<dl class="attribute">
+<dt id="pydarkstar.timeutils.DatetimeToTimestamp.epoch">
+<code class="descname">epoch</code><em class="property"> = datetime.datetime(1970, 1, 1, 0, 0)</em><a class="headerlink" href="#pydarkstar.timeutils.DatetimeToTimestamp.epoch" title="Permalink to this definition">¶</a></dt>
+<dd><p>01/01/1970</p>
 </dd></dl>
 
-<dl class="function">
-<dt id="pydarkstar.timeutils.timestamp">
-<code class="descclassname">pydarkstar.timeutils.</code><code class="descname">timestamp</code><span class="sig-paren">(</span><em>obj</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pydarkstar/timeutils.html#timestamp"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pydarkstar.timeutils.timestamp" title="Permalink to this definition">¶</a></dt>
-<dd><p>Convert anything (within reason) to a timestamp.</p>
+</dd></dl>
+
+<dl class="data">
+<dt id="pydarkstar.timeutils.datetime_to_timestamp">
+<code class="descclassname">pydarkstar.timeutils.</code><code class="descname">datetime_to_timestamp</code><em class="property"> = &lt;pydarkstar.timeutils.DatetimeToTimestamp object&gt;</em><a class="headerlink" href="#pydarkstar.timeutils.datetime_to_timestamp" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convert datetime object to timestamp.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>datetime_obj</strong> (<a class="reference external" href="https://docs.python.org/library/datetime.html#datetime.datetime" title="(in Python v2.7)"><code class="xref py py-class docutils literal"><span class="pre">datetime.datetime</span></code></a>) &#8211; datetime object</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">datetime as integer</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/library/functions.html#int" title="(in Python v2.7)">int</a></td>
+</tr>
+</tbody>
+</table>
+<div class="highlight-ipython"><div class="highlight"><pre><span class="gp">In [1]: </span><span class="n">pydarkstar</span><span class="o">.</span><span class="n">timeutils</span><span class="o">.</span><span class="n">datetime_to_timestamp</span><span class="p">(</span><span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="p">(</span><span class="mi">2015</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
+<span class="gh">Out[1]: </span><span class="go">1420070400.0</span>
+</pre></div>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><a class="reference external" href="https://docs.python.org/library/datetime.html#datetime.timedelta.total_seconds" title="(in Python v2.7)"><code class="xref py py-meth docutils literal"><span class="pre">datetime.timedelta.total_seconds()</span></code></a></p>
+</div>
 </dd></dl>
 
 <dl class="function">
 <dt id="pydarkstar.timeutils.timestamp_to_datetime">
 <code class="descclassname">pydarkstar.timeutils.</code><code class="descname">timestamp_to_datetime</code><span class="sig-paren">(</span><em>stamp</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pydarkstar/timeutils.html#timestamp_to_datetime"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pydarkstar.timeutils.timestamp_to_datetime" title="Permalink to this definition">¶</a></dt>
 <dd><p>Convert timestamp to datetime object.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>stamp</strong> (<em>int, float</em>) &#8211; seconds since epoch (01/01/1970)</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">datetime object</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/library/datetime.html#datetime.datetime" title="(in Python v2.7)"><code class="xref py py-class docutils literal"><span class="pre">datetime.datetime</span></code></a></td>
+</tr>
+</tbody>
+</table>
+<div class="highlight-ipython"><div class="highlight"><pre><span class="gp">In [1]: </span><span class="n">pydarkstar</span><span class="o">.</span><span class="n">timeutils</span><span class="o">.</span><span class="n">timestamp_to_datetime</span><span class="p">(</span><span class="mi">1420070400</span><span class="p">)</span>
+<span class="gh">Out[1]: </span><span class="go">datetime.datetime(2015, 1, 1, 0, 0)</span>
+</pre></div>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><code class="xref py py-meth docutils literal"><span class="pre">datetime.timedelta.utcfromtimestamp()</span></code></p>
+</div>
 </dd></dl>
 
+<dl class="function">
+<dt id="pydarkstar.timeutils.datetime">
+<code class="descclassname">pydarkstar.timeutils.</code><code class="descname">datetime</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pydarkstar/timeutils.html#datetime"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pydarkstar.timeutils.datetime" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convert anything (within reason) to a datetime object.</p>
+<dl class="docutils">
+<dt>When there are multiple arguments:</dt>
+<dd><ul class="first last simple">
+<li>the <a class="reference external" href="https://docs.python.org/library/datetime.html#datetime.datetime" title="(in Python v2.7)"><code class="xref py py-class docutils literal"><span class="pre">datetime.datetime</span></code></a> constructor is called</li>
+</ul>
+</dd>
+<dt>If there is only one argument:</dt>
+<dd><ul class="first last simple">
+<li>if it is a <a class="reference external" href="https://docs.python.org/library/datetime.html#datetime.datetime" title="(in Python v2.7)"><code class="xref py py-class docutils literal"><span class="pre">datetime.datetime</span></code></a> it is returned</li>
+<li>if it is a <a class="reference external" href="https://docs.python.org/library/functions.html#str" title="(in Python v2.7)"><code class="xref py py-obj docutils literal"><span class="pre">str</span></code></a> it is passed to <a class="reference internal" href="#pydarkstar.timeutils.str_to_datetime" title="pydarkstar.timeutils.str_to_datetime"><code class="xref py py-func docutils literal"><span class="pre">pydarkstar.timeutils.str_to_datetime()</span></code></a></li>
+<li>if it is a <a class="reference external" href="https://docs.python.org/library/functions.html#int" title="(in Python v2.7)"><code class="xref py py-obj docutils literal"><span class="pre">int</span></code></a> it is passed to <a class="reference internal" href="#pydarkstar.timeutils.timestamp_to_datetime" title="pydarkstar.timeutils.timestamp_to_datetime"><code class="xref py py-func docutils literal"><span class="pre">pydarkstar.timeutils.timestamp_to_datetime()</span></code></a></li>
+<li>if it is a <a class="reference external" href="https://docs.python.org/library/functions.html#float" title="(in Python v2.7)"><code class="xref py py-obj docutils literal"><span class="pre">float</span></code></a> it is passed to <a class="reference internal" href="#pydarkstar.timeutils.timestamp_to_datetime" title="pydarkstar.timeutils.timestamp_to_datetime"><code class="xref py py-func docutils literal"><span class="pre">pydarkstar.timeutils.timestamp_to_datetime()</span></code></a></li>
+</ul>
+</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>args</strong> &#8211; positional arguments</li>
+<li><strong>kwargs</strong> &#8211; keyword arguments</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight-ipython"><div class="highlight"><pre><span class="gp">In [1]: </span><span class="n">pydarkstar</span><span class="o">.</span><span class="n">timeutils</span><span class="o">.</span><span class="n">datetime</span><span class="p">(</span><span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="p">(</span><span class="mi">2015</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
+<span class="gh">Out[1]: </span><span class="go">datetime.datetime(2015, 1, 1)</span>
+
+<span class="gp">In [2]: </span><span class="n">pydarkstar</span><span class="o">.</span><span class="n">timeutils</span><span class="o">.</span><span class="n">datetime</span><span class="p">(</span><span class="s">&#39;01/01/2015 00:00:00&#39;</span><span class="p">)</span>
+<span class="gh">Out[2]: </span><span class="go">datetime.datetime(2015, 1, 1)</span>
+
+<span class="gp">In [3]: </span><span class="n">pydarkstar</span><span class="o">.</span><span class="n">timeutils</span><span class="o">.</span><span class="n">datetime</span><span class="p">(</span><span class="mf">1420070400.0</span><span class="p">)</span>
+<span class="gh">Out[3]: </span><span class="go">datetime.datetime(2015, 1, 1)</span>
+
+<span class="gp">In [4]: </span><span class="n">pydarkstar</span><span class="o">.</span><span class="n">timeutils</span><span class="o">.</span><span class="n">datetime</span><span class="p">(</span><span class="mi">1420070400</span><span class="p">)</span>
+<span class="gh">Out[4]: </span><span class="go">datetime.datetime(2015, 1, 1)</span>
+</pre></div>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><a class="reference internal" href="#pydarkstar.timeutils.str_to_datetime" title="pydarkstar.timeutils.str_to_datetime"><code class="xref py py-func docutils literal"><span class="pre">pydarkstar.timeutils.str_to_datetime()</span></code></a>
+<a class="reference internal" href="#pydarkstar.timeutils.timestamp_to_datetime" title="pydarkstar.timeutils.timestamp_to_datetime"><code class="xref py py-func docutils literal"><span class="pre">pydarkstar.timeutils.timestamp_to_datetime()</span></code></a>
+<a class="reference external" href="https://docs.python.org/library/datetime.html#datetime.datetime" title="(in Python v2.7)"><code class="xref py py-class docutils literal"><span class="pre">datetime.datetime</span></code></a></p>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="pydarkstar.timeutils.timestamp">
+<code class="descclassname">pydarkstar.timeutils.</code><code class="descname">timestamp</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pydarkstar/timeutils.html#timestamp"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pydarkstar.timeutils.timestamp" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convert anything (within reason) to a timestamp.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>args</strong> &#8211; positional arguments</li>
+<li><strong>kwargs</strong> &#8211; keyword arguments</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li>Passes arguments to <a class="reference internal" href="#pydarkstar.timeutils.datetime" title="pydarkstar.timeutils.datetime"><code class="xref py py-func docutils literal"><span class="pre">pydarkstar.timeutils.datetime()</span></code></a></li>
+<li>Passes result to <a class="reference internal" href="#pydarkstar.timeutils.datetime_to_timestamp" title="pydarkstar.timeutils.datetime_to_timestamp"><code class="xref py py-data docutils literal"><span class="pre">pydarkstar.timeutils.datetime_to_timestamp</span></code></a></li>
+</ul>
+<div class="highlight-ipython"><div class="highlight"><pre><span class="gp">In [1]: </span><span class="n">pydarkstar</span><span class="o">.</span><span class="n">timeutils</span><span class="o">.</span><span class="n">timestamp</span><span class="p">(</span><span class="s">&#39;01/01/2015 00:00:00&#39;</span><span class="p">)</span>
+<span class="gh">Out[1]: </span><span class="go">1420070400.0</span>
+
+<span class="gp">In [2]: </span><span class="n">pydarkstar</span><span class="o">.</span><span class="n">timeutils</span><span class="o">.</span><span class="n">timestamp</span><span class="p">(</span><span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="p">(</span><span class="mi">2015</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
+<span class="gh">Out[2]: </span><span class="go">1420070400.0</span>
+
+<span class="gp">In [3]: </span><span class="n">pydarkstar</span><span class="o">.</span><span class="n">timeutils</span><span class="o">.</span><span class="n">timestamp</span><span class="p">(</span><span class="mf">1420070400.0</span><span class="p">)</span>
+<span class="gh">Out[3]: </span><span class="go">1420070400.0</span>
+
+<span class="gp">In [4]: </span><span class="n">pydarkstar</span><span class="o">.</span><span class="n">timeutils</span><span class="o">.</span><span class="n">timestamp</span><span class="p">(</span><span class="mi">1420070400</span><span class="p">)</span>
+<span class="gh">Out[4]: </span><span class="go">1420070400.0</span>
+</pre></div>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><a class="reference internal" href="#pydarkstar.timeutils.datetime" title="pydarkstar.timeutils.datetime"><code class="xref py py-func docutils literal"><span class="pre">pydarkstar.timeutils.datetime()</span></code></a>
+<a class="reference internal" href="#pydarkstar.timeutils.datetime_to_timestamp" title="pydarkstar.timeutils.datetime_to_timestamp"><code class="xref py py-data docutils literal"><span class="pre">pydarkstar.timeutils.datetime_to_timestamp</span></code></a></p>
+</div>
+</dd></dl>
+
+</div>
 </div>
 
 

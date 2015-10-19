@@ -9,7 +9,7 @@
     
     <link rel="stylesheet" href="../../../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../../../_static/bootswatch-3.3.4/cyborg/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/bootswatch-3.3.4/cerulean/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../../../_static/bootstrap-sphinx.css" type="text/css" />
     
     <script type="text/javascript">
@@ -201,16 +201,16 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_parse_config</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_parse_args</span><span class="p">(</span><span class="n">args</span><span class="o">=</span><span class="n">remaining_args</span><span class="p">)</span>
 
-    <span class="k">def</span> <span class="nf">_parse_known_args</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">args</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
+<div class="viewcode-block" id="BaseOptions._parse_known_args"><a class="viewcode-back" href="../../../generated/pydarkstar.options.base.html#pydarkstar.options.base.BaseOptions._parse_known_args">[docs]</a>    <span class="k">def</span> <span class="nf">_parse_known_args</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">args</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_parent</span><span class="o">.</span><span class="n">parse_known_args</span><span class="p">(</span><span class="n">args</span><span class="p">,</span> <span class="n">namespace</span><span class="o">=</span><span class="bp">self</span><span class="p">)</span>
-
-    <span class="k">def</span> <span class="nf">_parse_config</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</div>
+<div class="viewcode-block" id="BaseOptions._parse_config"><a class="viewcode-back" href="../../../generated/pydarkstar.options.base.html#pydarkstar.options.base.BaseOptions._parse_config">[docs]</a>    <span class="k">def</span> <span class="nf">_parse_config</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">load</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_parser</span><span class="o">.</span><span class="n">set_defaults</span><span class="p">(</span><span class="o">**</span><span class="bp">self</span><span class="o">.</span><span class="n">dict</span><span class="p">())</span>
-
-    <span class="k">def</span> <span class="nf">_parse_args</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">args</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
+</div>
+<div class="viewcode-block" id="BaseOptions._parse_args"><a class="viewcode-back" href="../../../generated/pydarkstar.options.base.html#pydarkstar.options.base.BaseOptions._parse_args">[docs]</a>    <span class="k">def</span> <span class="nf">_parse_args</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">args</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_parser</span><span class="o">.</span><span class="n">parse_args</span><span class="p">(</span><span class="n">args</span><span class="p">,</span> <span class="n">namespace</span><span class="o">=</span><span class="bp">self</span><span class="p">)</span>
-
+</div>
     <span class="k">def</span> <span class="nf">__setattr__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
         <span class="nb">super</span><span class="p">(</span><span class="n">BaseOptions</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">__setattr__</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span>
         <span class="k">if</span> <span class="ow">not</span> <span class="n">key</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s">&#39;_&#39;</span><span class="p">):</span>

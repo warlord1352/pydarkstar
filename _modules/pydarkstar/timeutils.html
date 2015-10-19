@@ -9,7 +9,7 @@
     
     <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/bootswatch-3.3.4/cyborg/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/bootswatch-3.3.4/cerulean/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/bootstrap-sphinx.css" type="text/css" />
     
     <script type="text/javascript">
@@ -153,70 +153,73 @@
     <div class="col-md-12">
       
   <h1>Source code for pydarkstar.timeutils</h1><div class="highlight"><pre>
+<span class="c"># -*- coding: utf-8 -*-</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">Functions for handling dates and times.</span>
+
+<span class="sd">.. sourcecode:: ipython</span>
+
+<span class="sd">    In [1]: import pydarkstar.timeutils</span>
+
+<span class="sd">The most useful functions are:</span>
+<span class="sd">    * :py:func:`pydarkstar.timeutils.timestamp`</span>
+<span class="sd">    * :py:func:`pydarkstar.timeutils.datetime`</span>
+
+<span class="sd">.. sourcecode:: ipython</span>
+
+<span class="sd">    In [2]: pydarkstar.timeutils.timestamp(&#39;01/01/2015 00:00:00&#39;)</span>
+<span class="sd">    Out[2]: 1420070400.0</span>
+
+<span class="sd">    In [3]: pydarkstar.timeutils.datetime(&#39;01/01/2015 00:00:00&#39;)</span>
+<span class="sd">    Out[3]: datetime.datetime(2015, 1, 1)</span>
+
+<span class="sd">.. seealso:: :py:mod:`datetime`, :py:class:`datetime.datetime`</span>
+
+<span class="sd">Classes</span>
+<span class="sd">-------</span>
+
+<span class="sd">.. autosummary::</span>
+<span class="sd">    :nosignatures:</span>
+
+<span class="sd">    pydarkstar.timeutils.DatetimeToTimestamp</span>
+
+<span class="sd">Functions</span>
+<span class="sd">---------</span>
+
+<span class="sd">.. autosummary::</span>
+<span class="sd">    :nosignatures:</span>
+
+<span class="sd">    pydarkstar.timeutils.str_to_datetime</span>
+<span class="sd">    pydarkstar.timeutils.datetime_to_str</span>
+<span class="sd">    pydarkstar.timeutils.datetime_to_timestamp</span>
+<span class="sd">    pydarkstar.timeutils.timestamp_to_datetime</span>
+<span class="sd">    pydarkstar.timeutils.datetime</span>
+<span class="sd">    pydarkstar.timeutils.timestamp</span>
+
+<span class="sd">Documentation</span>
+<span class="sd">-------------</span>
+
+<span class="sd">.. moduleauthor:: Adam Gagorik &lt;adam.gagorik@gmail.com&gt;</span>
+<span class="sd">&quot;&quot;&quot;</span>
 <span class="kn">import</span> <span class="nn">datetime</span> <span class="kn">as</span> <span class="nn">_datetime</span>
-<span class="kn">import</span> <span class="nn">random</span> <span class="kn">as</span> <span class="nn">_random</span>
 
 
-<div class="viewcode-block" id="randomdt"><a class="viewcode-back" href="../../generated/pydarkstar.timeutils.html#pydarkstar.timeutils.randomdt">[docs]</a><span class="k">def</span> <span class="nf">randomdt</span><span class="p">(</span><span class="n">month</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">day</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">year</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">hour</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">minute</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">second</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span>
-             <span class="n">microsecond</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">tzinfo</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">month_range</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">12</span><span class="p">),</span> <span class="n">day_range</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">31</span><span class="p">),</span>
-             <span class="n">year_range</span><span class="o">=</span><span class="p">(</span><span class="mi">1900</span><span class="p">,</span> <span class="mi">2000</span><span class="p">),</span> <span class="n">hour_range</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">23</span><span class="p">),</span> <span class="n">minute_range</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">59</span><span class="p">),</span>
-             <span class="n">second_range</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">59</span><span class="p">),</span> <span class="n">microsecond_range</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Create a random datetime object.</span>
-
-<span class="sd">    :param month: month</span>
-<span class="sd">    :param day: day</span>
-<span class="sd">    :param year: year</span>
-<span class="sd">    :param hour: hour</span>
-<span class="sd">    :param minute: minute</span>
-<span class="sd">    :param second: second</span>
-<span class="sd">    :param microsecond: microsecond</span>
-<span class="sd">    :param tzinfo: time zone info</span>
-<span class="sd">    :param month_range: (min, max) month</span>
-<span class="sd">    :param day_range: (min, max) day</span>
-<span class="sd">    :param year_range: (min, max) year</span>
-<span class="sd">    :param hour_range: (min, max) hour</span>
-<span class="sd">    :param minute_range: (min, max) minute</span>
-<span class="sd">    :param second_range: (min, max) second</span>
-<span class="sd">    :param microsecond_range: (min, max) microsecond</span>
-<span class="sd">    :return: datetime</span>
-<span class="sd">    :rtype: py:class:`datetime.datetime`</span>
-
-<span class="sd">    .. seealso:: py:class:`datetime.datetime`</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="k">if</span> <span class="n">month</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
-        <span class="n">month</span> <span class="o">=</span> <span class="n">_random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="o">*</span><span class="n">month_range</span><span class="p">)</span>
-
-    <span class="k">if</span> <span class="n">day</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
-        <span class="n">day</span> <span class="o">=</span> <span class="n">_random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="o">*</span><span class="n">day_range</span><span class="p">)</span>
-
-    <span class="k">if</span> <span class="n">year</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
-        <span class="n">year</span> <span class="o">=</span> <span class="n">_random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="o">*</span><span class="n">year_range</span><span class="p">)</span>
-
-    <span class="k">if</span> <span class="n">hour</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
-        <span class="n">hour</span> <span class="o">=</span> <span class="n">_random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="o">*</span><span class="n">hour_range</span><span class="p">)</span>
-
-    <span class="k">if</span> <span class="n">minute</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
-        <span class="n">minute</span> <span class="o">=</span> <span class="n">_random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="o">*</span><span class="n">minute_range</span><span class="p">)</span>
-
-    <span class="k">if</span> <span class="n">second</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
-        <span class="n">second</span> <span class="o">=</span> <span class="n">_random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="o">*</span><span class="n">second_range</span><span class="p">)</span>
-
-    <span class="k">if</span> <span class="n">microsecond</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
-        <span class="n">microsecond</span> <span class="o">=</span> <span class="n">_random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="o">*</span><span class="n">microsecond_range</span><span class="p">)</span>
-
-    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
-        <span class="k">try</span><span class="p">:</span>
-            <span class="k">return</span> <span class="n">_datetime</span><span class="o">.</span><span class="n">datetime</span><span class="p">(</span><span class="n">year</span><span class="p">,</span> <span class="n">month</span><span class="p">,</span> <span class="n">day</span> <span class="o">-</span> <span class="n">i</span><span class="p">,</span> <span class="n">hour</span><span class="p">,</span> <span class="n">minute</span><span class="p">,</span> <span class="n">second</span><span class="p">,</span> <span class="n">microsecond</span><span class="p">,</span> <span class="n">tzinfo</span><span class="p">)</span>
-        <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
-            <span class="k">pass</span>
-
-    <span class="k">return</span> <span class="n">_datetime</span><span class="o">.</span><span class="n">datetime</span><span class="p">(</span><span class="n">year</span><span class="p">,</span> <span class="n">month</span><span class="p">,</span> <span class="n">day</span> <span class="o">-</span> <span class="mi">3</span><span class="p">,</span> <span class="n">hour</span><span class="p">,</span> <span class="n">minute</span><span class="p">,</span> <span class="n">second</span><span class="p">,</span> <span class="n">microsecond</span><span class="p">)</span>
-
-</div>
 <div class="viewcode-block" id="str_to_datetime"><a class="viewcode-back" href="../../generated/pydarkstar.timeutils.html#pydarkstar.timeutils.str_to_datetime">[docs]</a><span class="k">def</span> <span class="nf">str_to_datetime</span><span class="p">(</span><span class="n">date_string</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Convert string to datetime object.</span>
+
+<span class="sd">    :param date_string: string with format :code:`&#39;%m/%d/%Y %H:%M:%S&#39;`</span>
+<span class="sd">    :type date_string: str</span>
+
+<span class="sd">    :return: datetime object</span>
+<span class="sd">    :rtype: :py:class:`datetime.datetime`</span>
+
+<span class="sd">    .. sourcecode:: ipython</span>
+
+<span class="sd">        In [1]: pydarkstar.timeutils.str_to_datetime(&#39;01/01/2015 00:00:00&#39;)</span>
+<span class="sd">        Out[1]: datetime.datetime(2015, 1, 1, 0, 0)</span>
+
+<span class="sd">    .. seealso:: :py:meth:`datetime.datetime.strptime`</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">return</span> <span class="n">_datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">strptime</span><span class="p">(</span><span class="n">date_string</span><span class="p">,</span> <span class="s">&#39;%m/</span><span class="si">%d</span><span class="s">/%Y %H:%M:%S&#39;</span><span class="p">)</span>
 
@@ -224,14 +227,34 @@
 <div class="viewcode-block" id="datetime_to_str"><a class="viewcode-back" href="../../generated/pydarkstar.timeutils.html#pydarkstar.timeutils.datetime_to_str">[docs]</a><span class="k">def</span> <span class="nf">datetime_to_str</span><span class="p">(</span><span class="n">datetime_obj</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Convert datetime object to string.</span>
+
+<span class="sd">    :param datetime_obj: datetime object</span>
+<span class="sd">    :type datetime_obj: :py:class:`datetime.datetime`</span>
+
+<span class="sd">    :return: datetime as string</span>
+<span class="sd">    :rtype: str</span>
+
+<span class="sd">    .. sourcecode:: ipython</span>
+
+<span class="sd">        In [1]: pydarkstar.timeutils.datetime_to_str(datetime.datetime(2015, 1, 1))</span>
+<span class="sd">        Out[1]: &#39;01/01/2015 00:00:00&#39;</span>
+
+<span class="sd">    .. seealso:: :py:meth:`datetime.datetime.strftime`</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="k">return</span> <span class="s">&#39;{dt.month:&gt;02}/{dt.day:&gt;02}/{dt.year} {dt.hour:&gt;02}:{dt.minute:&gt;02}:{dt.second:&gt;02}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">dt</span><span class="o">=</span><span class="n">datetime_obj</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">datetime_obj</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s">&#39;%m/</span><span class="si">%d</span><span class="s">/%Y %H:%M:%S&#39;</span><span class="p">)</span>
 
 </div>
 <div class="viewcode-block" id="DatetimeToTimestamp"><a class="viewcode-back" href="../../generated/pydarkstar.timeutils.html#pydarkstar.timeutils.DatetimeToTimestamp">[docs]</a><span class="k">class</span> <span class="nc">DatetimeToTimestamp</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Convert datetime object to timestamp.</span>
+
+<span class="sd">    Calculates the total seconds since 01/01/1970.</span>
+
+<span class="sd">    .. warning:: Don&#39;t use this class directly.</span>
+
+<span class="sd">    .. seealso:: :py:data:`pydarkstar.timeutils.datetime_to_timestamp`</span>
 <span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c">#: 01/01/1970</span>
     <span class="n">epoch</span> <span class="o">=</span> <span class="n">_datetime</span><span class="o">.</span><span class="n">datetime</span><span class="p">(</span><span class="mi">1970</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
 
     <span class="k">def</span> <span class="nf">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">datetime_obj</span><span class="p">):</span>
@@ -239,11 +262,40 @@
 
 </div>
 <span class="n">datetime_to_timestamp</span> <span class="o">=</span> <span class="n">DatetimeToTimestamp</span><span class="p">()</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">Convert datetime object to timestamp.</span>
+
+<span class="sd">:param datetime_obj: datetime object</span>
+<span class="sd">:type datetime_obj: :py:class:`datetime.datetime`</span>
+
+<span class="sd">:return: datetime as integer</span>
+<span class="sd">:rtype: int</span>
+
+<span class="sd">.. sourcecode:: ipython</span>
+
+<span class="sd">    In [1]: pydarkstar.timeutils.datetime_to_timestamp(datetime.datetime(2015, 1, 1, 0, 0))</span>
+<span class="sd">    Out[1]: 1420070400.0</span>
+
+<span class="sd">.. seealso:: :py:meth:`datetime.timedelta.total_seconds`</span>
+<span class="sd">&quot;&quot;&quot;</span>
 
 
 <div class="viewcode-block" id="timestamp_to_datetime"><a class="viewcode-back" href="../../generated/pydarkstar.timeutils.html#pydarkstar.timeutils.timestamp_to_datetime">[docs]</a><span class="k">def</span> <span class="nf">timestamp_to_datetime</span><span class="p">(</span><span class="n">stamp</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Convert timestamp to datetime object.</span>
+
+<span class="sd">    :param stamp: seconds since epoch (01/01/1970)</span>
+<span class="sd">    :type stamp: int, float</span>
+
+<span class="sd">    :return: datetime object</span>
+<span class="sd">    :rtype: :py:class:`datetime.datetime`</span>
+
+<span class="sd">    .. sourcecode:: ipython</span>
+
+<span class="sd">        In [1]: pydarkstar.timeutils.timestamp_to_datetime(1420070400)</span>
+<span class="sd">        Out[1]: datetime.datetime(2015, 1, 1, 0, 0)</span>
+
+<span class="sd">    .. seealso:: :py:meth:`datetime.timedelta.utcfromtimestamp`</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">return</span> <span class="n">_datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">utcfromtimestamp</span><span class="p">(</span><span class="n">stamp</span><span class="p">)</span>
 
@@ -251,6 +303,38 @@
 <div class="viewcode-block" id="datetime"><a class="viewcode-back" href="../../generated/pydarkstar.timeutils.html#pydarkstar.timeutils.datetime">[docs]</a><span class="k">def</span> <span class="nf">datetime</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Convert anything (within reason) to a datetime object.</span>
+
+<span class="sd">    When there are multiple arguments:</span>
+<span class="sd">        * the :py:class:`datetime.datetime` constructor is called</span>
+
+<span class="sd">    If there is only one argument:</span>
+<span class="sd">        * if it is a :py:class:`datetime.datetime` it is returned</span>
+<span class="sd">        * if it is a :py:obj:`str` it is passed to :py:func:`pydarkstar.timeutils.str_to_datetime`</span>
+<span class="sd">        * if it is a :py:obj:`int` it is passed to :py:func:`pydarkstar.timeutils.timestamp_to_datetime`</span>
+<span class="sd">        * if it is a :py:obj:`float` it is passed to :py:func:`pydarkstar.timeutils.timestamp_to_datetime`</span>
+
+<span class="sd">    :param args: positional arguments</span>
+<span class="sd">    :param kwargs: keyword arguments</span>
+
+<span class="sd">    .. sourcecode:: ipython</span>
+
+<span class="sd">        In [1]: pydarkstar.timeutils.datetime(datetime.datetime(2015, 1, 1))</span>
+<span class="sd">        Out[1]: datetime.datetime(2015, 1, 1)</span>
+
+<span class="sd">        In [2]: pydarkstar.timeutils.datetime(&#39;01/01/2015 00:00:00&#39;)</span>
+<span class="sd">        Out[2]: datetime.datetime(2015, 1, 1)</span>
+
+<span class="sd">        In [3]: pydarkstar.timeutils.datetime(1420070400.0)</span>
+<span class="sd">        Out[3]: datetime.datetime(2015, 1, 1)</span>
+
+<span class="sd">        In [4]: pydarkstar.timeutils.datetime(1420070400)</span>
+<span class="sd">        Out[4]: datetime.datetime(2015, 1, 1)</span>
+
+<span class="sd">    .. seealso::</span>
+
+<span class="sd">        :py:func:`pydarkstar.timeutils.str_to_datetime`</span>
+<span class="sd">        :py:func:`pydarkstar.timeutils.timestamp_to_datetime`</span>
+<span class="sd">        :py:class:`datetime.datetime`</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">args</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">1</span> <span class="ow">or</span> <span class="n">kwargs</span><span class="p">:</span>
         <span class="k">return</span> <span class="n">_datetime</span><span class="o">.</span><span class="n">datetime</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
@@ -275,11 +359,36 @@
     <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s">&#39;unknown type: </span><span class="si">%s</span><span class="s">&#39;</span> <span class="o">%</span> <span class="nb">type</span><span class="p">(</span><span class="n">obj</span><span class="p">))</span>
 
 </div>
-<div class="viewcode-block" id="timestamp"><a class="viewcode-back" href="../../generated/pydarkstar.timeutils.html#pydarkstar.timeutils.timestamp">[docs]</a><span class="k">def</span> <span class="nf">timestamp</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<div class="viewcode-block" id="timestamp"><a class="viewcode-back" href="../../generated/pydarkstar.timeutils.html#pydarkstar.timeutils.timestamp">[docs]</a><span class="k">def</span> <span class="nf">timestamp</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Convert anything (within reason) to a timestamp.</span>
+
+<span class="sd">    :param args: positional arguments</span>
+<span class="sd">    :param kwargs: keyword arguments</span>
+
+<span class="sd">    * Passes arguments to :py:func:`pydarkstar.timeutils.datetime`</span>
+<span class="sd">    * Passes result to :py:data:`pydarkstar.timeutils.datetime_to_timestamp`</span>
+
+<span class="sd">    .. sourcecode:: ipython</span>
+
+<span class="sd">        In [1]: pydarkstar.timeutils.timestamp(&#39;01/01/2015 00:00:00&#39;)</span>
+<span class="sd">        Out[1]: 1420070400.0</span>
+
+<span class="sd">        In [2]: pydarkstar.timeutils.timestamp(datetime.datetime(2015, 1, 1))</span>
+<span class="sd">        Out[2]: 1420070400.0</span>
+
+<span class="sd">        In [3]: pydarkstar.timeutils.timestamp(1420070400.0)</span>
+<span class="sd">        Out[3]: 1420070400.0</span>
+
+<span class="sd">        In [4]: pydarkstar.timeutils.timestamp(1420070400)</span>
+<span class="sd">        Out[4]: 1420070400.0</span>
+
+<span class="sd">    .. seealso::</span>
+
+<span class="sd">        :py:func:`pydarkstar.timeutils.datetime`</span>
+<span class="sd">        :py:data:`pydarkstar.timeutils.datetime_to_timestamp`</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="k">return</span> <span class="n">datetime_to_timestamp</span><span class="p">(</span><span class="n">datetime</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">datetime_to_timestamp</span><span class="p">(</span><span class="n">datetime</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">))</span>
 
 </div>
 <span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">&#39;__main__&#39;</span><span class="p">:</span>

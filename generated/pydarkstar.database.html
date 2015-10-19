@@ -9,7 +9,7 @@
     
     <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/bootswatch-3.3.4/cyborg/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootswatch-3.3.4/cerulean/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
     
     <script type="text/javascript">
@@ -183,10 +183,28 @@
 </tr>
 </tbody>
 </table>
-<dl class="staticmethod">
-<dt id="pydarkstar.database.Database.format_url">
-<em class="property">static </em><code class="descname">format_url</code><span class="sig-paren">(</span><em>dialect</em>, <em>driver</em>, <em>hostname</em>, <em>database</em>, <em>username</em>, <em>password</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pydarkstar/database.html#Database.format_url"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pydarkstar.database.Database.format_url" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create connection url.</p>
+<dl class="method">
+<dt id="pydarkstar.database.Database.session">
+<code class="descname">session</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pydarkstar/database.html#Database.session"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pydarkstar.database.Database.session" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create session.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydarkstar.database.Database.scoped_session">
+<code class="descname">scoped_session</code><span class="sig-paren">(</span><em>rollback=True</em>, <em>fail=False</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pydarkstar/database.html#Database.scoped_session"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pydarkstar.database.Database.scoped_session" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provide a transactional scope around a series of operations.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>rollback</strong> (<a class="reference external" href="https://docs.python.org/library/functions.html#bool" title="(in Python v2.7)"><em>bool</em></a>) &#8211; rollback transactions after catch</li>
+<li><strong>fail</strong> (<a class="reference external" href="https://docs.python.org/library/functions.html#bool" title="(in Python v2.7)"><em>bool</em></a>) &#8211; raise error after catch</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 <dl class="classmethod">
@@ -209,28 +227,10 @@
 </table>
 </dd></dl>
 
-<dl class="method">
-<dt id="pydarkstar.database.Database.scoped_session">
-<code class="descname">scoped_session</code><span class="sig-paren">(</span><em>rollback=True</em>, <em>fail=False</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pydarkstar/database.html#Database.scoped_session"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pydarkstar.database.Database.scoped_session" title="Permalink to this definition">¶</a></dt>
-<dd><p>Provide a transactional scope around a series of operations.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>rollback</strong> (<a class="reference external" href="https://docs.python.org/library/functions.html#bool" title="(in Python v2.7)"><em>bool</em></a>) &#8211; rollback transactions after catch</li>
-<li><strong>fail</strong> (<a class="reference external" href="https://docs.python.org/library/functions.html#bool" title="(in Python v2.7)"><em>bool</em></a>) &#8211; raise error after catch</li>
-</ul>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="method">
-<dt id="pydarkstar.database.Database.session">
-<code class="descname">session</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pydarkstar/database.html#Database.session"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pydarkstar.database.Database.session" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create session.</p>
+<dl class="staticmethod">
+<dt id="pydarkstar.database.Database.format_url">
+<em class="property">static </em><code class="descname">format_url</code><span class="sig-paren">(</span><em>dialect</em>, <em>driver</em>, <em>hostname</em>, <em>database</em>, <em>username</em>, <em>password</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pydarkstar/database.html#Database.format_url"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pydarkstar.database.Database.format_url" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create connection url.</p>
 </dd></dl>
 
 </dd></dl>

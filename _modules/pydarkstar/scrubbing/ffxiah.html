@@ -9,7 +9,7 @@
     
     <link rel="stylesheet" href="../../../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../../../_static/bootswatch-3.3.4/cyborg/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/bootswatch-3.3.4/cerulean/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../../../_static/bootstrap-sphinx.css" type="text/css" />
     
     <script type="text/javascript">
@@ -293,7 +293,7 @@
             <span class="bp">self</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s">&#39;data count = </span><span class="si">%d</span><span class="s">&#39;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">))</span>
             <span class="k">return</span> <span class="n">data</span>
 </div>
-    <span class="k">def</span> <span class="nf">_load_item_ids</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="FFXIAHScrubber._load_item_ids"><a class="viewcode-back" href="../../../generated/pydarkstar.scrubbing.ffxiah.html#pydarkstar.scrubbing.ffxiah.FFXIAHScrubber._load_item_ids">[docs]</a>    <span class="k">def</span> <span class="nf">_load_item_ids</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Load item ids from pkl file.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
@@ -304,8 +304,8 @@
         <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_pkl_item_ids</span><span class="p">,</span> <span class="s">&#39;rb&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">handle</span><span class="p">:</span>
             <span class="n">ids</span> <span class="o">=</span> <span class="n">pickle</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">handle</span><span class="p">)</span>
         <span class="k">return</span> <span class="nb">set</span><span class="p">(</span><span class="n">ids</span><span class="p">)</span>
-
-    <span class="k">def</span> <span class="nf">_load_item_dat</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</div>
+<div class="viewcode-block" id="FFXIAHScrubber._load_item_dat"><a class="viewcode-back" href="../../../generated/pydarkstar.scrubbing.ffxiah.html#pydarkstar.scrubbing.ffxiah.FFXIAHScrubber._load_item_dat">[docs]</a>    <span class="k">def</span> <span class="nf">_load_item_dat</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Load item dat from pkl file.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
@@ -316,8 +316,8 @@
         <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_pkl_item_dat</span><span class="p">,</span> <span class="s">&#39;rb&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">handle</span><span class="p">:</span>
             <span class="n">dat</span> <span class="o">=</span> <span class="n">pickle</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">handle</span><span class="p">)</span>
         <span class="k">return</span> <span class="nb">dict</span><span class="p">(</span><span class="n">dat</span><span class="p">)</span>
-
-    <span class="k">def</span> <span class="nf">_save_item_ids</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ids</span><span class="p">):</span>
+</div>
+<div class="viewcode-block" id="FFXIAHScrubber._save_item_ids"><a class="viewcode-back" href="../../../generated/pydarkstar.scrubbing.ffxiah.html#pydarkstar.scrubbing.ffxiah.FFXIAHScrubber._save_item_ids">[docs]</a>    <span class="k">def</span> <span class="nf">_save_item_ids</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ids</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        save item ids to pkl file.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
@@ -325,8 +325,8 @@
             <span class="bp">self</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s">&#39;save </span><span class="si">%s</span><span class="s">&#39;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_pkl_item_ids</span><span class="p">)</span>
             <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_pkl_item_ids</span><span class="p">,</span> <span class="s">&#39;wb&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">handle</span><span class="p">:</span>
                 <span class="n">pickle</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">ids</span><span class="p">,</span> <span class="n">handle</span><span class="p">,</span> <span class="n">pickle</span><span class="o">.</span><span class="n">HIGHEST_PROTOCOL</span><span class="p">)</span>
-
-    <span class="k">def</span> <span class="nf">_save_item_dat</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dat</span><span class="p">):</span>
+</div>
+<div class="viewcode-block" id="FFXIAHScrubber._save_item_dat"><a class="viewcode-back" href="../../../generated/pydarkstar.scrubbing.ffxiah.html#pydarkstar.scrubbing.ffxiah.FFXIAHScrubber._save_item_dat">[docs]</a>    <span class="k">def</span> <span class="nf">_save_item_dat</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dat</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        save item dat to pkl file.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
@@ -335,8 +335,8 @@
             <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_pkl_item_dat</span><span class="p">,</span> <span class="s">&#39;wb&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">handle</span><span class="p">:</span>
                 <span class="n">pickle</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">dat</span><span class="p">,</span> <span class="n">handle</span><span class="p">,</span> <span class="n">pickle</span><span class="o">.</span><span class="n">HIGHEST_PROTOCOL</span><span class="p">)</span>
 
-    <span class="c"># step 1</span>
-    <span class="k">def</span> <span class="nf">_get_category_urls</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="c"># step 1</span></div>
+<div class="viewcode-block" id="FFXIAHScrubber._get_category_urls"><a class="viewcode-back" href="../../../generated/pydarkstar.scrubbing.ffxiah.html#pydarkstar.scrubbing.ffxiah.FFXIAHScrubber._get_category_urls">[docs]</a>    <span class="k">def</span> <span class="nf">_get_category_urls</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Parse http://www.ffxiah.com/browse to get URLs of the</span>
 <span class="sd">         form http://www.ffxiah.com/{CategoryNumber}</span>
@@ -372,8 +372,8 @@
 
         <span class="k">return</span> <span class="n">urls</span>
 
-    <span class="c"># step 2</span>
-    <span class="k">def</span> <span class="nf">_get_itemids</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">urls</span><span class="p">):</span>
+    <span class="c"># step 2</span></div>
+<div class="viewcode-block" id="FFXIAHScrubber._get_itemids"><a class="viewcode-back" href="../../../generated/pydarkstar.scrubbing.ffxiah.html#pydarkstar.scrubbing.ffxiah.FFXIAHScrubber._get_itemids">[docs]</a>    <span class="k">def</span> <span class="nf">_get_itemids</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">urls</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Scrub urls of the form http://www.ffxiah.com/{CategoryNumber} for itemids.</span>
 
@@ -388,8 +388,8 @@
 
         <span class="k">return</span> <span class="n">items</span>
 
-    <span class="c"># step 2.1</span>
-    <span class="k">def</span> <span class="nf">_get_itemids_for_category_url</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">url</span><span class="p">):</span>
+    <span class="c"># step 2.1</span></div>
+<div class="viewcode-block" id="FFXIAHScrubber._get_itemids_for_category_url"><a class="viewcode-back" href="../../../generated/pydarkstar.scrubbing.ffxiah.html#pydarkstar.scrubbing.ffxiah.FFXIAHScrubber._get_itemids_for_category_url">[docs]</a>    <span class="k">def</span> <span class="nf">_get_itemids_for_category_url</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">url</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Scrub url of the form http://www.ffxiah.com/{CategoryNumber} for itemids.</span>
 
@@ -450,8 +450,8 @@
 
         <span class="k">return</span> <span class="n">items</span>
 
-    <span class="c"># step 3</span>
-    <span class="k">def</span> <span class="nf">_get_item_data</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">itemids</span><span class="p">,</span> <span class="n">threads</span><span class="o">=-</span><span class="mi">1</span><span class="p">):</span>
+    <span class="c"># step 3</span></div>
+<div class="viewcode-block" id="FFXIAHScrubber._get_item_data"><a class="viewcode-back" href="../../../generated/pydarkstar.scrubbing.ffxiah.html#pydarkstar.scrubbing.ffxiah.FFXIAHScrubber._get_item_data">[docs]</a>    <span class="k">def</span> <span class="nf">_get_item_data</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">itemids</span><span class="p">,</span> <span class="n">threads</span><span class="o">=-</span><span class="mi">1</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Get metadata for many items.</span>
 
@@ -486,8 +486,8 @@
 
         <span class="k">return</span> <span class="n">data</span>
 
-    <span class="c"># step 3.1</span>
-    <span class="k">def</span> <span class="nf">_get_item_data_for_itemid</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">itemid</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">total</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
+    <span class="c"># step 3.1</span></div>
+<div class="viewcode-block" id="FFXIAHScrubber._get_item_data_for_itemid"><a class="viewcode-back" href="../../../generated/pydarkstar.scrubbing.ffxiah.html#pydarkstar.scrubbing.ffxiah.FFXIAHScrubber._get_item_data_for_itemid">[docs]</a>    <span class="k">def</span> <span class="nf">_get_item_data_for_itemid</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">itemid</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">total</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Get metadata for single item.</span>
 
@@ -531,13 +531,13 @@
         <span class="n">data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_fix_stack_price_key</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
 
         <span class="k">return</span> <span class="n">data</span>
-
-    <span class="k">def</span> <span class="nf">_get_item_data_for_itemid_map</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">args</span><span class="p">):</span>
+</div>
+<div class="viewcode-block" id="FFXIAHScrubber._get_item_data_for_itemid_map"><a class="viewcode-back" href="../../../generated/pydarkstar.scrubbing.ffxiah.html#pydarkstar.scrubbing.ffxiah.FFXIAHScrubber._get_item_data_for_itemid_map">[docs]</a>    <span class="k">def</span> <span class="nf">_get_item_data_for_itemid_map</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">args</span><span class="p">):</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_item_data_for_itemid</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">)</span>
 
-    <span class="c"># step 3.1.1</span>
+    <span class="c"># step 3.1.1</span></div>
     <span class="nd">@staticmethod</span>
-    <span class="k">def</span> <span class="nf">_create_item_url</span><span class="p">(</span><span class="n">itemid</span><span class="p">):</span>
+<div class="viewcode-block" id="FFXIAHScrubber._create_item_url"><a class="viewcode-back" href="../../../generated/pydarkstar.scrubbing.ffxiah.html#pydarkstar.scrubbing.ffxiah.FFXIAHScrubber._create_item_url">[docs]</a>    <span class="k">def</span> <span class="nf">_create_item_url</span><span class="p">(</span><span class="n">itemid</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Create URL from itemid.</span>
 
@@ -546,9 +546,9 @@
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="s">&#39;http://www.ffxiah.com/item/{item}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">item</span><span class="o">=</span><span class="n">itemid</span><span class="p">)</span>
 
-    <span class="c"># step 3.1.2</span>
+    <span class="c"># step 3.1.2</span></div>
     <span class="nd">@staticmethod</span>
-    <span class="k">def</span> <span class="nf">_fix_stack_price_key</span><span class="p">(</span><span class="n">data</span><span class="p">):</span>
+<div class="viewcode-block" id="FFXIAHScrubber._fix_stack_price_key"><a class="viewcode-back" href="../../../generated/pydarkstar.scrubbing.ffxiah.html#pydarkstar.scrubbing.ffxiah.FFXIAHScrubber._fix_stack_price_key">[docs]</a>    <span class="k">def</span> <span class="nf">_fix_stack_price_key</span><span class="p">(</span><span class="n">data</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Fix dictionary key.</span>
 
@@ -563,7 +563,7 @@
 
         <span class="k">return</span> <span class="n">data</span>
 
-</div>
+</div></div>
 <div class="viewcode-block" id="extract"><a class="viewcode-back" href="../../../generated/pydarkstar.scrubbing.ffxiah.html#pydarkstar.scrubbing.ffxiah.extract">[docs]</a><span class="k">def</span> <span class="nf">extract</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">itemid</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Extract item data from scrubbed info.</span>

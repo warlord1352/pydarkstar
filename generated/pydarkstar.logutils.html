@@ -9,7 +9,7 @@
     
     <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/bootswatch-3.3.4/cyborg/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootswatch-3.3.4/cerulean/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
     
     <script type="text/javascript">
@@ -171,13 +171,44 @@
       
   <div class="section" id="module-pydarkstar.logutils">
 <span id="logutils"></span><h1>logutils<a class="headerlink" href="#module-pydarkstar.logutils" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="pydarkstar.logutils.set_level">
+<code class="descclassname">pydarkstar.logutils.</code><code class="descname">set_level</code><span class="sig-paren">(</span><em>level</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pydarkstar/logutils.html#set_level"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pydarkstar.logutils.set_level" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="pydarkstar.logutils.set_debug">
+<code class="descclassname">pydarkstar.logutils.</code><code class="descname">set_debug</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pydarkstar/logutils.html#set_debug"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pydarkstar.logutils.set_debug" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="pydarkstar.logutils.set_error">
+<code class="descclassname">pydarkstar.logutils.</code><code class="descname">set_error</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pydarkstar/logutils.html#set_error"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pydarkstar.logutils.set_error" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="pydarkstar.logutils.set_info">
+<code class="descclassname">pydarkstar.logutils.</code><code class="descname">set_info</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pydarkstar/logutils.html#set_info"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pydarkstar.logutils.set_info" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="pydarkstar.logutils.custom_warning_format">
+<code class="descclassname">pydarkstar.logutils.</code><code class="descname">custom_warning_format</code><span class="sig-paren">(</span><em>message</em>, <em>category</em>, <em>filename</em>, <em>lineno</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pydarkstar/logutils.html#custom_warning_format"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pydarkstar.logutils.custom_warning_format" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="pydarkstar.logutils.capture">
+<code class="descclassname">pydarkstar.logutils.</code><code class="descname">capture</code><span class="sig-paren">(</span><em>capture_warnings=True</em>, <em>fail=False</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pydarkstar/logutils.html#capture"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pydarkstar.logutils.capture" title="Permalink to this definition">¶</a></dt>
+<dd><p>Log exceptions and warnings.</p>
+</dd></dl>
+
 <dl class="class">
 <dt id="pydarkstar.logutils.LoggingObject">
 <em class="property">class </em><code class="descclassname">pydarkstar.logutils.</code><code class="descname">LoggingObject</code><a class="reference internal" href="../_modules/pydarkstar/logutils.html#LoggingObject"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pydarkstar.logutils.LoggingObject" title="Permalink to this definition">¶</a></dt>
 <dd><p>Inherit from this to get a bunch of logging functions as class methods.</p>
 <dl class="method">
-<dt id="pydarkstar.logutils.LoggingObject.capture">
-<code class="descname">capture</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pydarkstar/logutils.html#LoggingObject.capture"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pydarkstar.logutils.LoggingObject.capture" title="Permalink to this definition">¶</a></dt>
+<dt id="pydarkstar.logutils.LoggingObject._init_notify">
+<code class="descname">_init_notify</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pydarkstar/logutils.html#LoggingObject._init_notify"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pydarkstar.logutils.LoggingObject._init_notify" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
@@ -191,11 +222,6 @@
 <dd></dd></dl>
 
 <dl class="method">
-<dt id="pydarkstar.logutils.LoggingObject.exception">
-<code class="descname">exception</code><span class="sig-paren">(</span><em>msg</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pydarkstar/logutils.html#LoggingObject.exception"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pydarkstar.logutils.LoggingObject.exception" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="method">
 <dt id="pydarkstar.logutils.LoggingObject.fatal">
 <code class="descname">fatal</code><span class="sig-paren">(</span><em>msg</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pydarkstar/logutils.html#LoggingObject.fatal"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pydarkstar.logutils.LoggingObject.fatal" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
@@ -206,8 +232,23 @@
 <dd></dd></dl>
 
 <dl class="method">
+<dt id="pydarkstar.logutils.LoggingObject.exception">
+<code class="descname">exception</code><span class="sig-paren">(</span><em>msg</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pydarkstar/logutils.html#LoggingObject.exception"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pydarkstar.logutils.LoggingObject.exception" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
 <dt id="pydarkstar.logutils.LoggingObject.log">
 <code class="descname">log</code><span class="sig-paren">(</span><em>level</em>, <em>msg</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pydarkstar/logutils.html#LoggingObject.log"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pydarkstar.logutils.LoggingObject.log" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydarkstar.logutils.LoggingObject._preprocess">
+<code class="descname">_preprocess</code><span class="sig-paren">(</span><em>msg</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pydarkstar/logutils.html#LoggingObject._preprocess"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pydarkstar.logutils.LoggingObject._preprocess" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydarkstar.logutils.LoggingObject.capture">
+<code class="descname">capture</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pydarkstar/logutils.html#LoggingObject.capture"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pydarkstar.logutils.LoggingObject.capture" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -237,37 +278,6 @@
 <code class="descclassname">pydarkstar.logutils.</code><code class="descname">basic_config</code><span class="sig-paren">(</span><em>verbose=False</em>, <em>silent=False</em>, <em>fname=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pydarkstar/logutils.html#basic_config"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pydarkstar.logutils.basic_config" title="Permalink to this definition">¶</a></dt>
 <dd><p>Setup logging.</p>
 </dd></dl>
-
-<dl class="function">
-<dt id="pydarkstar.logutils.capture">
-<code class="descclassname">pydarkstar.logutils.</code><code class="descname">capture</code><span class="sig-paren">(</span><em>capture_warnings=True</em>, <em>fail=False</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pydarkstar/logutils.html#capture"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pydarkstar.logutils.capture" title="Permalink to this definition">¶</a></dt>
-<dd><p>Log exceptions and warnings.</p>
-</dd></dl>
-
-<dl class="function">
-<dt id="pydarkstar.logutils.custom_warning_format">
-<code class="descclassname">pydarkstar.logutils.</code><code class="descname">custom_warning_format</code><span class="sig-paren">(</span><em>message</em>, <em>category</em>, <em>filename</em>, <em>lineno</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pydarkstar/logutils.html#custom_warning_format"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pydarkstar.logutils.custom_warning_format" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="function">
-<dt id="pydarkstar.logutils.set_debug">
-<code class="descclassname">pydarkstar.logutils.</code><code class="descname">set_debug</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pydarkstar/logutils.html#set_debug"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pydarkstar.logutils.set_debug" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="function">
-<dt id="pydarkstar.logutils.set_error">
-<code class="descclassname">pydarkstar.logutils.</code><code class="descname">set_error</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pydarkstar/logutils.html#set_error"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pydarkstar.logutils.set_error" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="function">
-<dt id="pydarkstar.logutils.set_info">
-<code class="descclassname">pydarkstar.logutils.</code><code class="descname">set_info</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pydarkstar/logutils.html#set_info"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pydarkstar.logutils.set_info" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="function">
-<dt id="pydarkstar.logutils.set_level">
-<code class="descclassname">pydarkstar.logutils.</code><code class="descname">set_level</code><span class="sig-paren">(</span><em>level</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pydarkstar/logutils.html#set_level"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pydarkstar.logutils.set_level" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
 
 </div>
 

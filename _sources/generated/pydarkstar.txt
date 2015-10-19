@@ -19,12 +19,13 @@ Submodules
 ----------
 
 .. toctree::
+    :maxdepth: 1
 
-   pydarkstar.common
-   pydarkstar.darkobject
-   pydarkstar.database
-   pydarkstar.item
-   pydarkstar.itemlist
-   pydarkstar.logutils
-   pydarkstar.timeutils
+    pydarkstar.common
+    pydarkstar.darkobject
+    pydarkstar.database
+    pydarkstar.item
+    pydarkstar.itemlist
+    pydarkstar.logutils
+    pydarkstar.timeutils
 
