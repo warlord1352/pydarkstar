@@ -15,3 +15,6 @@ gh-pages:
 publish:
 	git add -A
 	git c -m "Update gh-page"
+
+push:
+	git push
