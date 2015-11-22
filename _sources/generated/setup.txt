@@ -5,6 +5,16 @@ This is a quick giude to getting pydarkstar running. For more detail, as
 well as understanding how pydarkstar works, **please read the usage
 section**.
 
+-  **Read and follow the directions**.
+
+Notes
+^^^^^
+
+-  Computers do not magically know where to find files; you need to tell
+   them.
+-  Unless you know what you are doing, do not use pydarkstar in ways
+   that I have not outlined.
+
 Linux
 ^^^^^
 
@@ -23,11 +33,6 @@ Linux
 
     bash:~$ git clone git@github.com:AdamGagorik/pydarkstar.git
 
-    # enter the correct path!
-
-    bash:~$ cd ./path/to/pydarkstar
-    bash:~$ python3 ./makebin.py
-
 -  Edit the config.yaml in "/path/to/pydarkstar/bin" with your settings
    (use a text editor).
 
@@ -36,10 +41,10 @@ Linux
     bash:~$ cd /path/to/pydarkstar/bin
 
     # to download new data from ffxiah.com (takes forever)
-    bash:~$ ./scrub.sh
+    bash:~$ ./scrub.py
 
     # to start the broker
-    bash:~$ ./broker.sh
+    bash:~$ ./broker.py
 
 Windows
 ^^^^^^^
@@ -64,28 +69,19 @@ Windows
     > conda install pyyaml
 
 -  Clone pydarkstar repository.
--  Run the *makebin.py* script.
-
-**You need to open a command prompt at the root directory of
-pydarkstar.**
-
-.. code:: bash
-
-    # enter the correct path!
-
-    > cd "C:\path\to\pydarkstar"
-    > "C:\path\to\python3" .\makebin.py
-
 -  Edit the config.yaml in "C:\\path\\to\\pydarkstar\\bin" with your
    settings (use a text editor).
+
+**You need to open a command prompt at the root directory of pydarkstar.
+This is not the same as the Anaconda command prompt.**
 
 .. code:: bash
 
     > cd "C:\path\to\pydarkstar\bin"
 
     # to download new data from ffxiah.com (takes forever)
-    > .\scrub.bat
+    > "C:\path\to\python3" .\scrub.py
 
     # to start the broker
-    > .\broker.bat
+    > "C:\path\to\python3" .\broker.py
 

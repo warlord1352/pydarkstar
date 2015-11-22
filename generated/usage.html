@@ -71,6 +71,7 @@
       role="menu"
       aria-labelledby="dLabelGlobalToc"><ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="setup.html">Setup</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="setup.html#notes">Notes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="setup.html#linux">Linux</a></li>
 <li class="toctree-l2"><a class="reference internal" href="setup.html#windows">Windows</a></li>
 </ul>
@@ -98,8 +99,8 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="advanced.html">Advanced</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="advanced.html#pythonpath">PYTHONPATH</a></li>
-<li class="toctree-l2"><a class="reference internal" href="advanced.html#apps">Apps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="advanced.html#shell-scripts-pythonpath">Shell Scripts : PYTHONPATH</a></li>
+<li class="toctree-l2"><a class="reference internal" href="advanced.html#shell-scripts-running-apps">Shell Scripts : Running Apps</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="pydarkstar.html">Code</a><ul>
@@ -172,7 +173,7 @@
 
 <div class="container">
   <div class="row">
-    <div class="col-md-12">
+    <div class="col-md-12 content">
       
   <div class="section" id="usage">
 <h1>Usage<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h1>
@@ -180,16 +181,17 @@
 <h2>Basic<a class="headerlink" href="#basic" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li>Use pydarkstar from the command line.</li>
-<li>See the setup guide to create the shell scripts.</li>
+<li>Just run the scripts in the bin directory.</li>
+<li>See the advanced section if you want to create shell scripts.</li>
 </ul>
 <p>Windows</p>
 <div class="code bash highlight-python"><div class="highlight"><pre>&gt; cd &quot;C:\path\to\pydarkstar\bin&quot;
-&gt; .\broker.bat
+&gt; &quot;C:\path\to\python3&quot; .\broker.py
 </pre></div>
 </div>
 <p>Linux</p>
 <div class="code bash highlight-python"><div class="highlight"><pre>bash:~$ cd /path/to/pydarkstar/bin
-bash:~$ ./broker.sh
+bash:~$ ./broker.py
 </pre></div>
 </div>
 </div>
@@ -241,12 +243,12 @@ bash:~$ ./broker.sh
 </ul>
 <p>Windows</p>
 <div class="code bash highlight-python"><div class="highlight"><pre>&gt; cd &quot;C:\path\to\pydarkstar\bin&quot;
-&gt; .\broker.bat --help
+&gt; &quot;C:\path\to\python3&quot; .\broker.py --help
 </pre></div>
 </div>
 <p>Linux</p>
 <div class="code bash highlight-python"><div class="highlight"><pre>bash:~$ cd /path/to/pydarkstar/bin
-bash:~$ ./broker.sh --help
+bash:~$ ./broker.py --help
 </pre></div>
 </div>
 <ul class="simple">

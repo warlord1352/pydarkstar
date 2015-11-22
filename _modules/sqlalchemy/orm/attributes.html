@@ -70,6 +70,7 @@
       role="menu"
       aria-labelledby="dLabelGlobalToc"><ul>
 <li class="toctree-l1"><a class="reference internal" href="../../../generated/setup.html">Setup</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../generated/setup.html#notes">Notes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../generated/setup.html#linux">Linux</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../generated/setup.html#windows">Windows</a></li>
 </ul>
@@ -97,8 +98,8 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../../generated/advanced.html">Advanced</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../../generated/advanced.html#pythonpath">PYTHONPATH</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../generated/advanced.html#apps">Apps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../generated/advanced.html#shell-scripts-pythonpath">Shell Scripts : PYTHONPATH</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../generated/advanced.html#shell-scripts-running-apps">Shell Scripts : Running Apps</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../../generated/pydarkstar.html">Code</a><ul>
@@ -150,7 +151,7 @@
 
 <div class="container">
   <div class="row">
-    <div class="col-md-12">
+    <div class="col-md-12 content">
       
   <h1>Source code for sqlalchemy.orm.attributes</h1><div class="highlight"><pre>
 <span class="c"># orm/attributes.py</span>
@@ -705,6 +706,11 @@
 
     <span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">state</span><span class="p">,</span> <span class="n">dict_</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Initialize the given state&#39;s attribute with an empty value.&quot;&quot;&quot;</span>
+
+        <span class="c"># As of 1.0, we don&#39;t actually set a value in</span>
+        <span class="c"># dict_.  This is so that the state of the object does not get</span>
+        <span class="c"># modified without emitting the appropriate events.</span>
+
 
         <span class="k">return</span> <span class="bp">None</span>
 

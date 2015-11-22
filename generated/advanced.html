@@ -71,6 +71,7 @@
       role="menu"
       aria-labelledby="dLabelGlobalToc"><ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="setup.html">Setup</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="setup.html#notes">Notes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="setup.html#linux">Linux</a></li>
 <li class="toctree-l2"><a class="reference internal" href="setup.html#windows">Windows</a></li>
 </ul>
@@ -98,8 +99,8 @@
 </ul>
 </li>
 <li class="toctree-l1 current"><a class="current reference internal" href="">Advanced</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#pythonpath">PYTHONPATH</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#apps">Apps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#shell-scripts-pythonpath">Shell Scripts : PYTHONPATH</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#shell-scripts-running-apps">Shell Scripts : Running Apps</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="pydarkstar.html">Code</a><ul>
@@ -121,12 +122,12 @@
       role="menu"
       aria-labelledby="dLabelLocalToc"><ul>
 <li><a class="reference internal" href="#">Advanced</a><ul>
-<li><a class="reference internal" href="#pythonpath">PYTHONPATH</a><ul>
+<li><a class="reference internal" href="#shell-scripts-pythonpath">Shell Scripts : PYTHONPATH</a><ul>
 <li><a class="reference internal" href="#linux">Linux</a></li>
 <li><a class="reference internal" href="#windows">Windows</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#apps">Apps</a></li>
+<li><a class="reference internal" href="#shell-scripts-running-apps">Shell Scripts : Running Apps</a></li>
 </ul>
 </li>
 </ul>
@@ -174,12 +175,12 @@
 
 <div class="container">
   <div class="row">
-    <div class="col-md-12">
+    <div class="col-md-12 content">
       
   <div class="section" id="advanced">
 <h1>Advanced<a class="headerlink" href="#advanced" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="pythonpath">
-<h2>PYTHONPATH<a class="headerlink" href="#pythonpath" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="shell-scripts-pythonpath">
+<h2>Shell Scripts : PYTHONPATH<a class="headerlink" href="#shell-scripts-pythonpath" title="Permalink to this headline">¶</a></h2>
 <p><strong>The pydarkstar package will not work unless you tell python where
 pydarkstar is located</strong>.</p>
 <p><em>This is just how python works, and is not here to make things
@@ -229,8 +230,8 @@ python3 -m pydarkstar.apps.scrub.run %*
 </div>
 </div>
 </div>
-<div class="section" id="apps">
-<h2>Apps<a class="headerlink" href="#apps" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="shell-scripts-running-apps">
+<h2>Shell Scripts : Running Apps<a class="headerlink" href="#shell-scripts-running-apps" title="Permalink to this headline">¶</a></h2>
 <p><strong>Please note that pydarkstar takes advantage of python&#8217;s -m flag to run
 library modules as scripts</strong>. Python modules are just python files
 beneath the pydarkstar top level directory. There is no other way to run

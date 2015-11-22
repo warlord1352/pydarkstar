@@ -71,6 +71,7 @@
       role="menu"
       aria-labelledby="dLabelGlobalToc"><ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="">Setup</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#notes">Notes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#linux">Linux</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#windows">Windows</a></li>
 </ul>
@@ -98,8 +99,8 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="advanced.html">Advanced</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="advanced.html#pythonpath">PYTHONPATH</a></li>
-<li class="toctree-l2"><a class="reference internal" href="advanced.html#apps">Apps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="advanced.html#shell-scripts-pythonpath">Shell Scripts : PYTHONPATH</a></li>
+<li class="toctree-l2"><a class="reference internal" href="advanced.html#shell-scripts-running-apps">Shell Scripts : Running Apps</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="pydarkstar.html">Code</a><ul>
@@ -121,6 +122,7 @@
       role="menu"
       aria-labelledby="dLabelLocalToc"><ul>
 <li><a class="reference internal" href="#">Setup</a><ul>
+<li><a class="reference internal" href="#notes">Notes</a></li>
 <li><a class="reference internal" href="#linux">Linux</a></li>
 <li><a class="reference internal" href="#windows">Windows</a></li>
 </ul>
@@ -170,13 +172,25 @@
 
 <div class="container">
   <div class="row">
-    <div class="col-md-12">
+    <div class="col-md-12 content">
       
   <div class="section" id="setup">
 <h1>Setup<a class="headerlink" href="#setup" title="Permalink to this headline">¶</a></h1>
 <p>This is a quick giude to getting pydarkstar running. For more detail, as
 well as understanding how pydarkstar works, <strong>please read the usage
 section</strong>.</p>
+<ul class="simple">
+<li><strong>Read and follow the directions</strong>.</li>
+</ul>
+<div class="section" id="notes">
+<h2>Notes<a class="headerlink" href="#notes" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Computers do not magically know where to find files; you need to tell
+them.</li>
+<li>Unless you know what you are doing, do not use pydarkstar in ways
+that I have not outlined.</li>
+</ul>
+</div>
 <div class="section" id="linux">
 <h2>Linux<a class="headerlink" href="#linux" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
@@ -192,11 +206,6 @@ bash:~$ sudo pip install beautifulsoup4
 bash:~$ sudo pip install pyyaml
 
 bash:~$ git clone git@github.com:AdamGagorik/pydarkstar.git
-
-# enter the correct path!
-
-bash:~$ cd ./path/to/pydarkstar
-bash:~$ python3 ./makebin.py
 </pre></div>
 </div>
 <ul class="simple">
@@ -206,10 +215,10 @@ bash:~$ python3 ./makebin.py
 <div class="code bash highlight-python"><div class="highlight"><pre>bash:~$ cd /path/to/pydarkstar/bin
 
 # to download new data from ffxiah.com (takes forever)
-bash:~$ ./scrub.sh
+bash:~$ ./scrub.py
 
 # to start the broker
-bash:~$ ./broker.sh
+bash:~$ ./broker.py
 </pre></div>
 </div>
 </div>
@@ -236,27 +245,18 @@ using the start menu).</li>
 </div>
 <ul class="simple">
 <li>Clone pydarkstar repository.</li>
-<li>Run the <em>makebin.py</em> script.</li>
-</ul>
-<p><strong>You need to open a command prompt at the root directory of
-pydarkstar.</strong></p>
-<div class="code bash highlight-python"><div class="highlight"><pre># enter the correct path!
-
-&gt; cd &quot;C:\path\to\pydarkstar&quot;
-&gt; &quot;C:\path\to\python3&quot; .\makebin.py
-</pre></div>
-</div>
-<ul class="simple">
 <li>Edit the config.yaml in &#8220;C:\path\to\pydarkstar\bin&#8221; with your
 settings (use a text editor).</li>
 </ul>
+<p><strong>You need to open a command prompt at the root directory of pydarkstar.
+This is not the same as the Anaconda command prompt.</strong></p>
 <div class="code bash highlight-python"><div class="highlight"><pre>&gt; cd &quot;C:\path\to\pydarkstar\bin&quot;
 
 # to download new data from ffxiah.com (takes forever)
-&gt; .\scrub.bat
+&gt; &quot;C:\path\to\python3&quot; .\scrub.py
 
 # to start the broker
-&gt; .\broker.bat
+&gt; &quot;C:\path\to\python3&quot; .\broker.py
 </pre></div>
 </div>
 </div>
