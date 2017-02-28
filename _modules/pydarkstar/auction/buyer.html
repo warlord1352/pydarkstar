@@ -5,11 +5,11 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>pydarkstar.auction.buyer &mdash; pydarkstar 3.0.0 documentation</title>
+    <title>pydarkstar.auction.buyer &#8212; pydarkstar 3.0.0 documentation</title>
     
     <link rel="stylesheet" href="../../../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../../../_static/bootswatch-3.3.4/cerulean/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/bootswatch-3.3.6/cerulean/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../../../_static/bootstrap-sphinx.css" type="text/css" />
     
     <script type="text/javascript">
@@ -18,7 +18,8 @@
         VERSION:     '3.0.0',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
       };
     </script>
     <script type="text/javascript" src="../../../_static/jquery.js"></script>
@@ -27,10 +28,10 @@
     <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="../../../_static/js/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="../../../_static/js/jquery-fix.js"></script>
-    <script type="text/javascript" src="../../../_static/bootstrap-3.3.4/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../../_static/bootstrap-3.3.6/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="../../../_static/bootstrap-sphinx.js"></script>
-    <link rel="top" title="pydarkstar 3.0.0 documentation" href="../../../index.html" />
-    <link rel="up" title="Module code" href="../../index.html" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
 <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
@@ -70,16 +71,18 @@
       role="menu"
       aria-labelledby="dLabelGlobalToc"><ul>
 <li class="toctree-l1"><a class="reference internal" href="../../../generated/setup.html">Setup</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../../generated/setup.html#notes">Notes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../generated/setup.html#linux">Linux</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../generated/setup.html#windows">Windows</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../generated/setup.html#step-0-install-git-and-clone-pydarkstar">Step 0: Install Git and Clone pydarkstar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../generated/setup.html#step-1-install-python">Step 1: Install Python</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../generated/setup.html#step-2-install-3rd-party-python-modules">Step 2: Install 3rd-party Python Modules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../generated/setup.html#step-4-configure-pydarkstar">Step 4: Configure pydarkstar</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../../generated/usage.html">Usage</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../../generated/usage.html#basic">Basic</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../generated/usage.html#apps">Apps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../generated/usage.html#notes">Notes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../generated/usage.html#example">Example</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../generated/usage.html#parameters">Parameters</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../generated/usage.html#item-database">Item Database</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../generated/usage.html#apps">Apps</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../../generated/apps.html">Apps</a><ul>
@@ -154,8 +157,8 @@
     <div class="col-md-12 content">
       
   <h1>Source code for pydarkstar.auction.buyer</h1><div class="highlight"><pre>
-<span class="kn">from</span> <span class="nn">..tables.auctionhouse</span> <span class="kn">import</span> <span class="n">AuctionHouse</span>
-<span class="kn">from</span> <span class="nn">.worker</span> <span class="kn">import</span> <span class="n">Worker</span>
+<span></span><span class="kn">from</span> <span class="nn">..tables.auctionhouse</span> <span class="k">import</span> <span class="n">AuctionHouse</span>
+<span class="kn">from</span> <span class="nn">.worker</span> <span class="k">import</span> <span class="n">Worker</span>
 
 
 <div class="viewcode-block" id="Buyer"><a class="viewcode-back" href="../../../generated/pydarkstar.auction.buyer.html#pydarkstar.auction.buyer.Buyer">[docs]</a><span class="k">class</span> <span class="nc">Buyer</span><span class="p">(</span><span class="n">Worker</span><span class="p">):</span>
@@ -165,25 +168,25 @@
 <span class="sd">    :param db: database object</span>
 <span class="sd">    &quot;&quot;&quot;</span>
 
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">db</span><span class="p">,</span> <span class="n">buyer_name</span><span class="o">=</span><span class="s">&#39;Zissou&#39;</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
-        <span class="nb">super</span><span class="p">(</span><span class="n">Buyer</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">__init__</span><span class="p">(</span><span class="n">db</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">db</span><span class="p">,</span> <span class="n">buyer_name</span><span class="o">=</span><span class="s1">&#39;Zissou&#39;</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">Buyer</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">db</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">buyer_name</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">buyer_name</span><span class="p">)</span>
 
 <div class="viewcode-block" id="Buyer.buy_item"><a class="viewcode-back" href="../../../generated/pydarkstar.auction.buyer.html#pydarkstar.auction.buyer.Buyer.buy_item">[docs]</a>    <span class="k">def</span> <span class="nf">buy_item</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">row</span><span class="p">,</span> <span class="n">date</span><span class="p">,</span> <span class="n">price</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Buy item for given price.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="c"># validate</span>
+        <span class="c1"># validate</span>
         <span class="k">if</span> <span class="ow">not</span> <span class="n">row</span><span class="o">.</span><span class="n">sale</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-            <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="s">&#39;item already sold!&#39;</span><span class="p">)</span>
+            <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="s1">&#39;item already sold!&#39;</span><span class="p">)</span>
 
         <span class="n">row</span><span class="o">.</span><span class="n">buyer_name</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">buyer_name</span>
         <span class="n">row</span><span class="o">.</span><span class="n">sell_date</span> <span class="o">=</span> <span class="n">AuctionHouse</span><span class="o">.</span><span class="n">validate_date</span><span class="p">(</span><span class="n">date</span><span class="p">)</span>
         <span class="n">row</span><span class="o">.</span><span class="n">sale</span> <span class="o">=</span> <span class="n">AuctionHouse</span><span class="o">.</span><span class="n">validate_price</span><span class="p">(</span><span class="n">price</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s">&#39;</span><span class="si">%s</span><span class="s">&#39;</span><span class="p">,</span> <span class="n">row</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">%s</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">row</span><span class="p">)</span></div></div>
 
-</div></div>
-<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">&#39;__main__&#39;</span><span class="p">:</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
     <span class="k">pass</span>
 </pre></div>
 
@@ -199,7 +202,7 @@
     </p>
     <p>
         &copy; Copyright 2015, Adam Gagorik.<br/>
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.1.<br/>
     </p>
   </div>
 </footer>

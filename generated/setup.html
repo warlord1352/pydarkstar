@@ -5,11 +5,11 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Setup &mdash; pydarkstar 3.0.0 documentation</title>
+    <title>Setup &#8212; pydarkstar 3.0.0 documentation</title>
     
     <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/bootswatch-3.3.4/cerulean/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootswatch-3.3.6/cerulean/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
     
     <script type="text/javascript">
@@ -18,7 +18,8 @@
         VERSION:     '3.0.0',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
       };
     </script>
     <script type="text/javascript" src="../_static/jquery.js"></script>
@@ -27,9 +28,10 @@
     <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
-    <script type="text/javascript" src="../_static/bootstrap-3.3.4/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.3.6/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
-    <link rel="top" title="pydarkstar 3.0.0 documentation" href="../index.html" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Usage" href="usage.html" />
     <link rel="prev" title="pydarkstar" href="../index.html" />
 <meta charset='utf-8'>
@@ -70,17 +72,19 @@
   <ul class="dropdown-menu globaltoc"
       role="menu"
       aria-labelledby="dLabelGlobalToc"><ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="">Setup</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#notes">Notes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#linux">Linux</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#windows">Windows</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Setup</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#step-0-install-git-and-clone-pydarkstar">Step 0: Install Git and Clone pydarkstar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#step-1-install-python">Step 1: Install Python</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#step-2-install-3rd-party-python-modules">Step 2: Install 3rd-party Python Modules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#step-4-configure-pydarkstar">Step 4: Configure pydarkstar</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="usage.html">Usage</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="usage.html#basic">Basic</a></li>
-<li class="toctree-l2"><a class="reference internal" href="usage.html#apps">Apps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usage.html#notes">Notes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usage.html#example">Example</a></li>
 <li class="toctree-l2"><a class="reference internal" href="usage.html#parameters">Parameters</a></li>
 <li class="toctree-l2"><a class="reference internal" href="usage.html#item-database">Item Database</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usage.html#apps">Apps</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="apps.html">Apps</a><ul>
@@ -122,9 +126,10 @@
       role="menu"
       aria-labelledby="dLabelLocalToc"><ul>
 <li><a class="reference internal" href="#">Setup</a><ul>
-<li><a class="reference internal" href="#notes">Notes</a></li>
-<li><a class="reference internal" href="#linux">Linux</a></li>
-<li><a class="reference internal" href="#windows">Windows</a></li>
+<li><a class="reference internal" href="#step-0-install-git-and-clone-pydarkstar">Step 0: Install Git and Clone pydarkstar</a></li>
+<li><a class="reference internal" href="#step-1-install-python">Step 1: Install Python</a></li>
+<li><a class="reference internal" href="#step-2-install-3rd-party-python-modules">Step 2: Install 3rd-party Python Modules</a></li>
+<li><a class="reference internal" href="#step-4-configure-pydarkstar">Step 4: Configure pydarkstar</a></li>
 </ul>
 </li>
 </ul>
@@ -150,7 +155,7 @@
             
               <li class="hidden-sm">
 <div id="sourcelink">
-  <a href="../_sources/generated/setup.txt"
+  <a href="../_sources/generated/setup.rst.txt"
      rel="nofollow">Source</a>
 </div></li>
             
@@ -176,89 +181,85 @@
       
   <div class="section" id="setup">
 <h1>Setup<a class="headerlink" href="#setup" title="Permalink to this headline">¶</a></h1>
-<p>This is a quick giude to getting pydarkstar running. For more detail, as
-well as understanding how pydarkstar works, <strong>please read the usage
-section</strong>.</p>
+<p>This is a giude to getting pydarkstar running.</p>
+<div class="section" id="step-0-install-git-and-clone-pydarkstar">
+<h2>Step 0: Install Git and Clone pydarkstar<a class="headerlink" href="#step-0-install-git-and-clone-pydarkstar" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li><strong>Read and follow the directions</strong>.</li>
-</ul>
-<div class="section" id="notes">
-<h2>Notes<a class="headerlink" href="#notes" title="Permalink to this headline">¶</a></h2>
-<ul class="simple">
-<li>Computers do not magically know where to find files; you need to tell
-them.</li>
-<li>Unless you know what you are doing, do not use pydarkstar in ways
-that I have not outlined.</li>
+<li>You installed <strong>git</strong> already when you setup
+<a class="reference external" href="https://github.com/DarkstarProject/darkstar">darkstar</a></li>
+<li>Clone the pydarkstar repository from
+<a class="reference external" href="https://github.com/AdamGagorik/pydarkstar">here</a></li>
 </ul>
 </div>
-<div class="section" id="linux">
-<h2>Linux<a class="headerlink" href="#linux" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="step-1-install-python">
+<h2>Step 1: Install Python<a class="headerlink" href="#step-1-install-python" title="Permalink to this headline">¶</a></h2>
+<p><strong>GOTCHA</strong>: Make sure you use <strong>Python version 3</strong>!</p>
+<p>Choice 1: Anaconda (Recommended)</p>
 <ul class="simple">
-<li>Linux already comes with python. You should use <strong>python3</strong>, which is
-not the default.</li>
+<li>Install <a class="reference external" href="http://continuum.io/downloads">Python Anaconda</a></li>
+<li>You need <strong>Python3.4</strong> or greater.</li>
 </ul>
-<div class="code bash highlight-python"><div class="highlight"><pre>bash:~$ sudo apt-get install git
-bash:~$ sudo apt-get install pip
+<p>Choice 2: Use Your OS&#8217;s Python (Linux ONLY)</p>
+<ul class="simple">
+<li>Linux already comes with python installed</li>
+<li>You need <strong>Python3.4</strong> or greater (may not be the default)</li>
+</ul>
+<p>Choice 3: Install Python from Somewhere Else</p>
+<ul class="simple">
+<li>You can use the official Python from
+<a class="reference external" href="https://www.python.org/downloads">here</a>.</li>
+<li>You need <strong>Python3.4</strong> or greater.</li>
+</ul>
+</div>
+<div class="section" id="step-2-install-3rd-party-python-modules">
+<h2>Step 2: Install 3rd-party Python Modules<a class="headerlink" href="#step-2-install-3rd-party-python-modules" title="Permalink to this headline">¶</a></h2>
+<p>Choice 1: Use Anaconda&#8217;s Conda Command (Recommended)</p>
+<ul class="simple">
+<li><strong>GOTCHA</strong>: You must have installed Anaconda above!</li>
+<li><strong>GOTCHA</strong>: Use the Anaconda Command Prompt on <strong>WINDOWS</strong> (search
+for it in the start menu)</li>
+</ul>
+<p>Open a command prompt and run the following commands:</p>
+<div class="code bash highlight-default"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">update</span> <span class="n">conda</span>
 
-bash:~$ sudo pip install sqlalchemy
-bash:~$ sudo pip install pymysql
-bash:~$ sudo pip install beautifulsoup4
-bash:~$ sudo pip install pyyaml
+<span class="c1"># when prompted, enter &#39;y&#39; for yes</span>
 
-bash:~$ git clone git@github.com:AdamGagorik/pydarkstar.git
+<span class="n">conda</span> <span class="n">install</span> <span class="n">sqlalchemy</span>
+<span class="n">conda</span> <span class="n">install</span> <span class="n">pymysql</span>
+<span class="n">conda</span> <span class="n">install</span> <span class="n">beautiful</span><span class="o">-</span><span class="n">soup</span>
+<span class="n">conda</span> <span class="n">install</span> <span class="n">pyyaml</span>
+<span class="n">conda</span> <span class="n">install</span> <span class="n">six</span>
 </pre></div>
 </div>
+<p>Choice 2: Use Pip</p>
 <ul class="simple">
-<li>Edit the config.yaml in &#8220;/path/to/pydarkstar/bin&#8221; with your settings
-(use a text editor).</li>
+<li><strong>GOTCHA</strong>: Make sure you have the <strong>pip</strong> command!</li>
+<li><strong>GOTCHA</strong>: Notice that its beautifulsoup4 instead of beautiful-soup</li>
 </ul>
-<div class="code bash highlight-python"><div class="highlight"><pre>bash:~$ cd /path/to/pydarkstar/bin
+<p>Open a command prompt and run the following commands:</p>
+<div class="code bash highlight-default"><div class="highlight"><pre><span></span><span class="c1"># Windows</span>
 
-# to download new data from ffxiah.com (takes forever)
-bash:~$ ./scrub.py
+<span class="s2">&quot;C:\path</span><span class="se">\t</span><span class="s2">o\pip&quot;</span> <span class="n">install</span> <span class="n">sqlalchemy</span>
+<span class="s2">&quot;C:\path</span><span class="se">\t</span><span class="s2">o\pip&quot;</span> <span class="n">install</span> <span class="n">pymysql</span>
+<span class="s2">&quot;C:\path</span><span class="se">\t</span><span class="s2">o\pip&quot;</span> <span class="n">install</span> <span class="n">beautifulsoup4</span>
+<span class="s2">&quot;C:\path</span><span class="se">\t</span><span class="s2">o\pip&quot;</span> <span class="n">install</span> <span class="n">pyyaml</span>
+<span class="s2">&quot;C:\path</span><span class="se">\t</span><span class="s2">o\pip&quot;</span> <span class="n">install</span> <span class="n">six</span>
 
-# to start the broker
-bash:~$ ./broker.py
+<span class="c1"># Linux</span>
+
+<span class="n">sudo</span> <span class="n">pip</span> <span class="n">install</span> <span class="n">sqlalchemy</span>
+<span class="n">sudo</span> <span class="n">pip</span> <span class="n">install</span> <span class="n">pymysql</span>
+<span class="n">sudo</span> <span class="n">pip</span> <span class="n">install</span> <span class="n">beautifulsoup4</span>
+<span class="n">sudo</span> <span class="n">pip</span> <span class="n">install</span> <span class="n">pyyaml</span>
+<span class="n">sudo</span> <span class="n">pip</span> <span class="n">install</span> <span class="n">six</span>
 </pre></div>
 </div>
 </div>
-<div class="section" id="windows">
-<h2>Windows<a class="headerlink" href="#windows" title="Permalink to this headline">¶</a></h2>
-<ul class="simple">
-<li>Setting up Python on Windows can be painful.</li>
-<li>It is easier to install a Python distribution such as Anaconda
-(<a class="reference external" href="http://continuum.io/downloads">http://continuum.io/downloads</a>).</li>
-<li>Install Git.</li>
-<li>Install Python Anaconda.</li>
-<li>Open the Anaconda command prompt from the start menu (search for it
-using the start menu).</li>
-</ul>
-<div class="code bash highlight-python"><div class="highlight"><pre>&gt; conda update conda
-
-# when prompted, enter &#39;y&#39; for yes
-
-&gt; conda install sqlalchemy
-&gt; conda install pymysql
-&gt; conda install beautiful-soup
-&gt; conda install pyyaml
-</pre></div>
-</div>
-<ul class="simple">
-<li>Clone pydarkstar repository.</li>
-<li>Edit the config.yaml in &#8220;C:\path\to\pydarkstar\bin&#8221; with your
-settings (use a text editor).</li>
-</ul>
-<p><strong>You need to open a command prompt at the root directory of pydarkstar.
-This is not the same as the Anaconda command prompt.</strong></p>
-<div class="code bash highlight-python"><div class="highlight"><pre>&gt; cd &quot;C:\path\to\pydarkstar\bin&quot;
-
-# to download new data from ffxiah.com (takes forever)
-&gt; &quot;C:\path\to\python3&quot; .\scrub.py
-
-# to start the broker
-&gt; &quot;C:\path\to\python3&quot; .\broker.py
-</pre></div>
-</div>
+<div class="section" id="step-4-configure-pydarkstar">
+<h2>Step 4: Configure pydarkstar<a class="headerlink" href="#step-4-configure-pydarkstar" title="Permalink to this headline">¶</a></h2>
+<p>Follow the instructions on the
+<a class="reference external" href="http://adamgagorik.github.io/pydarkstar/generated/usage.html">usage</a>
+page.</p>
 </div>
 </div>
 
@@ -275,7 +276,7 @@ This is not the same as the Anaconda command prompt.</strong></p>
     </p>
     <p>
         &copy; Copyright 2015, Adam Gagorik.<br/>
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.1.<br/>
     </p>
   </div>
 </footer>

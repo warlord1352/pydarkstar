@@ -5,11 +5,11 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Apps &mdash; pydarkstar 3.0.0 documentation</title>
+    <title>Apps &#8212; pydarkstar 3.0.0 documentation</title>
     
     <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/bootswatch-3.3.4/cerulean/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootswatch-3.3.6/cerulean/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
     
     <script type="text/javascript">
@@ -18,7 +18,8 @@
         VERSION:     '3.0.0',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
       };
     </script>
     <script type="text/javascript" src="../_static/jquery.js"></script>
@@ -27,9 +28,10 @@
     <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
-    <script type="text/javascript" src="../_static/bootstrap-3.3.4/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.3.6/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
-    <link rel="top" title="pydarkstar 3.0.0 documentation" href="../index.html" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Requirements" href="requirements.html" />
     <link rel="prev" title="Usage" href="usage.html" />
 <meta charset='utf-8'>
@@ -71,19 +73,21 @@
       role="menu"
       aria-labelledby="dLabelGlobalToc"><ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="setup.html">Setup</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="setup.html#notes">Notes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="setup.html#linux">Linux</a></li>
-<li class="toctree-l2"><a class="reference internal" href="setup.html#windows">Windows</a></li>
+<li class="toctree-l2"><a class="reference internal" href="setup.html#step-0-install-git-and-clone-pydarkstar">Step 0: Install Git and Clone pydarkstar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="setup.html#step-1-install-python">Step 1: Install Python</a></li>
+<li class="toctree-l2"><a class="reference internal" href="setup.html#step-2-install-3rd-party-python-modules">Step 2: Install 3rd-party Python Modules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="setup.html#step-4-configure-pydarkstar">Step 4: Configure pydarkstar</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="usage.html">Usage</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="usage.html#basic">Basic</a></li>
-<li class="toctree-l2"><a class="reference internal" href="usage.html#apps">Apps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usage.html#notes">Notes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usage.html#example">Example</a></li>
 <li class="toctree-l2"><a class="reference internal" href="usage.html#parameters">Parameters</a></li>
 <li class="toctree-l2"><a class="reference internal" href="usage.html#item-database">Item Database</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usage.html#apps">Apps</a></li>
 </ul>
 </li>
-<li class="toctree-l1 current"><a class="current reference internal" href="">Apps</a><ul>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Apps</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#broker">broker</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#seller">seller</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#buyer">buyer</a></li>
@@ -154,7 +158,7 @@
             
               <li class="hidden-sm">
 <div id="sourcelink">
-  <a href="../_sources/generated/apps.txt"
+  <a href="../_sources/generated/apps.rst.txt"
      rel="nofollow">Source</a>
 </div></li>
             
@@ -182,187 +186,187 @@
 <h1>Apps<a class="headerlink" href="#apps" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="broker">
 <h2>broker<a class="headerlink" href="#broker" title="Permalink to this headline">¶</a></h2>
-<div class="code python highlight-python"><div class="highlight"><pre>usage: run.py [-h] [--verbose] [--silent] [--hostname str] [--database str]
-              [--username str] [--password str] [--fail] [--name str]
-              [--restock int] [--tick int]
-              [str [str ...]]
+<div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="n">usage</span><span class="p">:</span> <span class="n">run</span><span class="o">.</span><span class="n">py</span> <span class="p">[</span><span class="o">-</span><span class="n">h</span><span class="p">]</span> <span class="p">[</span><span class="o">--</span><span class="n">verbose</span><span class="p">]</span> <span class="p">[</span><span class="o">--</span><span class="n">silent</span><span class="p">]</span> <span class="p">[</span><span class="o">--</span><span class="n">hostname</span> <span class="nb">str</span><span class="p">]</span> <span class="p">[</span><span class="o">--</span><span class="n">database</span> <span class="nb">str</span><span class="p">]</span>
+              <span class="p">[</span><span class="o">--</span><span class="n">username</span> <span class="nb">str</span><span class="p">]</span> <span class="p">[</span><span class="o">--</span><span class="n">password</span> <span class="nb">str</span><span class="p">]</span> <span class="p">[</span><span class="o">--</span><span class="n">fail</span><span class="p">]</span> <span class="p">[</span><span class="o">--</span><span class="n">name</span> <span class="nb">str</span><span class="p">]</span>
+              <span class="p">[</span><span class="o">--</span><span class="n">restock</span> <span class="nb">int</span><span class="p">]</span> <span class="p">[</span><span class="o">--</span><span class="n">tick</span> <span class="nb">int</span><span class="p">]</span>
+              <span class="p">[</span><span class="nb">str</span> <span class="p">[</span><span class="nb">str</span> <span class="o">...</span><span class="p">]]</span>
 
-Buy and sell items on the auction house.
+<span class="n">Buy</span> <span class="ow">and</span> <span class="n">sell</span> <span class="n">items</span> <span class="n">on</span> <span class="n">the</span> <span class="n">auction</span> <span class="n">house</span><span class="o">.</span>
 
-positional arguments:
-  str             item data CSV file(s)
+<span class="n">positional</span> <span class="n">arguments</span><span class="p">:</span>
+  <span class="nb">str</span>             <span class="n">item</span> <span class="n">data</span> <span class="n">CSV</span> <span class="n">file</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
 
-optional arguments:
-  -h, --help      show this help message and exit
-  --verbose       report debug, info, and error
-  --silent        report error only
-  --hostname str  SQL address
-  --database str  SQL database
-  --username str  SQL username
-  --password str  SQL password
-  --fail          fail on SQL errors
-  --name str      seller name
-  --restock int   restock interval (seconds)
-  --tick int      buying interval (seconds)
+<span class="n">optional</span> <span class="n">arguments</span><span class="p">:</span>
+  <span class="o">-</span><span class="n">h</span><span class="p">,</span> <span class="o">--</span><span class="n">help</span>      <span class="n">show</span> <span class="n">this</span> <span class="n">help</span> <span class="n">message</span> <span class="ow">and</span> <span class="n">exit</span>
+  <span class="o">--</span><span class="n">verbose</span>       <span class="n">report</span> <span class="n">debug</span><span class="p">,</span> <span class="n">info</span><span class="p">,</span> <span class="ow">and</span> <span class="n">error</span>
+  <span class="o">--</span><span class="n">silent</span>        <span class="n">report</span> <span class="n">error</span> <span class="n">only</span>
+  <span class="o">--</span><span class="n">hostname</span> <span class="nb">str</span>  <span class="n">SQL</span> <span class="n">address</span>
+  <span class="o">--</span><span class="n">database</span> <span class="nb">str</span>  <span class="n">SQL</span> <span class="n">database</span>
+  <span class="o">--</span><span class="n">username</span> <span class="nb">str</span>  <span class="n">SQL</span> <span class="n">username</span>
+  <span class="o">--</span><span class="n">password</span> <span class="nb">str</span>  <span class="n">SQL</span> <span class="n">password</span>
+  <span class="o">--</span><span class="n">fail</span>          <span class="n">fail</span> <span class="n">on</span> <span class="n">SQL</span> <span class="n">errors</span>
+  <span class="o">--</span><span class="n">name</span> <span class="nb">str</span>      <span class="n">seller</span> <span class="n">name</span>
+  <span class="o">--</span><span class="n">restock</span> <span class="nb">int</span>   <span class="n">restock</span> <span class="n">interval</span> <span class="p">(</span><span class="n">seconds</span><span class="p">)</span>
+  <span class="o">--</span><span class="n">tick</span> <span class="nb">int</span>      <span class="n">buying</span> <span class="n">interval</span> <span class="p">(</span><span class="n">seconds</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="seller">
 <h2>seller<a class="headerlink" href="#seller" title="Permalink to this headline">¶</a></h2>
-<div class="code python highlight-python"><div class="highlight"><pre>usage: run.py [-h] [--verbose] [--silent] [--hostname str] [--database str]
-              [--username str] [--password str] [--fail] [--name str]
-              [--restock int]
-              [str [str ...]]
+<div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="n">usage</span><span class="p">:</span> <span class="n">run</span><span class="o">.</span><span class="n">py</span> <span class="p">[</span><span class="o">-</span><span class="n">h</span><span class="p">]</span> <span class="p">[</span><span class="o">--</span><span class="n">verbose</span><span class="p">]</span> <span class="p">[</span><span class="o">--</span><span class="n">silent</span><span class="p">]</span> <span class="p">[</span><span class="o">--</span><span class="n">hostname</span> <span class="nb">str</span><span class="p">]</span> <span class="p">[</span><span class="o">--</span><span class="n">database</span> <span class="nb">str</span><span class="p">]</span>
+              <span class="p">[</span><span class="o">--</span><span class="n">username</span> <span class="nb">str</span><span class="p">]</span> <span class="p">[</span><span class="o">--</span><span class="n">password</span> <span class="nb">str</span><span class="p">]</span> <span class="p">[</span><span class="o">--</span><span class="n">fail</span><span class="p">]</span> <span class="p">[</span><span class="o">--</span><span class="n">name</span> <span class="nb">str</span><span class="p">]</span>
+              <span class="p">[</span><span class="o">--</span><span class="n">restock</span> <span class="nb">int</span><span class="p">]</span>
+              <span class="p">[</span><span class="nb">str</span> <span class="p">[</span><span class="nb">str</span> <span class="o">...</span><span class="p">]]</span>
 
-Sell items on the auction house.
+<span class="n">Sell</span> <span class="n">items</span> <span class="n">on</span> <span class="n">the</span> <span class="n">auction</span> <span class="n">house</span><span class="o">.</span>
 
-positional arguments:
-  str             item data CSV file(s)
+<span class="n">positional</span> <span class="n">arguments</span><span class="p">:</span>
+  <span class="nb">str</span>             <span class="n">item</span> <span class="n">data</span> <span class="n">CSV</span> <span class="n">file</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
 
-optional arguments:
-  -h, --help      show this help message and exit
-  --verbose       report debug, info, and error
-  --silent        report error only
-  --hostname str  SQL address
-  --database str  SQL database
-  --username str  SQL username
-  --password str  SQL password
-  --fail          fail on SQL errors
-  --name str      seller name
-  --restock int   restock interval (seconds)
+<span class="n">optional</span> <span class="n">arguments</span><span class="p">:</span>
+  <span class="o">-</span><span class="n">h</span><span class="p">,</span> <span class="o">--</span><span class="n">help</span>      <span class="n">show</span> <span class="n">this</span> <span class="n">help</span> <span class="n">message</span> <span class="ow">and</span> <span class="n">exit</span>
+  <span class="o">--</span><span class="n">verbose</span>       <span class="n">report</span> <span class="n">debug</span><span class="p">,</span> <span class="n">info</span><span class="p">,</span> <span class="ow">and</span> <span class="n">error</span>
+  <span class="o">--</span><span class="n">silent</span>        <span class="n">report</span> <span class="n">error</span> <span class="n">only</span>
+  <span class="o">--</span><span class="n">hostname</span> <span class="nb">str</span>  <span class="n">SQL</span> <span class="n">address</span>
+  <span class="o">--</span><span class="n">database</span> <span class="nb">str</span>  <span class="n">SQL</span> <span class="n">database</span>
+  <span class="o">--</span><span class="n">username</span> <span class="nb">str</span>  <span class="n">SQL</span> <span class="n">username</span>
+  <span class="o">--</span><span class="n">password</span> <span class="nb">str</span>  <span class="n">SQL</span> <span class="n">password</span>
+  <span class="o">--</span><span class="n">fail</span>          <span class="n">fail</span> <span class="n">on</span> <span class="n">SQL</span> <span class="n">errors</span>
+  <span class="o">--</span><span class="n">name</span> <span class="nb">str</span>      <span class="n">seller</span> <span class="n">name</span>
+  <span class="o">--</span><span class="n">restock</span> <span class="nb">int</span>   <span class="n">restock</span> <span class="n">interval</span> <span class="p">(</span><span class="n">seconds</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="buyer">
 <h2>buyer<a class="headerlink" href="#buyer" title="Permalink to this headline">¶</a></h2>
-<div class="code python highlight-python"><div class="highlight"><pre>usage: run.py [-h] [--verbose] [--silent] [--hostname str] [--database str]
-              [--username str] [--password str] [--fail] [--name str]
-              [--tick int]
-              [str [str ...]]
+<div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="n">usage</span><span class="p">:</span> <span class="n">run</span><span class="o">.</span><span class="n">py</span> <span class="p">[</span><span class="o">-</span><span class="n">h</span><span class="p">]</span> <span class="p">[</span><span class="o">--</span><span class="n">verbose</span><span class="p">]</span> <span class="p">[</span><span class="o">--</span><span class="n">silent</span><span class="p">]</span> <span class="p">[</span><span class="o">--</span><span class="n">hostname</span> <span class="nb">str</span><span class="p">]</span> <span class="p">[</span><span class="o">--</span><span class="n">database</span> <span class="nb">str</span><span class="p">]</span>
+              <span class="p">[</span><span class="o">--</span><span class="n">username</span> <span class="nb">str</span><span class="p">]</span> <span class="p">[</span><span class="o">--</span><span class="n">password</span> <span class="nb">str</span><span class="p">]</span> <span class="p">[</span><span class="o">--</span><span class="n">fail</span><span class="p">]</span> <span class="p">[</span><span class="o">--</span><span class="n">name</span> <span class="nb">str</span><span class="p">]</span>
+              <span class="p">[</span><span class="o">--</span><span class="n">tick</span> <span class="nb">int</span><span class="p">]</span>
+              <span class="p">[</span><span class="nb">str</span> <span class="p">[</span><span class="nb">str</span> <span class="o">...</span><span class="p">]]</span>
 
-Buy items on the auction house.
+<span class="n">Buy</span> <span class="n">items</span> <span class="n">on</span> <span class="n">the</span> <span class="n">auction</span> <span class="n">house</span><span class="o">.</span>
 
-positional arguments:
-  str             item data CSV file(s)
+<span class="n">positional</span> <span class="n">arguments</span><span class="p">:</span>
+  <span class="nb">str</span>             <span class="n">item</span> <span class="n">data</span> <span class="n">CSV</span> <span class="n">file</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
 
-optional arguments:
-  -h, --help      show this help message and exit
-  --verbose       report debug, info, and error
-  --silent        report error only
-  --hostname str  SQL address
-  --database str  SQL database
-  --username str  SQL username
-  --password str  SQL password
-  --fail          fail on SQL errors
-  --name str      seller name
-  --tick int      buying interval (seconds)
+<span class="n">optional</span> <span class="n">arguments</span><span class="p">:</span>
+  <span class="o">-</span><span class="n">h</span><span class="p">,</span> <span class="o">--</span><span class="n">help</span>      <span class="n">show</span> <span class="n">this</span> <span class="n">help</span> <span class="n">message</span> <span class="ow">and</span> <span class="n">exit</span>
+  <span class="o">--</span><span class="n">verbose</span>       <span class="n">report</span> <span class="n">debug</span><span class="p">,</span> <span class="n">info</span><span class="p">,</span> <span class="ow">and</span> <span class="n">error</span>
+  <span class="o">--</span><span class="n">silent</span>        <span class="n">report</span> <span class="n">error</span> <span class="n">only</span>
+  <span class="o">--</span><span class="n">hostname</span> <span class="nb">str</span>  <span class="n">SQL</span> <span class="n">address</span>
+  <span class="o">--</span><span class="n">database</span> <span class="nb">str</span>  <span class="n">SQL</span> <span class="n">database</span>
+  <span class="o">--</span><span class="n">username</span> <span class="nb">str</span>  <span class="n">SQL</span> <span class="n">username</span>
+  <span class="o">--</span><span class="n">password</span> <span class="nb">str</span>  <span class="n">SQL</span> <span class="n">password</span>
+  <span class="o">--</span><span class="n">fail</span>          <span class="n">fail</span> <span class="n">on</span> <span class="n">SQL</span> <span class="n">errors</span>
+  <span class="o">--</span><span class="n">name</span> <span class="nb">str</span>      <span class="n">seller</span> <span class="n">name</span>
+  <span class="o">--</span><span class="n">tick</span> <span class="nb">int</span>      <span class="n">buying</span> <span class="n">interval</span> <span class="p">(</span><span class="n">seconds</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="clear">
 <h2>clear<a class="headerlink" href="#clear" title="Permalink to this headline">¶</a></h2>
-<div class="code python highlight-python"><div class="highlight"><pre>usage: run.py [-h] [--verbose] [--silent] [--hostname str] [--database str]
-              [--username str] [--password str] [--fail] [--name str] [--all]
-              [--force]
+<div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="n">usage</span><span class="p">:</span> <span class="n">run</span><span class="o">.</span><span class="n">py</span> <span class="p">[</span><span class="o">-</span><span class="n">h</span><span class="p">]</span> <span class="p">[</span><span class="o">--</span><span class="n">verbose</span><span class="p">]</span> <span class="p">[</span><span class="o">--</span><span class="n">silent</span><span class="p">]</span> <span class="p">[</span><span class="o">--</span><span class="n">hostname</span> <span class="nb">str</span><span class="p">]</span> <span class="p">[</span><span class="o">--</span><span class="n">database</span> <span class="nb">str</span><span class="p">]</span>
+              <span class="p">[</span><span class="o">--</span><span class="n">username</span> <span class="nb">str</span><span class="p">]</span> <span class="p">[</span><span class="o">--</span><span class="n">password</span> <span class="nb">str</span><span class="p">]</span> <span class="p">[</span><span class="o">--</span><span class="n">fail</span><span class="p">]</span> <span class="p">[</span><span class="o">--</span><span class="n">name</span> <span class="nb">str</span><span class="p">]</span> <span class="p">[</span><span class="o">--</span><span class="nb">all</span><span class="p">]</span>
+              <span class="p">[</span><span class="o">--</span><span class="n">force</span><span class="p">]</span>
 
-Clear the auction house.
+<span class="n">Clear</span> <span class="n">the</span> <span class="n">auction</span> <span class="n">house</span><span class="o">.</span>
 
-optional arguments:
-  -h, --help      show this help message and exit
-  --verbose       report debug, info, and error
-  --silent        report error only
-  --hostname str  SQL address
-  --database str  SQL database
-  --username str  SQL username
-  --password str  SQL password
-  --fail          fail on SQL errors
-  --name str      seller name
-  --all           clear *all* items
-  --force         force the item clear
+<span class="n">optional</span> <span class="n">arguments</span><span class="p">:</span>
+  <span class="o">-</span><span class="n">h</span><span class="p">,</span> <span class="o">--</span><span class="n">help</span>      <span class="n">show</span> <span class="n">this</span> <span class="n">help</span> <span class="n">message</span> <span class="ow">and</span> <span class="n">exit</span>
+  <span class="o">--</span><span class="n">verbose</span>       <span class="n">report</span> <span class="n">debug</span><span class="p">,</span> <span class="n">info</span><span class="p">,</span> <span class="ow">and</span> <span class="n">error</span>
+  <span class="o">--</span><span class="n">silent</span>        <span class="n">report</span> <span class="n">error</span> <span class="n">only</span>
+  <span class="o">--</span><span class="n">hostname</span> <span class="nb">str</span>  <span class="n">SQL</span> <span class="n">address</span>
+  <span class="o">--</span><span class="n">database</span> <span class="nb">str</span>  <span class="n">SQL</span> <span class="n">database</span>
+  <span class="o">--</span><span class="n">username</span> <span class="nb">str</span>  <span class="n">SQL</span> <span class="n">username</span>
+  <span class="o">--</span><span class="n">password</span> <span class="nb">str</span>  <span class="n">SQL</span> <span class="n">password</span>
+  <span class="o">--</span><span class="n">fail</span>          <span class="n">fail</span> <span class="n">on</span> <span class="n">SQL</span> <span class="n">errors</span>
+  <span class="o">--</span><span class="n">name</span> <span class="nb">str</span>      <span class="n">seller</span> <span class="n">name</span>
+  <span class="o">--</span><span class="nb">all</span>           <span class="n">clear</span> <span class="o">*</span><span class="nb">all</span><span class="o">*</span> <span class="n">items</span>
+  <span class="o">--</span><span class="n">force</span>         <span class="n">force</span> <span class="n">the</span> <span class="n">item</span> <span class="n">clear</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="refill">
 <h2>refill<a class="headerlink" href="#refill" title="Permalink to this headline">¶</a></h2>
-<div class="code python highlight-python"><div class="highlight"><pre>usage: run.py [-h] [--verbose] [--silent] [--hostname str] [--database str]
-              [--username str] [--password str] [--fail] [--name str]
-              [--force]
-              [str [str ...]]
+<div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="n">usage</span><span class="p">:</span> <span class="n">run</span><span class="o">.</span><span class="n">py</span> <span class="p">[</span><span class="o">-</span><span class="n">h</span><span class="p">]</span> <span class="p">[</span><span class="o">--</span><span class="n">verbose</span><span class="p">]</span> <span class="p">[</span><span class="o">--</span><span class="n">silent</span><span class="p">]</span> <span class="p">[</span><span class="o">--</span><span class="n">hostname</span> <span class="nb">str</span><span class="p">]</span> <span class="p">[</span><span class="o">--</span><span class="n">database</span> <span class="nb">str</span><span class="p">]</span>
+              <span class="p">[</span><span class="o">--</span><span class="n">username</span> <span class="nb">str</span><span class="p">]</span> <span class="p">[</span><span class="o">--</span><span class="n">password</span> <span class="nb">str</span><span class="p">]</span> <span class="p">[</span><span class="o">--</span><span class="n">fail</span><span class="p">]</span> <span class="p">[</span><span class="o">--</span><span class="n">name</span> <span class="nb">str</span><span class="p">]</span>
+              <span class="p">[</span><span class="o">--</span><span class="n">force</span><span class="p">]</span>
+              <span class="p">[</span><span class="nb">str</span> <span class="p">[</span><span class="nb">str</span> <span class="o">...</span><span class="p">]]</span>
 
-Refill the auction house.
+<span class="n">Refill</span> <span class="n">the</span> <span class="n">auction</span> <span class="n">house</span><span class="o">.</span>
 
-positional arguments:
-  str             item data CSV file(s)
+<span class="n">positional</span> <span class="n">arguments</span><span class="p">:</span>
+  <span class="nb">str</span>             <span class="n">item</span> <span class="n">data</span> <span class="n">CSV</span> <span class="n">file</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
 
-optional arguments:
-  -h, --help      show this help message and exit
-  --verbose       report debug, info, and error
-  --silent        report error only
-  --hostname str  SQL address
-  --database str  SQL database
-  --username str  SQL username
-  --password str  SQL password
-  --fail          fail on SQL errors
-  --name str      seller name
-  --force         force the item refill
+<span class="n">optional</span> <span class="n">arguments</span><span class="p">:</span>
+  <span class="o">-</span><span class="n">h</span><span class="p">,</span> <span class="o">--</span><span class="n">help</span>      <span class="n">show</span> <span class="n">this</span> <span class="n">help</span> <span class="n">message</span> <span class="ow">and</span> <span class="n">exit</span>
+  <span class="o">--</span><span class="n">verbose</span>       <span class="n">report</span> <span class="n">debug</span><span class="p">,</span> <span class="n">info</span><span class="p">,</span> <span class="ow">and</span> <span class="n">error</span>
+  <span class="o">--</span><span class="n">silent</span>        <span class="n">report</span> <span class="n">error</span> <span class="n">only</span>
+  <span class="o">--</span><span class="n">hostname</span> <span class="nb">str</span>  <span class="n">SQL</span> <span class="n">address</span>
+  <span class="o">--</span><span class="n">database</span> <span class="nb">str</span>  <span class="n">SQL</span> <span class="n">database</span>
+  <span class="o">--</span><span class="n">username</span> <span class="nb">str</span>  <span class="n">SQL</span> <span class="n">username</span>
+  <span class="o">--</span><span class="n">password</span> <span class="nb">str</span>  <span class="n">SQL</span> <span class="n">password</span>
+  <span class="o">--</span><span class="n">fail</span>          <span class="n">fail</span> <span class="n">on</span> <span class="n">SQL</span> <span class="n">errors</span>
+  <span class="o">--</span><span class="n">name</span> <span class="nb">str</span>      <span class="n">seller</span> <span class="n">name</span>
+  <span class="o">--</span><span class="n">force</span>         <span class="n">force</span> <span class="n">the</span> <span class="n">item</span> <span class="n">refill</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="scrub">
 <h2>scrub<a class="headerlink" href="#scrub" title="Permalink to this headline">¶</a></h2>
-<div class="code python highlight-python"><div class="highlight"><pre>usage: run.py [-h] [--verbose] [--silent] [--overwrite] [--backup]
-              [--urls [url [url ...]]] [--itemids [itemids [itemids ...]]]
-              [--stock01 5] [--stock12 5]
-              [stub]
+<div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="n">usage</span><span class="p">:</span> <span class="n">run</span><span class="o">.</span><span class="n">py</span> <span class="p">[</span><span class="o">-</span><span class="n">h</span><span class="p">]</span> <span class="p">[</span><span class="o">--</span><span class="n">verbose</span><span class="p">]</span> <span class="p">[</span><span class="o">--</span><span class="n">silent</span><span class="p">]</span> <span class="p">[</span><span class="o">--</span><span class="n">overwrite</span><span class="p">]</span> <span class="p">[</span><span class="o">--</span><span class="n">backup</span><span class="p">]</span>
+              <span class="p">[</span><span class="o">--</span><span class="n">urls</span> <span class="p">[</span><span class="n">url</span> <span class="p">[</span><span class="n">url</span> <span class="o">...</span><span class="p">]]]</span> <span class="p">[</span><span class="o">--</span><span class="n">itemids</span> <span class="p">[</span><span class="n">itemids</span> <span class="p">[</span><span class="n">itemids</span> <span class="o">...</span><span class="p">]]]</span>
+              <span class="p">[</span><span class="o">--</span><span class="n">stock01</span> <span class="mi">5</span><span class="p">]</span> <span class="p">[</span><span class="o">--</span><span class="n">stock12</span> <span class="mi">5</span><span class="p">]</span>
+              <span class="p">[</span><span class="n">stub</span><span class="p">]</span>
 
-Create item database.
+<span class="n">Create</span> <span class="n">item</span> <span class="n">database</span><span class="o">.</span>
 
-positional arguments:
-  stub                  output file stub
+<span class="n">positional</span> <span class="n">arguments</span><span class="p">:</span>
+  <span class="n">stub</span>                  <span class="n">output</span> <span class="n">file</span> <span class="n">stub</span>
 
-optional arguments:
-  -h, --help            show this help message and exit
-  --verbose             report debug, info, and error
-  --silent              report error only
-  --overwrite           overwrite output file
-  --backup              backup output file
-  --urls [url [url ...]]
-                        a list of category urls
-  --itemids [itemids [itemids ...]]
-                        a list of item ids
-  --stock01 5           default stock for singles
-  --stock12 5           default stock for stacks
+<span class="n">optional</span> <span class="n">arguments</span><span class="p">:</span>
+  <span class="o">-</span><span class="n">h</span><span class="p">,</span> <span class="o">--</span><span class="n">help</span>            <span class="n">show</span> <span class="n">this</span> <span class="n">help</span> <span class="n">message</span> <span class="ow">and</span> <span class="n">exit</span>
+  <span class="o">--</span><span class="n">verbose</span>             <span class="n">report</span> <span class="n">debug</span><span class="p">,</span> <span class="n">info</span><span class="p">,</span> <span class="ow">and</span> <span class="n">error</span>
+  <span class="o">--</span><span class="n">silent</span>              <span class="n">report</span> <span class="n">error</span> <span class="n">only</span>
+  <span class="o">--</span><span class="n">overwrite</span>           <span class="n">overwrite</span> <span class="n">output</span> <span class="n">file</span>
+  <span class="o">--</span><span class="n">backup</span>              <span class="n">backup</span> <span class="n">output</span> <span class="n">file</span>
+  <span class="o">--</span><span class="n">urls</span> <span class="p">[</span><span class="n">url</span> <span class="p">[</span><span class="n">url</span> <span class="o">...</span><span class="p">]]</span>
+                        <span class="n">a</span> <span class="nb">list</span> <span class="n">of</span> <span class="n">category</span> <span class="n">urls</span>
+  <span class="o">--</span><span class="n">itemids</span> <span class="p">[</span><span class="n">itemids</span> <span class="p">[</span><span class="n">itemids</span> <span class="o">...</span><span class="p">]]</span>
+                        <span class="n">a</span> <span class="nb">list</span> <span class="n">of</span> <span class="n">item</span> <span class="n">ids</span>
+  <span class="o">--</span><span class="n">stock01</span> <span class="mi">5</span>           <span class="n">default</span> <span class="n">stock</span> <span class="k">for</span> <span class="n">singles</span>
+  <span class="o">--</span><span class="n">stock12</span> <span class="mi">5</span>           <span class="n">default</span> <span class="n">stock</span> <span class="k">for</span> <span class="n">stacks</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="alter">
 <h2>alter<a class="headerlink" href="#alter" title="Permalink to this headline">¶</a></h2>
-<div class="code python highlight-python"><div class="highlight"><pre>usage: run.py [-h] [--verbose] [--silent] [--overwrite] [--backup]
-              [--all | --lambda lambda : True | --match .* | --itemids [itemids [itemids ...]]]
-              [--show | --scrub | --set key=value]
-              [str [str ...]] [stub]
+<div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="n">usage</span><span class="p">:</span> <span class="n">run</span><span class="o">.</span><span class="n">py</span> <span class="p">[</span><span class="o">-</span><span class="n">h</span><span class="p">]</span> <span class="p">[</span><span class="o">--</span><span class="n">verbose</span><span class="p">]</span> <span class="p">[</span><span class="o">--</span><span class="n">silent</span><span class="p">]</span> <span class="p">[</span><span class="o">--</span><span class="n">overwrite</span><span class="p">]</span> <span class="p">[</span><span class="o">--</span><span class="n">backup</span><span class="p">]</span>
+              <span class="p">[</span><span class="o">--</span><span class="nb">all</span> <span class="o">|</span> <span class="o">--</span><span class="k">lambda</span> <span class="k">lambda</span> <span class="p">:</span> <span class="kc">True</span> <span class="o">|</span> <span class="o">--</span><span class="n">match</span> <span class="o">.*</span> <span class="o">|</span> <span class="o">--</span><span class="n">itemids</span> <span class="p">[</span><span class="n">itemids</span> <span class="p">[</span><span class="n">itemids</span> <span class="o">...</span><span class="p">]]]</span>
+              <span class="p">[</span><span class="o">--</span><span class="n">show</span> <span class="o">|</span> <span class="o">--</span><span class="n">scrub</span> <span class="o">|</span> <span class="o">--</span><span class="nb">set</span> <span class="n">key</span><span class="o">=</span><span class="n">value</span><span class="p">]</span>
+              <span class="p">[</span><span class="nb">str</span> <span class="p">[</span><span class="nb">str</span> <span class="o">...</span><span class="p">]]</span> <span class="p">[</span><span class="n">stub</span><span class="p">]</span>
 
-Alter item database.
+<span class="n">Alter</span> <span class="n">item</span> <span class="n">database</span><span class="o">.</span>
 
-positional arguments:
-  str                   item data CSV file(s)
-  stub                  output file stub
+<span class="n">positional</span> <span class="n">arguments</span><span class="p">:</span>
+  <span class="nb">str</span>                   <span class="n">item</span> <span class="n">data</span> <span class="n">CSV</span> <span class="n">file</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+  <span class="n">stub</span>                  <span class="n">output</span> <span class="n">file</span> <span class="n">stub</span>
 
-optional arguments:
-  -h, --help            show this help message and exit
-  --verbose             report debug, info, and error
-  --silent              report error only
-  --overwrite           overwrite output file
-  --backup              backup output file
-  --all                 select all itemids
-  --lambda lambda : True
-                        select itemids where lambda evaluates to True
-  --match .*            select itemids where name matches regex
-  --itemids [itemids [itemids ...]]
-                        a list of item ids
-  --show                show itemids and exit
-  --scrub               redownload data for item
-  --set key=value       set column to value for item
+<span class="n">optional</span> <span class="n">arguments</span><span class="p">:</span>
+  <span class="o">-</span><span class="n">h</span><span class="p">,</span> <span class="o">--</span><span class="n">help</span>            <span class="n">show</span> <span class="n">this</span> <span class="n">help</span> <span class="n">message</span> <span class="ow">and</span> <span class="n">exit</span>
+  <span class="o">--</span><span class="n">verbose</span>             <span class="n">report</span> <span class="n">debug</span><span class="p">,</span> <span class="n">info</span><span class="p">,</span> <span class="ow">and</span> <span class="n">error</span>
+  <span class="o">--</span><span class="n">silent</span>              <span class="n">report</span> <span class="n">error</span> <span class="n">only</span>
+  <span class="o">--</span><span class="n">overwrite</span>           <span class="n">overwrite</span> <span class="n">output</span> <span class="n">file</span>
+  <span class="o">--</span><span class="n">backup</span>              <span class="n">backup</span> <span class="n">output</span> <span class="n">file</span>
+  <span class="o">--</span><span class="nb">all</span>                 <span class="n">select</span> <span class="nb">all</span> <span class="n">itemids</span>
+  <span class="o">--</span><span class="k">lambda</span> <span class="k">lambda</span> <span class="p">:</span> <span class="kc">True</span>
+                        <span class="n">select</span> <span class="n">itemids</span> <span class="n">where</span> <span class="k">lambda</span> <span class="n">evaluates</span> <span class="n">to</span> <span class="kc">True</span>
+  <span class="o">--</span><span class="n">match</span> <span class="o">.*</span>            <span class="n">select</span> <span class="n">itemids</span> <span class="n">where</span> <span class="n">name</span> <span class="n">matches</span> <span class="n">regex</span>
+  <span class="o">--</span><span class="n">itemids</span> <span class="p">[</span><span class="n">itemids</span> <span class="p">[</span><span class="n">itemids</span> <span class="o">...</span><span class="p">]]</span>
+                        <span class="n">a</span> <span class="nb">list</span> <span class="n">of</span> <span class="n">item</span> <span class="n">ids</span>
+  <span class="o">--</span><span class="n">show</span>                <span class="n">show</span> <span class="n">itemids</span> <span class="ow">and</span> <span class="n">exit</span>
+  <span class="o">--</span><span class="n">scrub</span>               <span class="n">redownload</span> <span class="n">data</span> <span class="k">for</span> <span class="n">item</span>
+  <span class="o">--</span><span class="nb">set</span> <span class="n">key</span><span class="o">=</span><span class="n">value</span>       <span class="nb">set</span> <span class="n">column</span> <span class="n">to</span> <span class="n">value</span> <span class="k">for</span> <span class="n">item</span>
 </pre></div>
 </div>
 </div>
@@ -381,7 +385,7 @@ optional arguments:
     </p>
     <p>
         &copy; Copyright 2015, Adam Gagorik.<br/>
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.1.<br/>
     </p>
   </div>
 </footer>

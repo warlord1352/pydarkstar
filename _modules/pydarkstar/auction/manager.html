@@ -5,11 +5,11 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>pydarkstar.auction.manager &mdash; pydarkstar 3.0.0 documentation</title>
+    <title>pydarkstar.auction.manager &#8212; pydarkstar 3.0.0 documentation</title>
     
     <link rel="stylesheet" href="../../../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../../../_static/bootswatch-3.3.4/cerulean/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/bootswatch-3.3.6/cerulean/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../../../_static/bootstrap-sphinx.css" type="text/css" />
     
     <script type="text/javascript">
@@ -18,7 +18,8 @@
         VERSION:     '3.0.0',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
       };
     </script>
     <script type="text/javascript" src="../../../_static/jquery.js"></script>
@@ -27,10 +28,10 @@
     <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="../../../_static/js/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="../../../_static/js/jquery-fix.js"></script>
-    <script type="text/javascript" src="../../../_static/bootstrap-3.3.4/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../../_static/bootstrap-3.3.6/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="../../../_static/bootstrap-sphinx.js"></script>
-    <link rel="top" title="pydarkstar 3.0.0 documentation" href="../../../index.html" />
-    <link rel="up" title="Module code" href="../../index.html" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
 <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
@@ -70,16 +71,18 @@
       role="menu"
       aria-labelledby="dLabelGlobalToc"><ul>
 <li class="toctree-l1"><a class="reference internal" href="../../../generated/setup.html">Setup</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../../generated/setup.html#notes">Notes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../generated/setup.html#linux">Linux</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../generated/setup.html#windows">Windows</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../generated/setup.html#step-0-install-git-and-clone-pydarkstar">Step 0: Install Git and Clone pydarkstar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../generated/setup.html#step-1-install-python">Step 1: Install Python</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../generated/setup.html#step-2-install-3rd-party-python-modules">Step 2: Install 3rd-party Python Modules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../generated/setup.html#step-4-configure-pydarkstar">Step 4: Configure pydarkstar</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../../generated/usage.html">Usage</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../../generated/usage.html#basic">Basic</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../generated/usage.html#apps">Apps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../generated/usage.html#notes">Notes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../generated/usage.html#example">Example</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../generated/usage.html#parameters">Parameters</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../generated/usage.html#item-database">Item Database</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../generated/usage.html#apps">Apps</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../../generated/apps.html">Apps</a><ul>
@@ -154,14 +157,14 @@
     <div class="col-md-12 content">
       
   <h1>Source code for pydarkstar.auction.manager</h1><div class="highlight"><pre>
-<span class="kn">from</span> <span class="nn">..tables.auctionhouse</span> <span class="kn">import</span> <span class="n">AuctionHouse</span>
-<span class="kn">from</span> <span class="nn">..database</span> <span class="kn">import</span> <span class="n">Database</span>
-<span class="kn">from</span> <span class="nn">.worker</span> <span class="kn">import</span> <span class="n">Worker</span>
-<span class="kn">from</span> <span class="nn">.browser</span> <span class="kn">import</span> <span class="n">Browser</span>
-<span class="kn">from</span> <span class="nn">.cleaner</span> <span class="kn">import</span> <span class="n">Cleaner</span>
-<span class="kn">from</span> <span class="nn">.seller</span> <span class="kn">import</span> <span class="n">Seller</span>
-<span class="kn">from</span> <span class="nn">.buyer</span> <span class="kn">import</span> <span class="n">Buyer</span>
-<span class="kn">from</span> <span class="nn">..</span> <span class="kn">import</span> <span class="n">timeutils</span>
+<span></span><span class="kn">from</span> <span class="nn">..tables.auctionhouse</span> <span class="k">import</span> <span class="n">AuctionHouse</span>
+<span class="kn">from</span> <span class="nn">..database</span> <span class="k">import</span> <span class="n">Database</span>
+<span class="kn">from</span> <span class="nn">.worker</span> <span class="k">import</span> <span class="n">Worker</span>
+<span class="kn">from</span> <span class="nn">.browser</span> <span class="k">import</span> <span class="n">Browser</span>
+<span class="kn">from</span> <span class="nn">.cleaner</span> <span class="k">import</span> <span class="n">Cleaner</span>
+<span class="kn">from</span> <span class="nn">.seller</span> <span class="k">import</span> <span class="n">Seller</span>
+<span class="kn">from</span> <span class="nn">.buyer</span> <span class="k">import</span> <span class="n">Buyer</span>
+<span class="kn">from</span> <span class="nn">..</span> <span class="k">import</span> <span class="n">timeutils</span>
 <span class="kn">import</span> <span class="nn">datetime</span>
 
 
@@ -173,7 +176,7 @@
 <span class="sd">    &quot;&quot;&quot;</span>
 
     <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">db</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
-        <span class="nb">super</span><span class="p">(</span><span class="n">Manager</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">__init__</span><span class="p">(</span><span class="n">db</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">Manager</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">db</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">blacklist</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">browser</span> <span class="o">=</span> <span class="n">Browser</span><span class="p">(</span><span class="n">db</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">cleaner</span> <span class="o">=</span> <span class="n">Cleaner</span><span class="p">(</span><span class="n">db</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
@@ -181,11 +184,11 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">buyer</span> <span class="o">=</span> <span class="n">Buyer</span><span class="p">(</span><span class="n">db</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
 
     <span class="nd">@classmethod</span>
-<div class="viewcode-block" id="Manager.create_database_and_manager"><a class="viewcode-back" href="../../../generated/pydarkstar.auction.manager.html#pydarkstar.auction.manager.Manager.create_database_and_manager">[docs]</a>    <span class="k">def</span> <span class="nf">create_database_and_manager</span><span class="p">(</span><span class="n">cls</span><span class="p">,</span> <span class="n">hostname</span><span class="p">,</span> <span class="n">database</span><span class="p">,</span> <span class="n">username</span><span class="p">,</span> <span class="n">password</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">fail</span><span class="o">=</span><span class="bp">True</span><span class="p">):</span>
+<div class="viewcode-block" id="Manager.create_database_and_manager"><a class="viewcode-back" href="../../../generated/pydarkstar.auction.manager.html#pydarkstar.auction.manager.Manager.create_database_and_manager">[docs]</a>    <span class="k">def</span> <span class="nf">create_database_and_manager</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">hostname</span><span class="p">,</span> <span class="n">database</span><span class="p">,</span> <span class="n">username</span><span class="p">,</span> <span class="n">password</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">fail</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Create database and manager at the same time.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="c"># connect to database</span>
+        <span class="c1"># connect to database</span>
         <span class="n">db</span> <span class="o">=</span> <span class="n">Database</span><span class="o">.</span><span class="n">pymysql</span><span class="p">(</span>
             <span class="n">hostname</span><span class="o">=</span><span class="n">hostname</span><span class="p">,</span>
             <span class="n">database</span><span class="o">=</span><span class="n">database</span><span class="p">,</span>
@@ -193,130 +196,130 @@
             <span class="n">password</span><span class="o">=</span><span class="n">password</span><span class="p">,</span>
         <span class="p">)</span>
 
-        <span class="c"># create auction house manager</span>
-        <span class="n">obj</span> <span class="o">=</span> <span class="n">cls</span><span class="p">(</span><span class="n">db</span><span class="p">,</span> <span class="n">fail</span><span class="o">=</span><span class="n">fail</span><span class="p">)</span>
+        <span class="c1"># create auction house manager</span>
+        <span class="n">obj</span> <span class="o">=</span> <span class="bp">cls</span><span class="p">(</span><span class="n">db</span><span class="p">,</span> <span class="n">fail</span><span class="o">=</span><span class="n">fail</span><span class="p">)</span>
 
-        <span class="k">if</span> <span class="n">name</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">name</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="n">obj</span><span class="o">.</span><span class="n">seller</span><span class="o">.</span><span class="n">seller_name</span> <span class="o">=</span> <span class="n">name</span>
             <span class="n">obj</span><span class="o">.</span><span class="n">buyer</span><span class="o">.</span><span class="n">buyer_name</span> <span class="o">=</span> <span class="n">name</span>
 
-        <span class="k">return</span> <span class="n">obj</span>
-</div>
+        <span class="k">return</span> <span class="n">obj</span></div>
+
 <div class="viewcode-block" id="Manager.add_to_blacklist"><a class="viewcode-back" href="../../../generated/pydarkstar.auction.manager.html#pydarkstar.auction.manager.Manager.add_to_blacklist">[docs]</a>    <span class="k">def</span> <span class="nf">add_to_blacklist</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">rowid</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Add row to blacklist.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s">&#39;blacklisting: row=</span><span class="si">%d</span><span class="s">&#39;</span><span class="p">,</span> <span class="n">rowid</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">blacklist</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">rowid</span><span class="p">)</span>
-</div>
+        <span class="bp">self</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;blacklisting: row=</span><span class="si">%d</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">rowid</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">blacklist</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">rowid</span><span class="p">)</span></div>
+
 <div class="viewcode-block" id="Manager.buy_items"><a class="viewcode-back" href="../../../generated/pydarkstar.auction.manager.html#pydarkstar.auction.manager.Manager.buy_items">[docs]</a>    <span class="k">def</span> <span class="nf">buy_items</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">itemdata</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        The main buy item loop.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">with</span> <span class="bp">self</span><span class="o">.</span><span class="n">scopped_session</span><span class="p">(</span><span class="n">fail</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">fail</span><span class="p">)</span> <span class="k">as</span> <span class="n">session</span><span class="p">:</span>
-            <span class="c"># find rows that are still up for sale</span>
+            <span class="c1"># find rows that are still up for sale</span>
             <span class="n">q</span> <span class="o">=</span> <span class="n">session</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">AuctionHouse</span><span class="p">)</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span>
                 <span class="n">AuctionHouse</span><span class="o">.</span><span class="n">seller</span> <span class="o">!=</span> <span class="bp">self</span><span class="o">.</span><span class="n">seller</span><span class="o">.</span><span class="n">seller</span><span class="p">,</span>
                 <span class="n">AuctionHouse</span><span class="o">.</span><span class="n">sell_date</span> <span class="o">==</span> <span class="mi">0</span><span class="p">,</span>
                 <span class="n">AuctionHouse</span><span class="o">.</span><span class="n">sale</span> <span class="o">==</span> <span class="mi">0</span><span class="p">,</span>
             <span class="p">)</span>
-            <span class="c"># loop rows</span>
+            <span class="c1"># loop rows</span>
             <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">q</span><span class="p">:</span>
                 <span class="k">with</span> <span class="bp">self</span><span class="o">.</span><span class="n">capture</span><span class="p">(</span><span class="n">fail</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">fail</span><span class="p">):</span>
-                    <span class="c"># skip blacklisted rows</span>
+                    <span class="c1"># skip blacklisted rows</span>
                     <span class="k">if</span> <span class="n">row</span><span class="o">.</span><span class="n">id</span> <span class="ow">not</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">blacklist</span><span class="p">:</span>
-                        <span class="c"># get item data</span>
+                        <span class="c1"># get item data</span>
                         <span class="k">try</span><span class="p">:</span>
                             <span class="n">data</span> <span class="o">=</span> <span class="n">itemdata</span><span class="p">[</span><span class="n">row</span><span class="o">.</span><span class="n">itemid</span><span class="p">]</span>
                         <span class="k">except</span> <span class="ne">KeyError</span><span class="p">:</span>
-                            <span class="bp">self</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="s">&#39;item missing from database: </span><span class="si">%d</span><span class="s">&#39;</span><span class="p">,</span> <span class="n">row</span><span class="o">.</span><span class="n">itemid</span><span class="p">)</span>
-                            <span class="n">data</span> <span class="o">=</span> <span class="bp">None</span>
+                            <span class="bp">self</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="s1">&#39;item missing from database: </span><span class="si">%d</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">row</span><span class="o">.</span><span class="n">itemid</span><span class="p">)</span>
+                            <span class="n">data</span> <span class="o">=</span> <span class="kc">None</span>
 
-                        <span class="k">if</span> <span class="n">data</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">:</span>
-                            <span class="c"># buy stacks</span>
+                        <span class="k">if</span> <span class="n">data</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                            <span class="c1"># buy stacks</span>
                             <span class="k">if</span> <span class="n">row</span><span class="o">.</span><span class="n">stack</span><span class="p">:</span>
-                                <span class="c"># check permissions</span>
+                                <span class="c1"># check permissions</span>
                                 <span class="k">if</span> <span class="n">data</span><span class="o">.</span><span class="n">buy12</span><span class="p">:</span>
-                                    <span class="c"># check price</span>
+                                    <span class="c1"># check price</span>
                                     <span class="k">if</span> <span class="n">row</span><span class="o">.</span><span class="n">price</span> <span class="o">&lt;=</span> <span class="n">data</span><span class="o">.</span><span class="n">price12</span><span class="p">:</span>
                                         <span class="n">date</span> <span class="o">=</span> <span class="n">timeutils</span><span class="o">.</span><span class="n">timestamp</span><span class="p">(</span><span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">())</span>
                                         <span class="bp">self</span><span class="o">.</span><span class="n">buyer</span><span class="o">.</span><span class="n">buy_item</span><span class="p">(</span><span class="n">row</span><span class="p">,</span> <span class="n">date</span><span class="p">,</span> <span class="n">data</span><span class="o">.</span><span class="n">price12</span><span class="p">)</span>
                                     <span class="k">else</span><span class="p">:</span>
-                                        <span class="bp">self</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s">&#39;price too high! itemid=</span><span class="si">%d</span><span class="s"> </span><span class="si">%d</span><span class="s"> &lt;= </span><span class="si">%d</span><span class="s">&#39;</span><span class="p">,</span>
+                                        <span class="bp">self</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;price too high! itemid=</span><span class="si">%d</span><span class="s1"> </span><span class="si">%d</span><span class="s1"> &lt;= </span><span class="si">%d</span><span class="s1">&#39;</span><span class="p">,</span>
                                                   <span class="n">row</span><span class="o">.</span><span class="n">itemid</span><span class="p">,</span> <span class="n">row</span><span class="o">.</span><span class="n">price</span><span class="p">,</span> <span class="n">data</span><span class="o">.</span><span class="n">price12</span><span class="p">)</span>
                                         <span class="bp">self</span><span class="o">.</span><span class="n">add_to_blacklist</span><span class="p">(</span><span class="n">row</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
                                 <span class="k">else</span><span class="p">:</span>
-                                    <span class="bp">self</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s">&#39;not allowed to buy item! itemid=</span><span class="si">%d</span><span class="s">&#39;</span><span class="p">,</span> <span class="n">row</span><span class="o">.</span><span class="n">itemid</span><span class="p">)</span>
+                                    <span class="bp">self</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s1">&#39;not allowed to buy item! itemid=</span><span class="si">%d</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">row</span><span class="o">.</span><span class="n">itemid</span><span class="p">)</span>
                                     <span class="bp">self</span><span class="o">.</span><span class="n">add_to_blacklist</span><span class="p">(</span><span class="n">row</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
-                            <span class="c"># buy singles</span>
+                            <span class="c1"># buy singles</span>
                             <span class="k">else</span><span class="p">:</span>
-                                <span class="c"># check permissions</span>
+                                <span class="c1"># check permissions</span>
                                 <span class="k">if</span> <span class="n">data</span><span class="o">.</span><span class="n">buy01</span><span class="p">:</span>
-                                    <span class="c"># check price</span>
+                                    <span class="c1"># check price</span>
                                     <span class="k">if</span> <span class="n">row</span><span class="o">.</span><span class="n">price</span> <span class="o">&lt;=</span> <span class="n">data</span><span class="o">.</span><span class="n">price01</span><span class="p">:</span>
                                         <span class="n">date</span> <span class="o">=</span> <span class="n">timeutils</span><span class="o">.</span><span class="n">timestamp</span><span class="p">(</span><span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">())</span>
                                         <span class="bp">self</span><span class="o">.</span><span class="n">buyer</span><span class="o">.</span><span class="n">buy_item</span><span class="p">(</span><span class="n">row</span><span class="p">,</span> <span class="n">date</span><span class="p">,</span> <span class="n">data</span><span class="o">.</span><span class="n">price01</span><span class="p">)</span>
                                     <span class="k">else</span><span class="p">:</span>
-                                        <span class="bp">self</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s">&#39;price too high! itemid=</span><span class="si">%d</span><span class="s"> </span><span class="si">%d</span><span class="s"> &lt;= </span><span class="si">%d</span><span class="s">&#39;</span><span class="p">,</span>
+                                        <span class="bp">self</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;price too high! itemid=</span><span class="si">%d</span><span class="s1"> </span><span class="si">%d</span><span class="s1"> &lt;= </span><span class="si">%d</span><span class="s1">&#39;</span><span class="p">,</span>
                                                   <span class="n">row</span><span class="o">.</span><span class="n">itemid</span><span class="p">,</span> <span class="n">row</span><span class="o">.</span><span class="n">price</span><span class="p">,</span> <span class="n">data</span><span class="o">.</span><span class="n">price01</span><span class="p">)</span>
                                         <span class="bp">self</span><span class="o">.</span><span class="n">add_to_blacklist</span><span class="p">(</span><span class="n">row</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
                                 <span class="k">else</span><span class="p">:</span>
-                                    <span class="bp">self</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s">&#39;not allowed to buy item! itemid=</span><span class="si">%d</span><span class="s">&#39;</span><span class="p">,</span> <span class="n">row</span><span class="o">.</span><span class="n">itemid</span><span class="p">)</span>
+                                    <span class="bp">self</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s1">&#39;not allowed to buy item! itemid=</span><span class="si">%d</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">row</span><span class="o">.</span><span class="n">itemid</span><span class="p">)</span>
                                     <span class="bp">self</span><span class="o">.</span><span class="n">add_to_blacklist</span><span class="p">(</span><span class="n">row</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
                         <span class="k">else</span><span class="p">:</span>
-                            <span class="c"># item data missing</span>
+                            <span class="c1"># item data missing</span>
                             <span class="bp">self</span><span class="o">.</span><span class="n">add_to_blacklist</span><span class="p">(</span><span class="n">row</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
                     <span class="k">else</span><span class="p">:</span>
-                        <span class="c"># row was blacklisted</span>
-                        <span class="bp">self</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s">&#39;skipping row </span><span class="si">%d</span><span class="s">&#39;</span><span class="p">,</span> <span class="n">row</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
-</div>
+                        <span class="c1"># row was blacklisted</span>
+                        <span class="bp">self</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s1">&#39;skipping row </span><span class="si">%d</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">row</span><span class="o">.</span><span class="n">id</span><span class="p">)</span></div>
+
 <div class="viewcode-block" id="Manager.restock_items"><a class="viewcode-back" href="../../../generated/pydarkstar.auction.manager.html#pydarkstar.auction.manager.Manager.restock_items">[docs]</a>    <span class="k">def</span> <span class="nf">restock_items</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">itemdata</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        The main restock loop.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="c"># loop over items</span>
+        <span class="c1"># loop over items</span>
         <span class="k">for</span> <span class="n">data</span> <span class="ow">in</span> <span class="n">itemdata</span><span class="o">.</span><span class="n">items</span><span class="o">.</span><span class="n">values</span><span class="p">():</span>
 
-            <span class="c"># singles</span>
+            <span class="c1"># singles</span>
             <span class="k">if</span> <span class="n">data</span><span class="o">.</span><span class="n">sell01</span><span class="p">:</span>
-                <span class="c"># check history</span>
-                <span class="n">history_price</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">browser</span><span class="o">.</span><span class="n">get_price</span><span class="p">(</span><span class="n">itemid</span><span class="o">=</span><span class="n">data</span><span class="o">.</span><span class="n">itemid</span><span class="p">,</span> <span class="n">stack</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span> <span class="n">seller</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">seller</span><span class="o">.</span><span class="n">seller</span><span class="p">)</span>
+                <span class="c1"># check history</span>
+                <span class="n">history_price</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">browser</span><span class="o">.</span><span class="n">get_price</span><span class="p">(</span><span class="n">itemid</span><span class="o">=</span><span class="n">data</span><span class="o">.</span><span class="n">itemid</span><span class="p">,</span> <span class="n">stack</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">seller</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">seller</span><span class="o">.</span><span class="n">seller</span><span class="p">)</span>
 
-                <span class="c"># set history</span>
-                <span class="k">if</span> <span class="n">history_price</span> <span class="ow">is</span> <span class="bp">None</span> <span class="ow">or</span> <span class="n">history_price</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="c1"># set history</span>
+                <span class="k">if</span> <span class="n">history_price</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">or</span> <span class="n">history_price</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="p">:</span>
                     <span class="n">now</span> <span class="o">=</span> <span class="n">timeutils</span><span class="o">.</span><span class="n">timestamp</span><span class="p">(</span><span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="p">(</span><span class="mi">2020</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
-                    <span class="bp">self</span><span class="o">.</span><span class="n">seller</span><span class="o">.</span><span class="n">set_history</span><span class="p">(</span><span class="n">itemid</span><span class="o">=</span><span class="n">data</span><span class="o">.</span><span class="n">itemid</span><span class="p">,</span> <span class="n">stack</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span> <span class="n">price</span><span class="o">=</span><span class="n">data</span><span class="o">.</span><span class="n">price01</span><span class="p">,</span> <span class="n">date</span><span class="o">=</span><span class="n">now</span><span class="p">,</span> <span class="n">count</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">seller</span><span class="o">.</span><span class="n">set_history</span><span class="p">(</span><span class="n">itemid</span><span class="o">=</span><span class="n">data</span><span class="o">.</span><span class="n">itemid</span><span class="p">,</span> <span class="n">stack</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">price</span><span class="o">=</span><span class="n">data</span><span class="o">.</span><span class="n">price01</span><span class="p">,</span> <span class="n">date</span><span class="o">=</span><span class="n">now</span><span class="p">,</span> <span class="n">count</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 
-                <span class="c"># get stock</span>
-                <span class="n">stock</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">browser</span><span class="o">.</span><span class="n">get_stock</span><span class="p">(</span><span class="n">itemid</span><span class="o">=</span><span class="n">data</span><span class="o">.</span><span class="n">itemid</span><span class="p">,</span> <span class="n">stack</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span> <span class="n">seller</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">seller</span><span class="o">.</span><span class="n">seller</span><span class="p">)</span>
+                <span class="c1"># get stock</span>
+                <span class="n">stock</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">browser</span><span class="o">.</span><span class="n">get_stock</span><span class="p">(</span><span class="n">itemid</span><span class="o">=</span><span class="n">data</span><span class="o">.</span><span class="n">itemid</span><span class="p">,</span> <span class="n">stack</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">seller</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">seller</span><span class="o">.</span><span class="n">seller</span><span class="p">)</span>
 
-                <span class="c"># restock</span>
+                <span class="c1"># restock</span>
                 <span class="k">while</span> <span class="n">stock</span> <span class="o">&lt;</span> <span class="n">data</span><span class="o">.</span><span class="n">stock01</span><span class="p">:</span>
                     <span class="n">now</span> <span class="o">=</span> <span class="n">timeutils</span><span class="o">.</span><span class="n">timestamp</span><span class="p">(</span><span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="p">(</span><span class="mi">2020</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
-                    <span class="bp">self</span><span class="o">.</span><span class="n">seller</span><span class="o">.</span><span class="n">sell_item</span><span class="p">(</span><span class="n">itemid</span><span class="o">=</span><span class="n">data</span><span class="o">.</span><span class="n">itemid</span><span class="p">,</span> <span class="n">stack</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span> <span class="n">date</span><span class="o">=</span><span class="n">now</span><span class="p">,</span> <span class="n">price</span><span class="o">=</span><span class="n">data</span><span class="o">.</span><span class="n">price01</span><span class="p">,</span> <span class="n">count</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">seller</span><span class="o">.</span><span class="n">sell_item</span><span class="p">(</span><span class="n">itemid</span><span class="o">=</span><span class="n">data</span><span class="o">.</span><span class="n">itemid</span><span class="p">,</span> <span class="n">stack</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">date</span><span class="o">=</span><span class="n">now</span><span class="p">,</span> <span class="n">price</span><span class="o">=</span><span class="n">data</span><span class="o">.</span><span class="n">price01</span><span class="p">,</span> <span class="n">count</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
                     <span class="n">stock</span> <span class="o">+=</span> <span class="mi">1</span>
 
-            <span class="c"># stacks</span>
+            <span class="c1"># stacks</span>
             <span class="k">if</span> <span class="n">data</span><span class="o">.</span><span class="n">sell12</span><span class="p">:</span>
-                <span class="c"># check history</span>
-                <span class="n">history_price</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">browser</span><span class="o">.</span><span class="n">get_price</span><span class="p">(</span><span class="n">itemid</span><span class="o">=</span><span class="n">data</span><span class="o">.</span><span class="n">itemid</span><span class="p">,</span> <span class="n">stack</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">seller</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">seller</span><span class="o">.</span><span class="n">seller</span><span class="p">)</span>
+                <span class="c1"># check history</span>
+                <span class="n">history_price</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">browser</span><span class="o">.</span><span class="n">get_price</span><span class="p">(</span><span class="n">itemid</span><span class="o">=</span><span class="n">data</span><span class="o">.</span><span class="n">itemid</span><span class="p">,</span> <span class="n">stack</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">seller</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">seller</span><span class="o">.</span><span class="n">seller</span><span class="p">)</span>
 
-                <span class="c"># set history</span>
-                <span class="k">if</span> <span class="n">history_price</span> <span class="ow">is</span> <span class="bp">None</span> <span class="ow">or</span> <span class="n">history_price</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="c1"># set history</span>
+                <span class="k">if</span> <span class="n">history_price</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">or</span> <span class="n">history_price</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="p">:</span>
                     <span class="n">now</span> <span class="o">=</span> <span class="n">timeutils</span><span class="o">.</span><span class="n">timestamp</span><span class="p">(</span><span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="p">(</span><span class="mi">2020</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
-                    <span class="bp">self</span><span class="o">.</span><span class="n">seller</span><span class="o">.</span><span class="n">set_history</span><span class="p">(</span><span class="n">itemid</span><span class="o">=</span><span class="n">data</span><span class="o">.</span><span class="n">itemid</span><span class="p">,</span> <span class="n">stack</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">price</span><span class="o">=</span><span class="n">data</span><span class="o">.</span><span class="n">price12</span><span class="p">,</span> <span class="n">date</span><span class="o">=</span><span class="n">now</span><span class="p">,</span> <span class="n">count</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">seller</span><span class="o">.</span><span class="n">set_history</span><span class="p">(</span><span class="n">itemid</span><span class="o">=</span><span class="n">data</span><span class="o">.</span><span class="n">itemid</span><span class="p">,</span> <span class="n">stack</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">price</span><span class="o">=</span><span class="n">data</span><span class="o">.</span><span class="n">price12</span><span class="p">,</span> <span class="n">date</span><span class="o">=</span><span class="n">now</span><span class="p">,</span> <span class="n">count</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 
-                <span class="c"># get stock</span>
-                <span class="n">stock</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">browser</span><span class="o">.</span><span class="n">get_stock</span><span class="p">(</span><span class="n">itemid</span><span class="o">=</span><span class="n">data</span><span class="o">.</span><span class="n">itemid</span><span class="p">,</span> <span class="n">stack</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">seller</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">seller</span><span class="o">.</span><span class="n">seller</span><span class="p">)</span>
+                <span class="c1"># get stock</span>
+                <span class="n">stock</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">browser</span><span class="o">.</span><span class="n">get_stock</span><span class="p">(</span><span class="n">itemid</span><span class="o">=</span><span class="n">data</span><span class="o">.</span><span class="n">itemid</span><span class="p">,</span> <span class="n">stack</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">seller</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">seller</span><span class="o">.</span><span class="n">seller</span><span class="p">)</span>
 
-                <span class="c"># restock</span>
+                <span class="c1"># restock</span>
                 <span class="k">while</span> <span class="n">stock</span> <span class="o">&lt;</span> <span class="n">data</span><span class="o">.</span><span class="n">stock12</span><span class="p">:</span>
                     <span class="n">now</span> <span class="o">=</span> <span class="n">timeutils</span><span class="o">.</span><span class="n">timestamp</span><span class="p">(</span><span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="p">(</span><span class="mi">2020</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
-                    <span class="bp">self</span><span class="o">.</span><span class="n">seller</span><span class="o">.</span><span class="n">sell_item</span><span class="p">(</span><span class="n">itemid</span><span class="o">=</span><span class="n">data</span><span class="o">.</span><span class="n">itemid</span><span class="p">,</span> <span class="n">stack</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">date</span><span class="o">=</span><span class="n">now</span><span class="p">,</span> <span class="n">price</span><span class="o">=</span><span class="n">data</span><span class="o">.</span><span class="n">price12</span><span class="p">,</span> <span class="n">count</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
-                    <span class="n">stock</span> <span class="o">+=</span> <span class="mi">1</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">seller</span><span class="o">.</span><span class="n">sell_item</span><span class="p">(</span><span class="n">itemid</span><span class="o">=</span><span class="n">data</span><span class="o">.</span><span class="n">itemid</span><span class="p">,</span> <span class="n">stack</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">date</span><span class="o">=</span><span class="n">now</span><span class="p">,</span> <span class="n">price</span><span class="o">=</span><span class="n">data</span><span class="o">.</span><span class="n">price12</span><span class="p">,</span> <span class="n">count</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+                    <span class="n">stock</span> <span class="o">+=</span> <span class="mi">1</span></div></div>
 
-</div></div>
-<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">&#39;__main__&#39;</span><span class="p">:</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
     <span class="k">pass</span>
 </pre></div>
 
@@ -332,7 +335,7 @@
     </p>
     <p>
         &copy; Copyright 2015, Adam Gagorik.<br/>
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.1.<br/>
     </p>
   </div>
 </footer>

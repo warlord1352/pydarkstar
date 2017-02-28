@@ -5,11 +5,11 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>pydarkstar.tables.auctionhouse &mdash; pydarkstar 3.0.0 documentation</title>
+    <title>pydarkstar.tables.auctionhouse &#8212; pydarkstar 3.0.0 documentation</title>
     
     <link rel="stylesheet" href="../../../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../../../_static/bootswatch-3.3.4/cerulean/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/bootswatch-3.3.6/cerulean/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../../../_static/bootstrap-sphinx.css" type="text/css" />
     
     <script type="text/javascript">
@@ -18,7 +18,8 @@
         VERSION:     '3.0.0',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
       };
     </script>
     <script type="text/javascript" src="../../../_static/jquery.js"></script>
@@ -27,10 +28,10 @@
     <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="../../../_static/js/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="../../../_static/js/jquery-fix.js"></script>
-    <script type="text/javascript" src="../../../_static/bootstrap-3.3.4/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../../_static/bootstrap-3.3.6/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="../../../_static/bootstrap-sphinx.js"></script>
-    <link rel="top" title="pydarkstar 3.0.0 documentation" href="../../../index.html" />
-    <link rel="up" title="Module code" href="../../index.html" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
 <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
@@ -70,16 +71,18 @@
       role="menu"
       aria-labelledby="dLabelGlobalToc"><ul>
 <li class="toctree-l1"><a class="reference internal" href="../../../generated/setup.html">Setup</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../../generated/setup.html#notes">Notes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../generated/setup.html#linux">Linux</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../generated/setup.html#windows">Windows</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../generated/setup.html#step-0-install-git-and-clone-pydarkstar">Step 0: Install Git and Clone pydarkstar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../generated/setup.html#step-1-install-python">Step 1: Install Python</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../generated/setup.html#step-2-install-3rd-party-python-modules">Step 2: Install 3rd-party Python Modules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../generated/setup.html#step-4-configure-pydarkstar">Step 4: Configure pydarkstar</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../../generated/usage.html">Usage</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../../generated/usage.html#basic">Basic</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../generated/usage.html#apps">Apps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../generated/usage.html#notes">Notes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../generated/usage.html#example">Example</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../generated/usage.html#parameters">Parameters</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../generated/usage.html#item-database">Item Database</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../generated/usage.html#apps">Apps</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../../generated/apps.html">Apps</a><ul>
@@ -154,9 +157,9 @@
     <div class="col-md-12 content">
       
   <h1>Source code for pydarkstar.tables.auctionhouse</h1><div class="highlight"><pre>
-<span class="kn">from</span> <span class="nn">sqlalchemy</span> <span class="kn">import</span> <span class="n">Column</span><span class="p">,</span> <span class="n">Integer</span><span class="p">,</span> <span class="n">SmallInteger</span><span class="p">,</span> <span class="n">String</span><span class="p">,</span> <span class="n">text</span>
-<span class="kn">from</span> <span class="nn">.base</span> <span class="kn">import</span> <span class="n">Base</span>
-<span class="kn">from</span> <span class="nn">..</span> <span class="kn">import</span> <span class="n">timeutils</span>
+<span></span><span class="kn">from</span> <span class="nn">sqlalchemy</span> <span class="k">import</span> <span class="n">Column</span><span class="p">,</span> <span class="n">Integer</span><span class="p">,</span> <span class="n">SmallInteger</span><span class="p">,</span> <span class="n">String</span><span class="p">,</span> <span class="n">text</span>
+<span class="kn">from</span> <span class="nn">.base</span> <span class="k">import</span> <span class="n">Base</span>
+<span class="kn">from</span> <span class="nn">..</span> <span class="k">import</span> <span class="n">timeutils</span>
 
 <span class="n">_template</span> <span class="o">=</span> \
     <span class="sd">&quot;&quot;&quot;</span>
@@ -176,21 +179,21 @@
 
 
 <div class="viewcode-block" id="AuctionHouse"><a class="viewcode-back" href="../../../generated/pydarkstar.tables.auctionhouse.html#pydarkstar.tables.auctionhouse.AuctionHouse">[docs]</a><span class="k">class</span> <span class="nc">AuctionHouse</span><span class="p">(</span><span class="n">Base</span><span class="p">):</span>
-    <span class="n">__tablename__</span> <span class="o">=</span> <span class="s">&#39;auction_house&#39;</span>
+    <span class="n">__tablename__</span> <span class="o">=</span> <span class="s1">&#39;auction_house&#39;</span>
 
-    <span class="nb">id</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">Integer</span><span class="p">,</span> <span class="n">primary_key</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
-    <span class="n">itemid</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">SmallInteger</span><span class="p">,</span> <span class="n">nullable</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">server_default</span><span class="o">=</span><span class="n">text</span><span class="p">(</span><span class="s">&quot;&#39;0&#39;&quot;</span><span class="p">))</span>
-    <span class="n">stack</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">Integer</span><span class="p">,</span> <span class="n">nullable</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span> <span class="n">server_default</span><span class="o">=</span><span class="n">text</span><span class="p">(</span><span class="s">&quot;&#39;0&#39;&quot;</span><span class="p">))</span>
-    <span class="n">seller</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">Integer</span><span class="p">,</span> <span class="n">nullable</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span> <span class="n">server_default</span><span class="o">=</span><span class="n">text</span><span class="p">(</span><span class="s">&quot;&#39;0&#39;&quot;</span><span class="p">))</span>
+    <span class="nb">id</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">Integer</span><span class="p">,</span> <span class="n">primary_key</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">itemid</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">SmallInteger</span><span class="p">,</span> <span class="n">nullable</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">server_default</span><span class="o">=</span><span class="n">text</span><span class="p">(</span><span class="s2">&quot;&#39;0&#39;&quot;</span><span class="p">))</span>
+    <span class="n">stack</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">Integer</span><span class="p">,</span> <span class="n">nullable</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">server_default</span><span class="o">=</span><span class="n">text</span><span class="p">(</span><span class="s2">&quot;&#39;0&#39;&quot;</span><span class="p">))</span>
+    <span class="n">seller</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">Integer</span><span class="p">,</span> <span class="n">nullable</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">server_default</span><span class="o">=</span><span class="n">text</span><span class="p">(</span><span class="s2">&quot;&#39;0&#39;&quot;</span><span class="p">))</span>
     <span class="n">seller_name</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">String</span><span class="p">(</span><span class="mi">15</span><span class="p">))</span>
-    <span class="n">date</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">Integer</span><span class="p">,</span> <span class="n">nullable</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span> <span class="n">server_default</span><span class="o">=</span><span class="n">text</span><span class="p">(</span><span class="s">&quot;&#39;0&#39;&quot;</span><span class="p">))</span>
-    <span class="n">price</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">Integer</span><span class="p">,</span> <span class="n">nullable</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span> <span class="n">server_default</span><span class="o">=</span><span class="n">text</span><span class="p">(</span><span class="s">&quot;&#39;0&#39;&quot;</span><span class="p">))</span>
+    <span class="n">date</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">Integer</span><span class="p">,</span> <span class="n">nullable</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">server_default</span><span class="o">=</span><span class="n">text</span><span class="p">(</span><span class="s2">&quot;&#39;0&#39;&quot;</span><span class="p">))</span>
+    <span class="n">price</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">Integer</span><span class="p">,</span> <span class="n">nullable</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">server_default</span><span class="o">=</span><span class="n">text</span><span class="p">(</span><span class="s2">&quot;&#39;0&#39;&quot;</span><span class="p">))</span>
     <span class="n">buyer_name</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">String</span><span class="p">(</span><span class="mi">15</span><span class="p">))</span>
-    <span class="n">sale</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">Integer</span><span class="p">,</span> <span class="n">nullable</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span> <span class="n">server_default</span><span class="o">=</span><span class="n">text</span><span class="p">(</span><span class="s">&quot;&#39;0&#39;&quot;</span><span class="p">))</span>
-    <span class="n">sell_date</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">Integer</span><span class="p">,</span> <span class="n">nullable</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span> <span class="n">server_default</span><span class="o">=</span><span class="n">text</span><span class="p">(</span><span class="s">&quot;&#39;0&#39;&quot;</span><span class="p">))</span>
+    <span class="n">sale</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">Integer</span><span class="p">,</span> <span class="n">nullable</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">server_default</span><span class="o">=</span><span class="n">text</span><span class="p">(</span><span class="s2">&quot;&#39;0&#39;&quot;</span><span class="p">))</span>
+    <span class="n">sell_date</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">Integer</span><span class="p">,</span> <span class="n">nullable</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">server_default</span><span class="o">=</span><span class="n">text</span><span class="p">(</span><span class="s2">&quot;&#39;0&#39;&quot;</span><span class="p">))</span>
 
     <span class="k">def</span> <span class="nf">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">return</span> <span class="s">&#39;({addr}) AuctionHouseRow id={self.id}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">=</span><span class="bp">self</span><span class="p">,</span> <span class="n">addr</span><span class="o">=</span><span class="nb">hex</span><span class="p">(</span><span class="nb">id</span><span class="p">(</span><span class="bp">self</span><span class="p">)))</span>
+        <span class="k">return</span> <span class="s1">&#39;(</span><span class="si">{addr}</span><span class="s1">) AuctionHouseRow id=</span><span class="si">{self.id}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">=</span><span class="bp">self</span><span class="p">,</span> <span class="n">addr</span><span class="o">=</span><span class="nb">hex</span><span class="p">(</span><span class="nb">id</span><span class="p">(</span><span class="bp">self</span><span class="p">)))</span>
 
     <span class="k">def</span> <span class="nf">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="n">_template</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">=</span><span class="bp">self</span><span class="p">,</span> <span class="n">addr</span><span class="o">=</span><span class="nb">hex</span><span class="p">(</span><span class="nb">id</span><span class="p">(</span><span class="bp">self</span><span class="p">)))</span>
@@ -199,38 +202,38 @@
 <div class="viewcode-block" id="AuctionHouse.validate_itemid"><a class="viewcode-back" href="../../../generated/pydarkstar.tables.auctionhouse.html#pydarkstar.tables.auctionhouse.AuctionHouse.validate_itemid">[docs]</a>    <span class="k">def</span> <span class="nf">validate_itemid</span><span class="p">(</span><span class="n">itemid</span><span class="p">):</span>
         <span class="n">itemid</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">itemid</span><span class="p">)</span>
         <span class="k">assert</span> <span class="n">itemid</span> <span class="o">&gt;</span> <span class="mi">0</span>
-        <span class="k">return</span> <span class="n">itemid</span>
-</div>
+        <span class="k">return</span> <span class="n">itemid</span></div>
+
     <span class="nd">@staticmethod</span>
 <div class="viewcode-block" id="AuctionHouse.validate_stack"><a class="viewcode-back" href="../../../generated/pydarkstar.tables.auctionhouse.html#pydarkstar.tables.auctionhouse.AuctionHouse.validate_stack">[docs]</a>    <span class="k">def</span> <span class="nf">validate_stack</span><span class="p">(</span><span class="n">stack</span><span class="p">):</span>
         <span class="k">if</span> <span class="n">stack</span><span class="p">:</span>
             <span class="k">return</span> <span class="mi">1</span>
-        <span class="k">return</span> <span class="mi">0</span>
-</div>
+        <span class="k">return</span> <span class="mi">0</span></div>
+
     <span class="nd">@staticmethod</span>
 <div class="viewcode-block" id="AuctionHouse.validate_seller"><a class="viewcode-back" href="../../../generated/pydarkstar.tables.auctionhouse.html#pydarkstar.tables.auctionhouse.AuctionHouse.validate_seller">[docs]</a>    <span class="k">def</span> <span class="nf">validate_seller</span><span class="p">(</span><span class="n">seller</span><span class="p">):</span>
         <span class="n">seller</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">seller</span><span class="p">)</span>
         <span class="k">assert</span> <span class="n">seller</span> <span class="o">&gt;=</span> <span class="mi">0</span>
-        <span class="k">return</span> <span class="n">seller</span>
-</div>
+        <span class="k">return</span> <span class="n">seller</span></div>
+
     <span class="nd">@staticmethod</span>
 <div class="viewcode-block" id="AuctionHouse.validate_date"><a class="viewcode-back" href="../../../generated/pydarkstar.tables.auctionhouse.html#pydarkstar.tables.auctionhouse.AuctionHouse.validate_date">[docs]</a>    <span class="k">def</span> <span class="nf">validate_date</span><span class="p">(</span><span class="n">date</span><span class="p">):</span>
-        <span class="k">return</span> <span class="n">timeutils</span><span class="o">.</span><span class="n">timestamp</span><span class="p">(</span><span class="n">date</span><span class="p">)</span>
-</div>
+        <span class="k">return</span> <span class="n">timeutils</span><span class="o">.</span><span class="n">timestamp</span><span class="p">(</span><span class="n">date</span><span class="p">)</span></div>
+
     <span class="nd">@staticmethod</span>
 <div class="viewcode-block" id="AuctionHouse.validate_price"><a class="viewcode-back" href="../../../generated/pydarkstar.tables.auctionhouse.html#pydarkstar.tables.auctionhouse.AuctionHouse.validate_price">[docs]</a>    <span class="k">def</span> <span class="nf">validate_price</span><span class="p">(</span><span class="n">price</span><span class="p">):</span>
         <span class="n">price</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">price</span><span class="p">)</span>
         <span class="k">assert</span> <span class="n">price</span> <span class="o">&gt;=</span> <span class="mi">0</span>
-        <span class="k">return</span> <span class="n">price</span>
-</div>
+        <span class="k">return</span> <span class="n">price</span></div>
+
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">sell_datestr</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">sell_date</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
-            <span class="k">return</span> <span class="nb">str</span><span class="p">(</span><span class="bp">None</span><span class="p">)</span>
-        <span class="k">return</span> <span class="n">timeutils</span><span class="o">.</span><span class="n">datetime_to_str</span><span class="p">(</span><span class="n">timeutils</span><span class="o">.</span><span class="n">timestamp_to_datetime</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">sell_date</span><span class="p">))</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">sell_date</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">return</span> <span class="nb">str</span><span class="p">(</span><span class="kc">None</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">timeutils</span><span class="o">.</span><span class="n">datetime_to_str</span><span class="p">(</span><span class="n">timeutils</span><span class="o">.</span><span class="n">timestamp_to_datetime</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">sell_date</span><span class="p">))</span></div>
 
-</div>
-<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">&#39;__main__&#39;</span><span class="p">:</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
     <span class="k">pass</span>
 </pre></div>
 
@@ -246,7 +249,7 @@
     </p>
     <p>
         &copy; Copyright 2015, Adam Gagorik.<br/>
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.1.<br/>
     </p>
   </div>
 </footer>

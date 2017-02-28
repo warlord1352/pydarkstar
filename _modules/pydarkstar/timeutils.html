@@ -5,11 +5,11 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>pydarkstar.timeutils &mdash; pydarkstar 3.0.0 documentation</title>
+    <title>pydarkstar.timeutils &#8212; pydarkstar 3.0.0 documentation</title>
     
     <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/bootswatch-3.3.4/cerulean/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/bootswatch-3.3.6/cerulean/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/bootstrap-sphinx.css" type="text/css" />
     
     <script type="text/javascript">
@@ -18,7 +18,8 @@
         VERSION:     '3.0.0',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
       };
     </script>
     <script type="text/javascript" src="../../_static/jquery.js"></script>
@@ -27,10 +28,10 @@
     <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="../../_static/js/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="../../_static/js/jquery-fix.js"></script>
-    <script type="text/javascript" src="../../_static/bootstrap-3.3.4/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../_static/bootstrap-3.3.6/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="../../_static/bootstrap-sphinx.js"></script>
-    <link rel="top" title="pydarkstar 3.0.0 documentation" href="../../index.html" />
-    <link rel="up" title="Module code" href="../index.html" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
 <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
@@ -70,16 +71,18 @@
       role="menu"
       aria-labelledby="dLabelGlobalToc"><ul>
 <li class="toctree-l1"><a class="reference internal" href="../../generated/setup.html">Setup</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../generated/setup.html#notes">Notes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../generated/setup.html#linux">Linux</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../generated/setup.html#windows">Windows</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generated/setup.html#step-0-install-git-and-clone-pydarkstar">Step 0: Install Git and Clone pydarkstar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generated/setup.html#step-1-install-python">Step 1: Install Python</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generated/setup.html#step-2-install-3rd-party-python-modules">Step 2: Install 3rd-party Python Modules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generated/setup.html#step-4-configure-pydarkstar">Step 4: Configure pydarkstar</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../generated/usage.html">Usage</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../generated/usage.html#basic">Basic</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../generated/usage.html#apps">Apps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generated/usage.html#notes">Notes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generated/usage.html#example">Example</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../generated/usage.html#parameters">Parameters</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../generated/usage.html#item-database">Item Database</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generated/usage.html#apps">Apps</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../generated/apps.html">Apps</a><ul>
@@ -154,7 +157,7 @@
     <div class="col-md-12 content">
       
   <h1>Source code for pydarkstar.timeutils</h1><div class="highlight"><pre>
-<span class="c"># -*- coding: utf-8 -*-</span>
+<span></span><span class="c1"># -*- coding: utf-8 -*-</span>
 <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">Functions for handling dates and times.</span>
 
@@ -202,7 +205,7 @@
 
 <span class="sd">.. moduleauthor:: Adam Gagorik &lt;adam.gagorik@gmail.com&gt;</span>
 <span class="sd">&quot;&quot;&quot;</span>
-<span class="kn">import</span> <span class="nn">datetime</span> <span class="kn">as</span> <span class="nn">_datetime</span>
+<span class="kn">import</span> <span class="nn">datetime</span> <span class="k">as</span> <span class="nn">_datetime</span>
 
 
 <div class="viewcode-block" id="str_to_datetime"><a class="viewcode-back" href="../../generated/pydarkstar.timeutils.html#pydarkstar.timeutils.str_to_datetime">[docs]</a><span class="k">def</span> <span class="nf">str_to_datetime</span><span class="p">(</span><span class="n">date_string</span><span class="p">):</span>
@@ -222,9 +225,9 @@
 
 <span class="sd">    .. seealso:: :py:meth:`datetime.datetime.strptime`</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="k">return</span> <span class="n">_datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">strptime</span><span class="p">(</span><span class="n">date_string</span><span class="p">,</span> <span class="s">&#39;%m/</span><span class="si">%d</span><span class="s">/%Y %H:%M:%S&#39;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">_datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">strptime</span><span class="p">(</span><span class="n">date_string</span><span class="p">,</span> <span class="s1">&#39;%m/</span><span class="si">%d</span><span class="s1">/%Y %H:%M:%S&#39;</span><span class="p">)</span></div>
 
-</div>
+
 <div class="viewcode-block" id="datetime_to_str"><a class="viewcode-back" href="../../generated/pydarkstar.timeutils.html#pydarkstar.timeutils.datetime_to_str">[docs]</a><span class="k">def</span> <span class="nf">datetime_to_str</span><span class="p">(</span><span class="n">datetime_obj</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Convert datetime object to string.</span>
@@ -242,9 +245,9 @@
 
 <span class="sd">    .. seealso:: :py:meth:`datetime.datetime.strftime`</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="k">return</span> <span class="n">datetime_obj</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s">&#39;%m/</span><span class="si">%d</span><span class="s">/%Y %H:%M:%S&#39;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">datetime_obj</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s1">&#39;%m/</span><span class="si">%d</span><span class="s1">/%Y %H:%M:%S&#39;</span><span class="p">)</span></div>
 
-</div>
+
 <div class="viewcode-block" id="DatetimeToTimestamp"><a class="viewcode-back" href="../../generated/pydarkstar.timeutils.html#pydarkstar.timeutils.DatetimeToTimestamp">[docs]</a><span class="k">class</span> <span class="nc">DatetimeToTimestamp</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Convert datetime object to timestamp.</span>
@@ -255,13 +258,13 @@
 
 <span class="sd">    .. seealso:: :py:data:`pydarkstar.timeutils.datetime_to_timestamp`</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="c">#: 01/01/1970</span>
+    <span class="c1">#: 01/01/1970</span>
     <span class="n">epoch</span> <span class="o">=</span> <span class="n">_datetime</span><span class="o">.</span><span class="n">datetime</span><span class="p">(</span><span class="mi">1970</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
 
     <span class="k">def</span> <span class="nf">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">datetime_obj</span><span class="p">):</span>
-        <span class="k">return</span> <span class="nb">float</span><span class="p">((</span><span class="n">datetime_obj</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">epoch</span><span class="p">)</span><span class="o">.</span><span class="n">total_seconds</span><span class="p">())</span>
+        <span class="k">return</span> <span class="nb">float</span><span class="p">((</span><span class="n">datetime_obj</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">epoch</span><span class="p">)</span><span class="o">.</span><span class="n">total_seconds</span><span class="p">())</span></div>
 
-</div>
+
 <span class="n">datetime_to_timestamp</span> <span class="o">=</span> <span class="n">DatetimeToTimestamp</span><span class="p">()</span>
 <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">Convert datetime object to timestamp.</span>
@@ -298,9 +301,9 @@
 
 <span class="sd">    .. seealso:: :py:meth:`datetime.timedelta.utcfromtimestamp`</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="k">return</span> <span class="n">_datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">utcfromtimestamp</span><span class="p">(</span><span class="n">stamp</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">_datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">utcfromtimestamp</span><span class="p">(</span><span class="n">stamp</span><span class="p">)</span></div>
 
-</div>
+
 <div class="viewcode-block" id="datetime"><a class="viewcode-back" href="../../generated/pydarkstar.timeutils.html#pydarkstar.timeutils.datetime">[docs]</a><span class="k">def</span> <span class="nf">datetime</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Convert anything (within reason) to a datetime object.</span>
@@ -343,7 +346,7 @@
     <span class="k">try</span><span class="p">:</span>
         <span class="n">obj</span> <span class="o">=</span> <span class="n">args</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
     <span class="k">except</span> <span class="ne">IndexError</span><span class="p">:</span>
-        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s">&#39;expecting argument&#39;</span><span class="p">)</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;expecting argument&#39;</span><span class="p">)</span>
 
     <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="n">_datetime</span><span class="o">.</span><span class="n">datetime</span><span class="p">):</span>
         <span class="k">return</span> <span class="n">obj</span>
@@ -357,9 +360,9 @@
     <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="nb">float</span><span class="p">):</span>
         <span class="k">return</span> <span class="n">timestamp_to_datetime</span><span class="p">(</span><span class="n">obj</span><span class="p">)</span>
 
-    <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s">&#39;unknown type: </span><span class="si">%s</span><span class="s">&#39;</span> <span class="o">%</span> <span class="nb">type</span><span class="p">(</span><span class="n">obj</span><span class="p">))</span>
+    <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s1">&#39;unknown type: </span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="nb">type</span><span class="p">(</span><span class="n">obj</span><span class="p">))</span></div>
 
-</div>
+
 <div class="viewcode-block" id="timestamp"><a class="viewcode-back" href="../../generated/pydarkstar.timeutils.html#pydarkstar.timeutils.timestamp">[docs]</a><span class="k">def</span> <span class="nf">timestamp</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Convert anything (within reason) to a timestamp.</span>
@@ -389,10 +392,10 @@
 <span class="sd">        :py:func:`pydarkstar.timeutils.datetime`</span>
 <span class="sd">        :py:data:`pydarkstar.timeutils.datetime_to_timestamp`</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="k">return</span> <span class="n">datetime_to_timestamp</span><span class="p">(</span><span class="n">datetime</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">datetime_to_timestamp</span><span class="p">(</span><span class="n">datetime</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">))</span></div>
 
-</div>
-<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">&#39;__main__&#39;</span><span class="p">:</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
     <span class="k">pass</span>
 </pre></div>
 
@@ -408,7 +411,7 @@
     </p>
     <p>
         &copy; Copyright 2015, Adam Gagorik.<br/>
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.1.<br/>
     </p>
   </div>
 </footer>

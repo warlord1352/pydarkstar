@@ -5,11 +5,11 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>pydarkstar.logutils &mdash; pydarkstar 3.0.0 documentation</title>
+    <title>pydarkstar.logutils &#8212; pydarkstar 3.0.0 documentation</title>
     
     <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/bootswatch-3.3.4/cerulean/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/bootswatch-3.3.6/cerulean/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/bootstrap-sphinx.css" type="text/css" />
     
     <script type="text/javascript">
@@ -18,7 +18,8 @@
         VERSION:     '3.0.0',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
       };
     </script>
     <script type="text/javascript" src="../../_static/jquery.js"></script>
@@ -27,10 +28,10 @@
     <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="../../_static/js/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="../../_static/js/jquery-fix.js"></script>
-    <script type="text/javascript" src="../../_static/bootstrap-3.3.4/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../_static/bootstrap-3.3.6/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="../../_static/bootstrap-sphinx.js"></script>
-    <link rel="top" title="pydarkstar 3.0.0 documentation" href="../../index.html" />
-    <link rel="up" title="Module code" href="../index.html" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
 <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
@@ -70,16 +71,18 @@
       role="menu"
       aria-labelledby="dLabelGlobalToc"><ul>
 <li class="toctree-l1"><a class="reference internal" href="../../generated/setup.html">Setup</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../generated/setup.html#notes">Notes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../generated/setup.html#linux">Linux</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../generated/setup.html#windows">Windows</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generated/setup.html#step-0-install-git-and-clone-pydarkstar">Step 0: Install Git and Clone pydarkstar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generated/setup.html#step-1-install-python">Step 1: Install Python</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generated/setup.html#step-2-install-3rd-party-python-modules">Step 2: Install 3rd-party Python Modules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generated/setup.html#step-4-configure-pydarkstar">Step 4: Configure pydarkstar</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../generated/usage.html">Usage</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../generated/usage.html#basic">Basic</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../generated/usage.html#apps">Apps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generated/usage.html#notes">Notes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generated/usage.html#example">Example</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../generated/usage.html#parameters">Parameters</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../generated/usage.html#item-database">Item Database</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generated/usage.html#apps">Apps</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../generated/apps.html">Apps</a><ul>
@@ -154,41 +157,41 @@
     <div class="col-md-12 content">
       
   <h1>Source code for pydarkstar.logutils</h1><div class="highlight"><pre>
-<span class="kn">import</span> <span class="nn">contextlib</span>
+<span></span><span class="kn">import</span> <span class="nn">contextlib</span>
 <span class="kn">import</span> <span class="nn">warnings</span>
 <span class="kn">import</span> <span class="nn">logging</span>
 <span class="kn">import</span> <span class="nn">logging.handlers</span>
 
-<span class="n">lfmt</span> <span class="o">=</span> <span class="s">&#39;[</span><span class="si">%(asctime)s</span><span class="s">][</span><span class="si">%(process)5d</span><span class="s">][</span><span class="si">%(levelname)-5s</span><span class="s">]: </span><span class="si">%(message)s</span><span class="s">&#39;</span>
-<span class="n">dfmt</span> <span class="o">=</span> <span class="s">&quot;%Y-%m-</span><span class="si">%d</span><span class="s"> %H:%M:%S&quot;</span>
-<span class="n">logging</span><span class="o">.</span><span class="n">basicConfig</span><span class="p">(</span><span class="n">level</span><span class="o">=</span><span class="n">logging</span><span class="o">.</span><span class="n">ERROR</span><span class="p">,</span> <span class="n">format</span><span class="o">=</span><span class="n">lfmt</span><span class="p">,</span> <span class="n">datefmt</span><span class="o">=</span><span class="n">dfmt</span><span class="p">)</span>
-<span class="n">logging</span><span class="o">.</span><span class="n">addLevelName</span><span class="p">(</span><span class="n">logging</span><span class="o">.</span><span class="n">CRITICAL</span><span class="p">,</span> <span class="s">&#39;FATAL&#39;</span><span class="p">)</span>
-<span class="n">logging</span><span class="o">.</span><span class="n">addLevelName</span><span class="p">(</span><span class="n">logging</span><span class="o">.</span><span class="n">WARNING</span><span class="p">,</span> <span class="s">&#39;WARN&#39;</span><span class="p">)</span>
+<span class="n">lfmt</span> <span class="o">=</span> <span class="s1">&#39;[</span><span class="si">%(asctime)s</span><span class="s1">][</span><span class="si">%(process)5d</span><span class="s1">][</span><span class="si">%(levelname)-5s</span><span class="s1">]: </span><span class="si">%(message)s</span><span class="s1">&#39;</span>
+<span class="n">dfmt</span> <span class="o">=</span> <span class="s2">&quot;%Y-%m-</span><span class="si">%d</span><span class="s2"> %H:%M:%S&quot;</span>
+<span class="n">logging</span><span class="o">.</span><span class="n">basicConfig</span><span class="p">(</span><span class="n">level</span><span class="o">=</span><span class="n">logging</span><span class="o">.</span><span class="n">ERROR</span><span class="p">,</span> <span class="nb">format</span><span class="o">=</span><span class="n">lfmt</span><span class="p">,</span> <span class="n">datefmt</span><span class="o">=</span><span class="n">dfmt</span><span class="p">)</span>
+<span class="n">logging</span><span class="o">.</span><span class="n">addLevelName</span><span class="p">(</span><span class="n">logging</span><span class="o">.</span><span class="n">CRITICAL</span><span class="p">,</span> <span class="s1">&#39;FATAL&#39;</span><span class="p">)</span>
+<span class="n">logging</span><span class="o">.</span><span class="n">addLevelName</span><span class="p">(</span><span class="n">logging</span><span class="o">.</span><span class="n">WARNING</span><span class="p">,</span> <span class="s1">&#39;WARN&#39;</span><span class="p">)</span>
 
 
 <div class="viewcode-block" id="set_level"><a class="viewcode-back" href="../../generated/pydarkstar.logutils.html#pydarkstar.logutils.set_level">[docs]</a><span class="k">def</span> <span class="nf">set_level</span><span class="p">(</span><span class="n">level</span><span class="p">):</span>
-    <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">()</span><span class="o">.</span><span class="n">setLevel</span><span class="p">(</span><span class="n">level</span><span class="p">)</span>
+    <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">()</span><span class="o">.</span><span class="n">setLevel</span><span class="p">(</span><span class="n">level</span><span class="p">)</span></div>
 
-</div>
+
 <div class="viewcode-block" id="set_debug"><a class="viewcode-back" href="../../generated/pydarkstar.logutils.html#pydarkstar.logutils.set_debug">[docs]</a><span class="k">def</span> <span class="nf">set_debug</span><span class="p">():</span>
-    <span class="n">set_level</span><span class="p">(</span><span class="n">logging</span><span class="o">.</span><span class="n">DEBUG</span><span class="p">)</span>
+    <span class="n">set_level</span><span class="p">(</span><span class="n">logging</span><span class="o">.</span><span class="n">DEBUG</span><span class="p">)</span></div>
 
-</div>
+
 <div class="viewcode-block" id="set_error"><a class="viewcode-back" href="../../generated/pydarkstar.logutils.html#pydarkstar.logutils.set_error">[docs]</a><span class="k">def</span> <span class="nf">set_error</span><span class="p">():</span>
-    <span class="n">set_level</span><span class="p">(</span><span class="n">logging</span><span class="o">.</span><span class="n">ERROR</span><span class="p">)</span>
+    <span class="n">set_level</span><span class="p">(</span><span class="n">logging</span><span class="o">.</span><span class="n">ERROR</span><span class="p">)</span></div>
 
-</div>
+
 <div class="viewcode-block" id="set_info"><a class="viewcode-back" href="../../generated/pydarkstar.logutils.html#pydarkstar.logutils.set_info">[docs]</a><span class="k">def</span> <span class="nf">set_info</span><span class="p">():</span>
-    <span class="n">set_level</span><span class="p">(</span><span class="n">logging</span><span class="o">.</span><span class="n">INFO</span><span class="p">)</span>
+    <span class="n">set_level</span><span class="p">(</span><span class="n">logging</span><span class="o">.</span><span class="n">INFO</span><span class="p">)</span></div>
 
 
-<span class="c"># noinspection PyUnusedLocal</span></div>
+<span class="c1"># noinspection PyUnusedLocal</span>
 <div class="viewcode-block" id="custom_warning_format"><a class="viewcode-back" href="../../generated/pydarkstar.logutils.html#pydarkstar.logutils.custom_warning_format">[docs]</a><span class="k">def</span> <span class="nf">custom_warning_format</span><span class="p">(</span><span class="n">message</span><span class="p">,</span> <span class="n">category</span><span class="p">,</span> <span class="n">filename</span><span class="p">,</span> <span class="n">lineno</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
-    <span class="k">return</span> <span class="s">&#39;</span><span class="si">%s</span><span class="s">:</span><span class="si">%s</span><span class="se">\n</span><span class="si">%s</span><span class="s">: </span><span class="si">%s</span><span class="s">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">lineno</span><span class="p">,</span> <span class="n">category</span><span class="o">.</span><span class="n">__name__</span><span class="p">,</span> <span class="n">message</span><span class="p">)</span>
+    <span class="k">return</span> <span class="s1">&#39;</span><span class="si">%s</span><span class="s1">:</span><span class="si">%s</span><span class="se">\n</span><span class="si">%s</span><span class="s1">: </span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">lineno</span><span class="p">,</span> <span class="n">category</span><span class="o">.</span><span class="vm">__name__</span><span class="p">,</span> <span class="n">message</span><span class="p">)</span></div>
 
-</div>
-<span class="nd">@contextlib.contextmanager</span>
-<div class="viewcode-block" id="capture"><a class="viewcode-back" href="../../generated/pydarkstar.logutils.html#pydarkstar.logutils.capture">[docs]</a><span class="k">def</span> <span class="nf">capture</span><span class="p">(</span><span class="n">capture_warnings</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">fail</span><span class="o">=</span><span class="bp">False</span><span class="p">):</span>
+
+<span class="nd">@contextlib</span><span class="o">.</span><span class="n">contextmanager</span>
+<div class="viewcode-block" id="capture"><a class="viewcode-back" href="../../generated/pydarkstar.logutils.html#pydarkstar.logutils.capture">[docs]</a><span class="k">def</span> <span class="nf">capture</span><span class="p">(</span><span class="n">capture_warnings</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">fail</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Log exceptions and warnings.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
@@ -196,20 +199,20 @@
     <span class="k">try</span><span class="p">:</span>
         <span class="k">if</span> <span class="n">capture_warnings</span><span class="p">:</span>
             <span class="n">warnings</span><span class="o">.</span><span class="n">formatwarning</span> <span class="o">=</span> <span class="n">custom_warning_format</span>
-            <span class="n">logging</span><span class="o">.</span><span class="n">captureWarnings</span><span class="p">(</span><span class="bp">True</span><span class="p">)</span>
+            <span class="n">logging</span><span class="o">.</span><span class="n">captureWarnings</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
         <span class="k">try</span><span class="p">:</span>
             <span class="k">yield</span>
         <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
-            <span class="n">logging</span><span class="o">.</span><span class="n">exception</span><span class="p">(</span><span class="s">&#39;caught unhandled excetion&#39;</span><span class="p">)</span>
+            <span class="n">logging</span><span class="o">.</span><span class="n">exception</span><span class="p">(</span><span class="s1">&#39;caught unhandled excetion&#39;</span><span class="p">)</span>
             <span class="k">if</span> <span class="n">fail</span><span class="p">:</span>
                 <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">e</span><span class="p">,</span> <span class="ne">Warning</span><span class="p">):</span>
-                    <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="s">&#39;application failure&#39;</span><span class="p">)</span>
+                    <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="s1">&#39;application failure&#39;</span><span class="p">)</span>
     <span class="k">finally</span><span class="p">:</span>
         <span class="k">if</span> <span class="n">capture_warnings</span><span class="p">:</span>
             <span class="n">warnings</span><span class="o">.</span><span class="n">formatwarning</span> <span class="o">=</span> <span class="n">default_warning_format</span>
-            <span class="n">logging</span><span class="o">.</span><span class="n">captureWarnings</span><span class="p">(</span><span class="bp">False</span><span class="p">)</span>
+            <span class="n">logging</span><span class="o">.</span><span class="n">captureWarnings</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span></div>
 
-</div>
+
 <div class="viewcode-block" id="LoggingObject"><a class="viewcode-back" href="../../generated/pydarkstar.logutils.html#pydarkstar.logutils.LoggingObject">[docs]</a><span class="k">class</span> <span class="nc">LoggingObject</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Inherit from this to get a bunch of logging functions as class methods.</span>
@@ -219,41 +222,41 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_init_notify</span><span class="p">()</span>
 
 <div class="viewcode-block" id="LoggingObject._init_notify"><a class="viewcode-back" href="../../generated/pydarkstar.logutils.html#pydarkstar.logutils.LoggingObject._init_notify">[docs]</a>    <span class="k">def</span> <span class="nf">_init_notify</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s">&#39;init&#39;</span><span class="p">)</span>
-</div>
+        <span class="bp">self</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s1">&#39;init&#39;</span><span class="p">)</span></div>
+
 <div class="viewcode-block" id="LoggingObject.debug"><a class="viewcode-back" href="../../generated/pydarkstar.logutils.html#pydarkstar.logutils.LoggingObject.debug">[docs]</a>    <span class="k">def</span> <span class="nf">debug</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">msg</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
-        <span class="n">logging</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_preprocess</span><span class="p">(</span><span class="n">msg</span><span class="p">),</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-</div>
+        <span class="n">logging</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_preprocess</span><span class="p">(</span><span class="n">msg</span><span class="p">),</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></div>
+
 <div class="viewcode-block" id="LoggingObject.error"><a class="viewcode-back" href="../../generated/pydarkstar.logutils.html#pydarkstar.logutils.LoggingObject.error">[docs]</a>    <span class="k">def</span> <span class="nf">error</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">msg</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
-        <span class="n">logging</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_preprocess</span><span class="p">(</span><span class="n">msg</span><span class="p">),</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-</div>
+        <span class="n">logging</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_preprocess</span><span class="p">(</span><span class="n">msg</span><span class="p">),</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></div>
+
 <div class="viewcode-block" id="LoggingObject.fatal"><a class="viewcode-back" href="../../generated/pydarkstar.logutils.html#pydarkstar.logutils.LoggingObject.fatal">[docs]</a>    <span class="k">def</span> <span class="nf">fatal</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">msg</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="n">logging</span><span class="o">.</span><span class="n">fatal</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_preprocess</span><span class="p">(</span><span class="n">msg</span><span class="p">),</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-        <span class="nb">exit</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
-</div>
+        <span class="n">exit</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span></div>
+
 <div class="viewcode-block" id="LoggingObject.info"><a class="viewcode-back" href="../../generated/pydarkstar.logutils.html#pydarkstar.logutils.LoggingObject.info">[docs]</a>    <span class="k">def</span> <span class="nf">info</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">msg</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
-        <span class="n">logging</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_preprocess</span><span class="p">(</span><span class="n">msg</span><span class="p">),</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-</div>
+        <span class="n">logging</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_preprocess</span><span class="p">(</span><span class="n">msg</span><span class="p">),</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></div>
+
 <div class="viewcode-block" id="LoggingObject.exception"><a class="viewcode-back" href="../../generated/pydarkstar.logutils.html#pydarkstar.logutils.LoggingObject.exception">[docs]</a>    <span class="k">def</span> <span class="nf">exception</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">msg</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
-        <span class="n">logging</span><span class="o">.</span><span class="n">exception</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_preprocess</span><span class="p">(</span><span class="n">msg</span><span class="p">),</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-</div>
+        <span class="n">logging</span><span class="o">.</span><span class="n">exception</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_preprocess</span><span class="p">(</span><span class="n">msg</span><span class="p">),</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></div>
+
 <div class="viewcode-block" id="LoggingObject.log"><a class="viewcode-back" href="../../generated/pydarkstar.logutils.html#pydarkstar.logutils.LoggingObject.log">[docs]</a>    <span class="k">def</span> <span class="nf">log</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">level</span><span class="p">,</span> <span class="n">msg</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
-        <span class="n">logging</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">level</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_preprocess</span><span class="p">(</span><span class="n">msg</span><span class="p">),</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-</div>
+        <span class="n">logging</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">level</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_preprocess</span><span class="p">(</span><span class="n">msg</span><span class="p">),</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></div>
+
 <div class="viewcode-block" id="LoggingObject._preprocess"><a class="viewcode-back" href="../../generated/pydarkstar.logutils.html#pydarkstar.logutils.LoggingObject._preprocess">[docs]</a>    <span class="k">def</span> <span class="nf">_preprocess</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">msg</span><span class="p">):</span>
-        <span class="k">return</span> <span class="s">&#39;{}: {}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">repr</span><span class="p">(</span><span class="bp">self</span><span class="p">),</span> <span class="n">msg</span><span class="p">)</span>
-</div>
-    <span class="nd">@contextlib.contextmanager</span>
+        <span class="k">return</span> <span class="s1">&#39;</span><span class="si">{}</span><span class="s1">: </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">repr</span><span class="p">(</span><span class="bp">self</span><span class="p">),</span> <span class="n">msg</span><span class="p">)</span></div>
+
+    <span class="nd">@contextlib</span><span class="o">.</span><span class="n">contextmanager</span>
 <div class="viewcode-block" id="LoggingObject.capture"><a class="viewcode-back" href="../../generated/pydarkstar.logutils.html#pydarkstar.logutils.LoggingObject.capture">[docs]</a>    <span class="k">def</span> <span class="nf">capture</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="k">try</span><span class="p">:</span>
             <span class="k">with</span> <span class="n">capture</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
                 <span class="k">yield</span>
         <span class="k">finally</span><span class="p">:</span>
-            <span class="k">pass</span>
+            <span class="k">pass</span></div></div>
 
-</div></div>
-<div class="viewcode-block" id="add_rotating_file_handler"><a class="viewcode-back" href="../../generated/pydarkstar.logutils.html#pydarkstar.logutils.add_rotating_file_handler">[docs]</a><span class="k">def</span> <span class="nf">add_rotating_file_handler</span><span class="p">(</span><span class="n">level</span><span class="o">=</span><span class="n">logging</span><span class="o">.</span><span class="n">DEBUG</span><span class="p">,</span> <span class="n">fname</span><span class="o">=</span><span class="s">&#39;app.log&#39;</span><span class="p">,</span>
-                              <span class="n">logger</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">fmt</span><span class="o">=</span><span class="n">lfmt</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+
+<div class="viewcode-block" id="add_rotating_file_handler"><a class="viewcode-back" href="../../generated/pydarkstar.logutils.html#pydarkstar.logutils.add_rotating_file_handler">[docs]</a><span class="k">def</span> <span class="nf">add_rotating_file_handler</span><span class="p">(</span><span class="n">level</span><span class="o">=</span><span class="n">logging</span><span class="o">.</span><span class="n">DEBUG</span><span class="p">,</span> <span class="n">fname</span><span class="o">=</span><span class="s1">&#39;app.log&#39;</span><span class="p">,</span>
+                              <span class="n">logger</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">fmt</span><span class="o">=</span><span class="n">lfmt</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Create rotating file handler and add it to logging.</span>
 
@@ -275,15 +278,15 @@
     <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">logger</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
         <span class="n">logger</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="n">logger</span><span class="p">)</span>
 
-    <span class="k">elif</span> <span class="n">logger</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+    <span class="k">elif</span> <span class="n">logger</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
         <span class="n">logger</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">()</span>
 
     <span class="n">logger</span><span class="o">.</span><span class="n">addHandler</span><span class="p">(</span><span class="n">handler</span><span class="p">)</span>
 
-    <span class="k">return</span> <span class="n">logger</span>
+    <span class="k">return</span> <span class="n">logger</span></div>
 
-</div>
-<div class="viewcode-block" id="basic_config"><a class="viewcode-back" href="../../generated/pydarkstar.logutils.html#pydarkstar.logutils.basic_config">[docs]</a><span class="k">def</span> <span class="nf">basic_config</span><span class="p">(</span><span class="n">verbose</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span> <span class="n">silent</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span> <span class="n">fname</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
+
+<div class="viewcode-block" id="basic_config"><a class="viewcode-back" href="../../generated/pydarkstar.logutils.html#pydarkstar.logutils.basic_config">[docs]</a><span class="k">def</span> <span class="nf">basic_config</span><span class="p">(</span><span class="n">verbose</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">silent</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">fname</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Setup logging.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
@@ -296,10 +299,10 @@
         <span class="n">set_error</span><span class="p">()</span>
 
     <span class="k">if</span> <span class="n">fname</span><span class="p">:</span>
-        <span class="n">add_rotating_file_handler</span><span class="p">(</span><span class="n">fname</span><span class="o">=</span><span class="n">fname</span><span class="p">)</span>
+        <span class="n">add_rotating_file_handler</span><span class="p">(</span><span class="n">fname</span><span class="o">=</span><span class="n">fname</span><span class="p">)</span></div>
 
-</div>
-<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">&#39;__main__&#39;</span><span class="p">:</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
     <span class="k">pass</span>
 </pre></div>
 
@@ -315,7 +318,7 @@
     </p>
     <p>
         &copy; Copyright 2015, Adam Gagorik.<br/>
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.1.<br/>
     </p>
   </div>
 </footer>

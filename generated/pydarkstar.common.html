@@ -5,11 +5,11 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>common &mdash; pydarkstar 3.0.0 documentation</title>
+    <title>common &#8212; pydarkstar 3.0.0 documentation</title>
     
     <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/bootswatch-3.3.4/cerulean/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootswatch-3.3.6/cerulean/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
     
     <script type="text/javascript">
@@ -18,7 +18,8 @@
         VERSION:     '3.0.0',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
       };
     </script>
     <script type="text/javascript" src="../_static/jquery.js"></script>
@@ -27,10 +28,10 @@
     <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
-    <script type="text/javascript" src="../_static/bootstrap-3.3.4/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.3.6/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
-    <link rel="top" title="pydarkstar 3.0.0 documentation" href="../index.html" />
-    <link rel="up" title="pydarkstar" href="pydarkstar.html" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="darkobject" href="pydarkstar.darkobject.html" />
     <link rel="prev" title="tables.deliverybox" href="pydarkstar.tables.deliverybox.html" />
 <meta charset='utf-8'>
@@ -72,16 +73,18 @@
       role="menu"
       aria-labelledby="dLabelGlobalToc"><ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="setup.html">Setup</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="setup.html#notes">Notes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="setup.html#linux">Linux</a></li>
-<li class="toctree-l2"><a class="reference internal" href="setup.html#windows">Windows</a></li>
+<li class="toctree-l2"><a class="reference internal" href="setup.html#step-0-install-git-and-clone-pydarkstar">Step 0: Install Git and Clone pydarkstar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="setup.html#step-1-install-python">Step 1: Install Python</a></li>
+<li class="toctree-l2"><a class="reference internal" href="setup.html#step-2-install-3rd-party-python-modules">Step 2: Install 3rd-party Python Modules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="setup.html#step-4-configure-pydarkstar">Step 4: Configure pydarkstar</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="usage.html">Usage</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="usage.html#basic">Basic</a></li>
-<li class="toctree-l2"><a class="reference internal" href="usage.html#apps">Apps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usage.html#notes">Notes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usage.html#example">Example</a></li>
 <li class="toctree-l2"><a class="reference internal" href="usage.html#parameters">Parameters</a></li>
 <li class="toctree-l2"><a class="reference internal" href="usage.html#item-database">Item Database</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usage.html#apps">Apps</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="apps.html">Apps</a><ul>
@@ -132,7 +135,7 @@
               
                 
   <li>
-    <a href="pydarkstar.tables.deliverybox.html" title="Previous Chapter: tables.deliverybox"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; tables.delive...</span>
+    <a href="pydarkstar.tables.deliverybox.html" title="Previous Chapter: tables.deliverybox"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; tables.deliverybox</span>
     </a>
   </li>
   <li>
@@ -146,7 +149,7 @@
             
               <li class="hidden-sm">
 <div id="sourcelink">
-  <a href="../_sources/generated/pydarkstar.common.txt"
+  <a href="../_sources/generated/pydarkstar.common.rst.txt"
      rel="nofollow">Source</a>
 </div></li>
             
@@ -181,10 +184,10 @@
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>args</strong> &#8211; path components passed to <a class="reference external" href="https://docs.python.org/library/os.path.html#os.path.join" title="(in Python v2.7)"><code class="xref py py-func docutils literal"><span class="pre">os.path.join()</span></code></a></li>
-<li><strong>absolute</strong> (<a class="reference external" href="https://docs.python.org/library/functions.html#bool" title="(in Python v2.7)"><em>bool</em></a>) &#8211; make path absolute</li>
-<li><strong>dt</strong> (<a class="reference external" href="https://docs.python.org/library/datetime.html#datetime.datetime" title="(in Python v2.7)"><code class="xref py py-class docutils literal"><span class="pre">datetime.datetime</span></code></a>) &#8211; datetime object</li>
-<li><strong>dt_fmt</strong> (<a class="reference external" href="https://docs.python.org/library/functions.html#str" title="(in Python v2.7)"><em>str</em></a>) &#8211; date format</li>
+<li><strong>args</strong> &#8211; path components passed to <a class="reference external" href="https://docs.python.org/2/library/os.path.html#os.path.join" title="(in Python v2.7)"><code class="xref py py-func docutils literal"><span class="pre">os.path.join()</span></code></a></li>
+<li><strong>absolute</strong> (<a class="reference external" href="https://docs.python.org/2/library/functions.html#bool" title="(in Python v2.7)"><em>bool</em></a>) &#8211; make path absolute</li>
+<li><strong>dt</strong> (<a class="reference external" href="https://docs.python.org/2/library/datetime.html#datetime.datetime" title="(in Python v2.7)"><code class="xref py py-class docutils literal"><span class="pre">datetime.datetime</span></code></a>) &#8211; datetime object</li>
+<li><strong>dt_fmt</strong> (<a class="reference external" href="https://docs.python.org/2/library/functions.html#str" title="(in Python v2.7)"><em>str</em></a>) &#8211; date format</li>
 <li><strong>kwargs</strong> &#8211; variables passed to <code class="xref py py-func docutils literal"><span class="pre">str.format()</span></code></li>
 </ul>
 </td>
@@ -245,7 +248,7 @@
     </p>
     <p>
         &copy; Copyright 2015, Adam Gagorik.<br/>
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.1.<br/>
     </p>
   </div>
 </footer>

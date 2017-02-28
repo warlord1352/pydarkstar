@@ -5,11 +5,11 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Usage &mdash; pydarkstar 3.0.0 documentation</title>
+    <title>Usage &#8212; pydarkstar 3.0.0 documentation</title>
     
     <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/bootswatch-3.3.4/cerulean/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootswatch-3.3.6/cerulean/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
     
     <script type="text/javascript">
@@ -18,7 +18,8 @@
         VERSION:     '3.0.0',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
       };
     </script>
     <script type="text/javascript" src="../_static/jquery.js"></script>
@@ -27,9 +28,10 @@
     <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
-    <script type="text/javascript" src="../_static/bootstrap-3.3.4/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.3.6/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
-    <link rel="top" title="pydarkstar 3.0.0 documentation" href="../index.html" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Apps" href="apps.html" />
     <link rel="prev" title="Setup" href="setup.html" />
 <meta charset='utf-8'>
@@ -71,16 +73,18 @@
       role="menu"
       aria-labelledby="dLabelGlobalToc"><ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="setup.html">Setup</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="setup.html#notes">Notes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="setup.html#linux">Linux</a></li>
-<li class="toctree-l2"><a class="reference internal" href="setup.html#windows">Windows</a></li>
+<li class="toctree-l2"><a class="reference internal" href="setup.html#step-0-install-git-and-clone-pydarkstar">Step 0: Install Git and Clone pydarkstar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="setup.html#step-1-install-python">Step 1: Install Python</a></li>
+<li class="toctree-l2"><a class="reference internal" href="setup.html#step-2-install-3rd-party-python-modules">Step 2: Install 3rd-party Python Modules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="setup.html#step-4-configure-pydarkstar">Step 4: Configure pydarkstar</a></li>
 </ul>
 </li>
-<li class="toctree-l1 current"><a class="current reference internal" href="">Usage</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#basic">Basic</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#apps">Apps</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Usage</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#notes">Notes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#example">Example</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#parameters">Parameters</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#item-database">Item Database</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#apps">Apps</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="apps.html">Apps</a><ul>
@@ -122,10 +126,11 @@
       role="menu"
       aria-labelledby="dLabelLocalToc"><ul>
 <li><a class="reference internal" href="#">Usage</a><ul>
-<li><a class="reference internal" href="#basic">Basic</a></li>
-<li><a class="reference internal" href="#apps">Apps</a></li>
+<li><a class="reference internal" href="#notes">Notes</a></li>
+<li><a class="reference internal" href="#example">Example</a></li>
 <li><a class="reference internal" href="#parameters">Parameters</a></li>
 <li><a class="reference internal" href="#item-database">Item Database</a></li>
+<li><a class="reference internal" href="#apps">Apps</a></li>
 </ul>
 </li>
 </ul>
@@ -151,7 +156,7 @@
             
               <li class="hidden-sm">
 <div id="sourcelink">
-  <a href="../_sources/generated/usage.txt"
+  <a href="../_sources/generated/usage.rst.txt"
      rel="nofollow">Source</a>
 </div></li>
             
@@ -177,85 +182,39 @@
       
   <div class="section" id="usage">
 <h1>Usage<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="basic">
-<h2>Basic<a class="headerlink" href="#basic" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="notes">
+<h2>Notes<a class="headerlink" href="#notes" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>Use pydarkstar from the command line.</li>
-<li>Just run the scripts in the bin directory.</li>
-<li>See the advanced section if you want to create shell scripts.</li>
+<li>Use pydarkstar from the command line</li>
+<li>Just run the scripts in the bin directory</li>
+<li>See the advanced section if you want to create shell scripts</li>
+<li>Set the options in the config.yaml file (see below)</li>
+<li>Set your item prices in the items.csv file (see below)</li>
 </ul>
-<p>Windows</p>
-<div class="code bash highlight-python"><div class="highlight"><pre>&gt; cd &quot;C:\path\to\pydarkstar\bin&quot;
-&gt; &quot;C:\path\to\python3&quot; .\broker.py
-</pre></div>
 </div>
-<p>Linux</p>
-<div class="code bash highlight-python"><div class="highlight"><pre>bash:~$ cd /path/to/pydarkstar/bin
+<div class="section" id="example">
+<h2>Example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h2>
+<div class="code bash highlight-default"><div class="highlight"><pre><span></span># Windows
+
+&gt; cd &quot;C:\path\to\pydarkstar\bin&quot;
+&gt; &quot;C:\path\to\python3&quot; .\broker.py
+
+# Linux
+
+bash:~$ cd /path/to/pydarkstar/bin
 bash:~$ ./broker.py
 </pre></div>
 </div>
 </div>
-<div class="section" id="apps">
-<h2>Apps<a class="headerlink" href="#apps" title="Permalink to this headline">¶</a></h2>
-<ul class="simple">
-<li>There are many apps.</li>
-</ul>
-<table border="1" class="docutils">
-<colgroup>
-<col width="12%" />
-<col width="88%" />
-</colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head">app</th>
-<th class="head">description</th>
-</tr>
-</thead>
-<tbody valign="top">
-<tr class="row-even"><td>scrub</td>
-<td>download data from the web to create a database of items and prices</td>
-</tr>
-<tr class="row-odd"><td>broker</td>
-<td>server that buys and sells items on the AH from players</td>
-</tr>
-<tr class="row-even"><td>buyer</td>
-<td>server that buys items on the AH from players</td>
-</tr>
-<tr class="row-odd"><td>seller</td>
-<td>server that sells items on the AH to players</td>
-</tr>
-<tr class="row-even"><td>clear</td>
-<td>clear the AH of all transactions</td>
-</tr>
-<tr class="row-odd"><td>refill</td>
-<td>fill the AH with items for sale and exit</td>
-</tr>
-<tr class="row-even"><td>alter</td>
-<td>alter the item database</td>
-</tr>
-</tbody>
-</table>
-</div>
 <div class="section" id="parameters">
 <h2>Parameters<a class="headerlink" href="#parameters" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>Configure the apps by passing command line arguments.</li>
-<li>Use the &#8211;help flag for a list of options.</li>
+<li>Parameters can be set in the config.yaml file</li>
+<li>You should set your mysql parameters</li>
+<li>Please do not edit source code files to configure your apps</li>
 </ul>
-<p>Windows</p>
-<div class="code bash highlight-python"><div class="highlight"><pre>&gt; cd &quot;C:\path\to\pydarkstar\bin&quot;
-&gt; &quot;C:\path\to\python3&quot; .\broker.py --help
-</pre></div>
-</div>
-<p>Linux</p>
-<div class="code bash highlight-python"><div class="highlight"><pre>bash:~$ cd /path/to/pydarkstar/bin
-bash:~$ ./broker.py --help
-</pre></div>
-</div>
-<ul class="simple">
-<li>Parameters can also be set in the config.yaml file.</li>
-<li>You should set your mysql parameters.</li>
-</ul>
-<div class="code python highlight-python"><div class="highlight"><pre># ah
+<p>Example</p>
+<div class="code python highlight-default"><div class="highlight"><pre><span></span># ah
 name: Zissou          # Name that appears on AH when buying and selling
 
 # basic
@@ -290,21 +249,17 @@ stock12: 5            # default stock12 when scrubbing
 urls: []              # list of category urls to scrub
 </pre></div>
 </div>
-<ul class="simple">
-<li>The order of precedence is <em>defaults &lt; config file &lt; command line</em>.</li>
-<li>Please do not edit source code files to configure your apps.</li>
-</ul>
 </div>
 <div class="section" id="item-database">
 <h2>Item Database<a class="headerlink" href="#item-database" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>Item data is stored in <em>items.csv</em>.</li>
-<li><em>items.csv</em> is just a simple text file that you can edit with excel.</li>
-<li>The <em>items.csv</em> can be created with the scrub app.</li>
-<li>There is an already generated <em>items.csv</em> in the bin folder for you.</li>
+<li>Item data is stored in <em>items.csv</em></li>
+<li><em>items.csv</em> is just a simple text file that you can edit with excel</li>
+<li>The <em>items.csv</em> can be created with the scrub app</li>
+<li>There is an already generated <em>items.csv</em> in the bin folder for you</li>
 <li>You do not need to run the <em>scrub</em> app unless you want to recreate
-the database.</li>
-<li>You can change many properties be editing the <em>items.csv.</em> manually.</li>
+the database</li>
+<li>You can change many properties be editing the <em>items.csv.</em> manually</li>
 </ul>
 <table border="1" class="docutils">
 <colgroup>
@@ -370,6 +325,47 @@ the database.</li>
 </tbody>
 </table>
 </div>
+<div class="section" id="apps">
+<h2>Apps<a class="headerlink" href="#apps" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>There are many apps</li>
+<li>You will probably only use the broker app</li>
+</ul>
+<table border="1" class="docutils">
+<colgroup>
+<col width="12%" />
+<col width="88%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">app</th>
+<th class="head">description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>scrub</td>
+<td>download data from the web to create a database of items and prices</td>
+</tr>
+<tr class="row-odd"><td>broker</td>
+<td>server that buys and sells items on the AH from players</td>
+</tr>
+<tr class="row-even"><td>buyer</td>
+<td>server that buys items on the AH from players</td>
+</tr>
+<tr class="row-odd"><td>seller</td>
+<td>server that sells items on the AH to players</td>
+</tr>
+<tr class="row-even"><td>clear</td>
+<td>clear the AH of all transactions</td>
+</tr>
+<tr class="row-odd"><td>refill</td>
+<td>fill the AH with items for sale and exit</td>
+</tr>
+<tr class="row-even"><td>alter</td>
+<td>alter the item database</td>
+</tr>
+</tbody>
+</table>
+</div>
 </div>
 
 
@@ -385,7 +381,7 @@ the database.</li>
     </p>
     <p>
         &copy; Copyright 2015, Adam Gagorik.<br/>
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.1.<br/>
     </p>
   </div>
 </footer>
