@@ -7,7 +7,7 @@ gh-pages:
 	rm -rf ${GH_PAGES_SOURCES}
 	git checkout master ${GH_PAGES_SOURCES}
 	git reset HEAD
-	$(MAKE) -C ./doc html
+	cd ./doc; ./build.sh
 	mv -fv ./doc/build/html/* ./
 	rm -rf ${GH_PAGES_SOURCES}
 	git checkout .nojekyll
