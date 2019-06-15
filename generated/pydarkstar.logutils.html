@@ -1,306 +1,340 @@
+
+
 <!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>logutils &mdash; pydarkstar 3.0.0 documentation</title>
+  
 
+  
+  
+  
+  
 
-<html xmlns="http://www.w3.org/1999/xhtml">
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
     
-    <title>logutils &#8212; pydarkstar 3.0.0 documentation</title>
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
     
-    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/bootswatch-3.3.6/cerulean/bootstrap.min.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
     
-    <script type="text/javascript">
-      var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    '../',
-        VERSION:     '3.0.0',
-        COLLAPSE_INDEX: false,
-        FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true,
-        SOURCELINK_SUFFIX: '.txt'
-      };
-    </script>
-    <script type="text/javascript" src="../_static/jquery.js"></script>
-    <script type="text/javascript" src="../_static/underscore.js"></script>
-    <script type="text/javascript" src="../_static/doctools.js"></script>
-    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
-    <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
-    <script type="text/javascript" src="../_static/bootstrap-3.3.6/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="timeutils" href="pydarkstar.timeutils.html" />
-    <link rel="prev" title="itemlist" href="pydarkstar.itemlist.html" />
-<meta charset='utf-8'>
-<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
-<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
-<meta name="apple-mobile-web-app-capable" content="yes">
+    <link rel="prev" title="itemlist" href="pydarkstar.itemlist.html" /> 
+</head>
 
-  </head>
-  <body role="document">
+<body class="wy-body-for-nav">
 
-  <div id="navbar" class="navbar navbar-inverse navbar-default navbar-fixed-top">
-    <div class="container">
-      <div class="navbar-header">
-        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="../index.html">
-          Home</a>
-        <span class="navbar-text navbar-version pull-left"><b>3.0.0</b></span>
-      </div>
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
 
-        <div class="collapse navbar-collapse nav-collapse">
-          <ul class="nav navbar-nav">
-            
-                <li><a href="https://github.com/AdamGagorik/pydarkstar">pydarkstar</a></li>
-                <li><a href="https://github.com/DarkstarProject/darkstar">darkstar</a></li>
-            
-            
-              <li class="dropdown globaltoc-container">
-  <a role="button"
-     id="dLabelGlobalToc"
-     data-toggle="dropdown"
-     data-target="#"
-     href="../index.html">Site <b class="caret"></b></a>
-  <ul class="dropdown-menu globaltoc"
-      role="menu"
-      aria-labelledby="dLabelGlobalToc"><ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="setup.html">Setup</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="setup.html#step-0-install-git-and-clone-pydarkstar">Step 0: Install Git and Clone pydarkstar</a></li>
-<li class="toctree-l2"><a class="reference internal" href="setup.html#step-1-install-python">Step 1: Install Python</a></li>
-<li class="toctree-l2"><a class="reference internal" href="setup.html#step-2-install-3rd-party-python-modules">Step 2: Install 3rd-party Python Modules</a></li>
-<li class="toctree-l2"><a class="reference internal" href="setup.html#step-4-configure-pydarkstar">Step 4: Configure pydarkstar</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="usage.html">Usage</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="usage.html#notes">Notes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="usage.html#example">Example</a></li>
-<li class="toctree-l2"><a class="reference internal" href="usage.html#parameters">Parameters</a></li>
-<li class="toctree-l2"><a class="reference internal" href="usage.html#item-database">Item Database</a></li>
-<li class="toctree-l2"><a class="reference internal" href="usage.html#apps">Apps</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="apps.html">Apps</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="apps.html#broker">broker</a></li>
-<li class="toctree-l2"><a class="reference internal" href="apps.html#seller">seller</a></li>
-<li class="toctree-l2"><a class="reference internal" href="apps.html#buyer">buyer</a></li>
-<li class="toctree-l2"><a class="reference internal" href="apps.html#clear">clear</a></li>
-<li class="toctree-l2"><a class="reference internal" href="apps.html#refill">refill</a></li>
-<li class="toctree-l2"><a class="reference internal" href="apps.html#scrub">scrub</a></li>
-<li class="toctree-l2"><a class="reference internal" href="apps.html#alter">alter</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="requirements.html">Requirements</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="requirements.html#pip">pip</a></li>
-<li class="toctree-l2"><a class="reference internal" href="requirements.html#anaconda">Anaconda</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="advanced.html">Advanced</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="advanced.html#shell-scripts-pythonpath">Shell Scripts : PYTHONPATH</a></li>
-<li class="toctree-l2"><a class="reference internal" href="advanced.html#shell-scripts-running-apps">Shell Scripts : Running Apps</a></li>
-</ul>
-</li>
-<li class="toctree-l1 current"><a class="reference internal" href="pydarkstar.html">Code</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="pydarkstar.html#subpackages">Subpackages</a></li>
-<li class="toctree-l2 current"><a class="reference internal" href="pydarkstar.html#submodules">Submodules</a></li>
-</ul>
-</li>
-</ul>
-</ul>
-</li>
-              
-                <li class="dropdown">
-  <a role="button"
-     id="dLabelLocalToc"
-     data-toggle="dropdown"
-     data-target="#"
-     href="#">Page <b class="caret"></b></a>
-  <ul class="dropdown-menu localtoc"
-      role="menu"
-      aria-labelledby="dLabelLocalToc"><ul>
-<li><a class="reference internal" href="#">logutils</a></li>
-</ul>
-</ul>
-</li>
-              
-            
-            
-              
-                
-  <li>
-    <a href="pydarkstar.itemlist.html" title="Previous Chapter: itemlist"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; itemlist</span>
-    </a>
-  </li>
-  <li>
-    <a href="pydarkstar.timeutils.html" title="Next Chapter: timeutils"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">timeutils &raquo;</span>
-    </a>
-  </li>
-              
-            
-            
-            
-            
-              <li class="hidden-sm">
-<div id="sourcelink">
-  <a href="../_sources/generated/pydarkstar.logutils.rst.txt"
-     rel="nofollow">Source</a>
-</div></li>
-            
-          </ul>
+          
+            <a href="../index.html" class="icon icon-home"> pydarkstar
+          
+
+          
+          </a>
 
           
             
-<form class="navbar-form navbar-right" action="../search.html" method="get">
- <div class="form-group">
-  <input type="text" name="q" class="form-control" placeholder="Search" />
- </div>
-  <input type="hidden" name="check_keywords" value="yes" />
-  <input type="hidden" name="area" value="default" />
-</form>
+            
+              <div class="version">
+                3.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
           
         </div>
-    </div>
-  </div>
 
-<div class="container">
-  <div class="row">
-    <div class="col-md-12 content">
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="setup.html">Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="usage.html">Usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="apps.html">Apps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="requirements.html">Requirements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="advanced.html">Advanced</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="pydarkstar.html">Code</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="pydarkstar.html#subpackages">Subpackages</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="pydarkstar.html#submodules">Submodules</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="pydarkstar.common.html">common</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pydarkstar.darkobject.html">darkobject</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pydarkstar.database.html">database</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pydarkstar.item.html">item</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pydarkstar.itemlist.html">itemlist</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">logutils</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pydarkstar.timeutils.html">timeutils</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
       
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">pydarkstar</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="pydarkstar.html">pydarkstar</a> &raquo;</li>
+        
+      <li>logutils</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/generated/pydarkstar.logutils.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
   <div class="section" id="module-pydarkstar.logutils">
 <span id="logutils"></span><h1>logutils<a class="headerlink" href="#module-pydarkstar.logutils" title="Permalink to this headline">¶</a></h1>
+<dl class="data">
+<dt id="pydarkstar.logutils.lfmt">
+<code class="sig-prename descclassname">pydarkstar.logutils.</code><code class="sig-name descname">lfmt</code><em class="property"> = '[%(asctime)s][%(process)5d][%(levelname)-5s]: %(message)s'</em><a class="headerlink" href="#pydarkstar.logutils.lfmt" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="data">
+<dt id="pydarkstar.logutils.dfmt">
+<code class="sig-prename descclassname">pydarkstar.logutils.</code><code class="sig-name descname">dfmt</code><em class="property"> = '%Y-%m-%d %H:%M:%S'</em><a class="headerlink" href="#pydarkstar.logutils.dfmt" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
 <dl class="function">
 <dt id="pydarkstar.logutils.set_level">
-<code class="descclassname">pydarkstar.logutils.</code><code class="descname">set_level</code><span class="sig-paren">(</span><em>level</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pydarkstar/logutils.html#set_level"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pydarkstar.logutils.set_level" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">pydarkstar.logutils.</code><code class="sig-name descname">set_level</code><span class="sig-paren">(</span><em class="sig-param">level</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pydarkstar/logutils.html#set_level"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pydarkstar.logutils.set_level" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="function">
 <dt id="pydarkstar.logutils.set_debug">
-<code class="descclassname">pydarkstar.logutils.</code><code class="descname">set_debug</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pydarkstar/logutils.html#set_debug"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pydarkstar.logutils.set_debug" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">pydarkstar.logutils.</code><code class="sig-name descname">set_debug</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pydarkstar/logutils.html#set_debug"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pydarkstar.logutils.set_debug" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="function">
 <dt id="pydarkstar.logutils.set_error">
-<code class="descclassname">pydarkstar.logutils.</code><code class="descname">set_error</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pydarkstar/logutils.html#set_error"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pydarkstar.logutils.set_error" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">pydarkstar.logutils.</code><code class="sig-name descname">set_error</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pydarkstar/logutils.html#set_error"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pydarkstar.logutils.set_error" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="function">
 <dt id="pydarkstar.logutils.set_info">
-<code class="descclassname">pydarkstar.logutils.</code><code class="descname">set_info</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pydarkstar/logutils.html#set_info"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pydarkstar.logutils.set_info" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">pydarkstar.logutils.</code><code class="sig-name descname">set_info</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pydarkstar/logutils.html#set_info"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pydarkstar.logutils.set_info" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="function">
 <dt id="pydarkstar.logutils.custom_warning_format">
-<code class="descclassname">pydarkstar.logutils.</code><code class="descname">custom_warning_format</code><span class="sig-paren">(</span><em>message</em>, <em>category</em>, <em>filename</em>, <em>lineno</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pydarkstar/logutils.html#custom_warning_format"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pydarkstar.logutils.custom_warning_format" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">pydarkstar.logutils.</code><code class="sig-name descname">custom_warning_format</code><span class="sig-paren">(</span><em class="sig-param">message</em>, <em class="sig-param">category</em>, <em class="sig-param">filename</em>, <em class="sig-param">lineno</em>, <em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pydarkstar/logutils.html#custom_warning_format"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pydarkstar.logutils.custom_warning_format" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="function">
 <dt id="pydarkstar.logutils.capture">
-<code class="descclassname">pydarkstar.logutils.</code><code class="descname">capture</code><span class="sig-paren">(</span><em>capture_warnings=True</em>, <em>fail=False</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pydarkstar/logutils.html#capture"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pydarkstar.logutils.capture" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">pydarkstar.logutils.</code><code class="sig-name descname">capture</code><span class="sig-paren">(</span><em class="sig-param">capture_warnings=True</em>, <em class="sig-param">fail=False</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pydarkstar/logutils.html#capture"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pydarkstar.logutils.capture" title="Permalink to this definition">¶</a></dt>
 <dd><p>Log exceptions and warnings.</p>
 </dd></dl>
 
 <dl class="class">
 <dt id="pydarkstar.logutils.LoggingObject">
-<em class="property">class </em><code class="descclassname">pydarkstar.logutils.</code><code class="descname">LoggingObject</code><a class="reference internal" href="../_modules/pydarkstar/logutils.html#LoggingObject"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pydarkstar.logutils.LoggingObject" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pydarkstar.logutils.</code><code class="sig-name descname">LoggingObject</code><a class="reference internal" href="../_modules/pydarkstar/logutils.html#LoggingObject"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pydarkstar.logutils.LoggingObject" title="Permalink to this definition">¶</a></dt>
 <dd><p>Inherit from this to get a bunch of logging functions as class methods.</p>
 <dl class="method">
 <dt id="pydarkstar.logutils.LoggingObject._init_notify">
-<code class="descname">_init_notify</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pydarkstar/logutils.html#LoggingObject._init_notify"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pydarkstar.logutils.LoggingObject._init_notify" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">_init_notify</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pydarkstar/logutils.html#LoggingObject._init_notify"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pydarkstar.logutils.LoggingObject._init_notify" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="pydarkstar.logutils.LoggingObject.debug">
-<code class="descname">debug</code><span class="sig-paren">(</span><em>msg</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pydarkstar/logutils.html#LoggingObject.debug"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pydarkstar.logutils.LoggingObject.debug" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">debug</code><span class="sig-paren">(</span><em class="sig-param">msg</em>, <em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pydarkstar/logutils.html#LoggingObject.debug"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pydarkstar.logutils.LoggingObject.debug" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="pydarkstar.logutils.LoggingObject.error">
-<code class="descname">error</code><span class="sig-paren">(</span><em>msg</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pydarkstar/logutils.html#LoggingObject.error"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pydarkstar.logutils.LoggingObject.error" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">error</code><span class="sig-paren">(</span><em class="sig-param">msg</em>, <em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pydarkstar/logutils.html#LoggingObject.error"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pydarkstar.logutils.LoggingObject.error" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="pydarkstar.logutils.LoggingObject.fatal">
-<code class="descname">fatal</code><span class="sig-paren">(</span><em>msg</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pydarkstar/logutils.html#LoggingObject.fatal"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pydarkstar.logutils.LoggingObject.fatal" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">fatal</code><span class="sig-paren">(</span><em class="sig-param">msg</em>, <em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pydarkstar/logutils.html#LoggingObject.fatal"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pydarkstar.logutils.LoggingObject.fatal" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="pydarkstar.logutils.LoggingObject.info">
-<code class="descname">info</code><span class="sig-paren">(</span><em>msg</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pydarkstar/logutils.html#LoggingObject.info"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pydarkstar.logutils.LoggingObject.info" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">info</code><span class="sig-paren">(</span><em class="sig-param">msg</em>, <em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pydarkstar/logutils.html#LoggingObject.info"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pydarkstar.logutils.LoggingObject.info" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="pydarkstar.logutils.LoggingObject.exception">
-<code class="descname">exception</code><span class="sig-paren">(</span><em>msg</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pydarkstar/logutils.html#LoggingObject.exception"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pydarkstar.logutils.LoggingObject.exception" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">exception</code><span class="sig-paren">(</span><em class="sig-param">msg</em>, <em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pydarkstar/logutils.html#LoggingObject.exception"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pydarkstar.logutils.LoggingObject.exception" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="pydarkstar.logutils.LoggingObject.log">
-<code class="descname">log</code><span class="sig-paren">(</span><em>level</em>, <em>msg</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pydarkstar/logutils.html#LoggingObject.log"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pydarkstar.logutils.LoggingObject.log" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">log</code><span class="sig-paren">(</span><em class="sig-param">level</em>, <em class="sig-param">msg</em>, <em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pydarkstar/logutils.html#LoggingObject.log"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pydarkstar.logutils.LoggingObject.log" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="pydarkstar.logutils.LoggingObject._preprocess">
-<code class="descname">_preprocess</code><span class="sig-paren">(</span><em>msg</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pydarkstar/logutils.html#LoggingObject._preprocess"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pydarkstar.logutils.LoggingObject._preprocess" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">_preprocess</code><span class="sig-paren">(</span><em class="sig-param">msg</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pydarkstar/logutils.html#LoggingObject._preprocess"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pydarkstar.logutils.LoggingObject._preprocess" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="pydarkstar.logutils.LoggingObject.capture">
-<code class="descname">capture</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pydarkstar/logutils.html#LoggingObject.capture"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pydarkstar.logutils.LoggingObject.capture" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">capture</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pydarkstar/logutils.html#LoggingObject.capture"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pydarkstar.logutils.LoggingObject.capture" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="function">
 <dt id="pydarkstar.logutils.add_rotating_file_handler">
-<code class="descclassname">pydarkstar.logutils.</code><code class="descname">add_rotating_file_handler</code><span class="sig-paren">(</span><em>level=10</em>, <em>fname='app.log'</em>, <em>logger=None</em>, <em>fmt='[%(asctime)s][%(process)5d][%(levelname)-5s]: %(message)s'</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pydarkstar/logutils.html#add_rotating_file_handler"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pydarkstar.logutils.add_rotating_file_handler" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">pydarkstar.logutils.</code><code class="sig-name descname">add_rotating_file_handler</code><span class="sig-paren">(</span><em class="sig-param">level=10</em>, <em class="sig-param">fname='app.log'</em>, <em class="sig-param">logger=None</em>, <em class="sig-param">fmt='[%(asctime)s][%(process)5d][%(levelname)-5s]: %(message)s'</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pydarkstar/logutils.html#add_rotating_file_handler"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pydarkstar.logutils.add_rotating_file_handler" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create rotating file handler and add it to logging.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>level</strong> &#8211; logging level</li>
-<li><strong>fname</strong> &#8211; name of file</li>
-<li><strong>name</strong> &#8211; logger instance</li>
-<li><strong>fmt</strong> &#8211; format</li>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>level</strong> – logging level</p></li>
+<li><p><strong>fname</strong> – name of file</p></li>
+<li><p><strong>logger</strong> – logger instance</p></li>
+<li><p><strong>fmt</strong> – format</p></li>
 </ul>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="function">
 <dt id="pydarkstar.logutils.basic_config">
-<code class="descclassname">pydarkstar.logutils.</code><code class="descname">basic_config</code><span class="sig-paren">(</span><em>verbose=False</em>, <em>silent=False</em>, <em>fname=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pydarkstar/logutils.html#basic_config"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pydarkstar.logutils.basic_config" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">pydarkstar.logutils.</code><code class="sig-name descname">basic_config</code><span class="sig-paren">(</span><em class="sig-param">verbose=False</em>, <em class="sig-param">silent=False</em>, <em class="sig-param">fname=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pydarkstar/logutils.html#basic_config"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pydarkstar.logutils.basic_config" title="Permalink to this definition">¶</a></dt>
 <dd><p>Setup logging.</p>
 </dd></dl>
 
 </div>
 
 
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="pydarkstar.timeutils.html" class="btn btn-neutral float-right" title="timeutils" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="pydarkstar.itemlist.html" class="btn btn-neutral float-left" title="itemlist" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
     </div>
-      
-  </div>
-</div>
-<footer class="footer">
-  <div class="container">
-    <p class="pull-right">
-      <a href="#">Back to top</a>
-      
-    </p>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
     <p>
-        &copy; Copyright 2015, Adam Gagorik.<br/>
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.1.<br/>
+        &copy; Copyright 2019, Adam Gagorik
+
     </p>
   </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
 </footer>
-  </body>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
 </html>

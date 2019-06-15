@@ -2,8 +2,8 @@ tables
 =========================
 
 .. automodule:: pydarkstar.tables
-    :members:
-    :undoc-members:
+   :members:
+   :undoc-members:
 
 Submodules
 ----------
@@ -13,4 +13,3 @@ Submodules
    pydarkstar.tables.auctionhouse
    pydarkstar.tables.base
    pydarkstar.tables.deliverybox
-

@@ -2,8 +2,8 @@ pydarkstar
 ==================
 
 .. automodule:: pydarkstar
-    :members:
-    :undoc-members:
+   :members:
+   :undoc-members:
 
 Subpackages
 -----------
@@ -28,4 +28,3 @@ Submodules
     pydarkstar.itemlist
     pydarkstar.logutils
     pydarkstar.timeutils
-

@@ -2,5 +2,5 @@ tables.auctionhouse
 =====================================
 
 .. automodule:: pydarkstar.tables.auctionhouse
-    :members:
-    :undoc-members:
+   :members:
+   :undoc-members:

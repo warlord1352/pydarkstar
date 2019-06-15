@@ -2,5 +2,5 @@ auction.buyer
 ===============================
 
 .. automodule:: pydarkstar.auction.buyer
-    :members:
-    :undoc-members:
+   :members:
+   :undoc-members:

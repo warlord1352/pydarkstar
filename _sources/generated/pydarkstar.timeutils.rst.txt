@@ -2,5 +2,5 @@ timeutils
 ===========================
 
 .. automodule:: pydarkstar.timeutils
-    :members:
-    :undoc-members:
+   :members:
+   :undoc-members:

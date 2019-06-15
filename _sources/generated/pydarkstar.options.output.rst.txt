@@ -2,5 +2,5 @@ options.output
 ================================
 
 .. automodule:: pydarkstar.options.output
-    :members:
-    :undoc-members:
+   :members:
+   :undoc-members:

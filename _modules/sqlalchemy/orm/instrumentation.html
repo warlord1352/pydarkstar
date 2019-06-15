@@ -1,164 +1,159 @@
+
+
 <!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>sqlalchemy.orm.instrumentation &mdash; pydarkstar 3.0.0 documentation</title>
+  
 
+  
+  
+  
+  
 
-<html xmlns="http://www.w3.org/1999/xhtml">
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  
+  <script type="text/javascript" src="../../../_static/js/modernizr.min.js"></script>
+  
     
-    <title>sqlalchemy.orm.instrumentation &#8212; pydarkstar 3.0.0 documentation</title>
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../_static/language_data.js"></script>
     
-    <link rel="stylesheet" href="../../../_static/basic.css" type="text/css" />
-    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../../../_static/bootswatch-3.3.6/cerulean/bootstrap.min.css" type="text/css" />
-    <link rel="stylesheet" href="../../../_static/bootstrap-sphinx.css" type="text/css" />
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
     
-    <script type="text/javascript">
-      var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    '../../../',
-        VERSION:     '3.0.0',
-        COLLAPSE_INDEX: false,
-        FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true,
-        SOURCELINK_SUFFIX: '.txt'
-      };
-    </script>
-    <script type="text/javascript" src="../../../_static/jquery.js"></script>
-    <script type="text/javascript" src="../../../_static/underscore.js"></script>
-    <script type="text/javascript" src="../../../_static/doctools.js"></script>
-    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/javascript" src="../../../_static/js/jquery-1.11.0.min.js"></script>
-    <script type="text/javascript" src="../../../_static/js/jquery-fix.js"></script>
-    <script type="text/javascript" src="../../../_static/bootstrap-3.3.6/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="../../../_static/bootstrap-sphinx.js"></script>
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="../../../genindex.html" />
-    <link rel="search" title="Search" href="../../../search.html" />
-<meta charset='utf-8'>
-<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
-<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
-<meta name="apple-mobile-web-app-capable" content="yes">
+    <link rel="search" title="Search" href="../../../search.html" /> 
+</head>
 
-  </head>
-  <body role="document">
+<body class="wy-body-for-nav">
 
-  <div id="navbar" class="navbar navbar-inverse navbar-default navbar-fixed-top">
-    <div class="container">
-      <div class="navbar-header">
-        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="../../../index.html">
-          Home</a>
-        <span class="navbar-text navbar-version pull-left"><b>3.0.0</b></span>
-      </div>
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
 
-        <div class="collapse navbar-collapse nav-collapse">
-          <ul class="nav navbar-nav">
-            
-                <li><a href="https://github.com/AdamGagorik/pydarkstar">pydarkstar</a></li>
-                <li><a href="https://github.com/DarkstarProject/darkstar">darkstar</a></li>
-            
-            
-              <li class="dropdown globaltoc-container">
-  <a role="button"
-     id="dLabelGlobalToc"
-     data-toggle="dropdown"
-     data-target="#"
-     href="../../../index.html">Site <b class="caret"></b></a>
-  <ul class="dropdown-menu globaltoc"
-      role="menu"
-      aria-labelledby="dLabelGlobalToc"><ul>
-<li class="toctree-l1"><a class="reference internal" href="../../../generated/setup.html">Setup</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../../generated/setup.html#step-0-install-git-and-clone-pydarkstar">Step 0: Install Git and Clone pydarkstar</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../generated/setup.html#step-1-install-python">Step 1: Install Python</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../generated/setup.html#step-2-install-3rd-party-python-modules">Step 2: Install 3rd-party Python Modules</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../generated/setup.html#step-4-configure-pydarkstar">Step 4: Configure pydarkstar</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../../../generated/usage.html">Usage</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../../generated/usage.html#notes">Notes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../generated/usage.html#example">Example</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../generated/usage.html#parameters">Parameters</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../generated/usage.html#item-database">Item Database</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../generated/usage.html#apps">Apps</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../../../generated/apps.html">Apps</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../../generated/apps.html#broker">broker</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../generated/apps.html#seller">seller</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../generated/apps.html#buyer">buyer</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../generated/apps.html#clear">clear</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../generated/apps.html#refill">refill</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../generated/apps.html#scrub">scrub</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../generated/apps.html#alter">alter</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../../../generated/requirements.html">Requirements</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../../generated/requirements.html#pip">pip</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../generated/requirements.html#anaconda">Anaconda</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../../../generated/advanced.html">Advanced</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../../generated/advanced.html#shell-scripts-pythonpath">Shell Scripts : PYTHONPATH</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../generated/advanced.html#shell-scripts-running-apps">Shell Scripts : Running Apps</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../../../generated/pydarkstar.html">Code</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../../generated/pydarkstar.html#subpackages">Subpackages</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../generated/pydarkstar.html#submodules">Submodules</a></li>
-</ul>
-</li>
-</ul>
-</ul>
-</li>
-              
-                <li class="dropdown">
-  <a role="button"
-     id="dLabelLocalToc"
-     data-toggle="dropdown"
-     data-target="#"
-     href="#">Page <b class="caret"></b></a>
-  <ul class="dropdown-menu localtoc"
-      role="menu"
-      aria-labelledby="dLabelLocalToc"></ul>
-</li>
-              
-            
-            
-              
-                
-              
-            
-            
-            
-            
-              <li class="hidden-sm"></li>
-            
-          </ul>
+          
+            <a href="../../../index.html" class="icon icon-home"> pydarkstar
+          
+
+          
+          </a>
 
           
             
-<form class="navbar-form navbar-right" action="../../../search.html" method="get">
- <div class="form-group">
-  <input type="text" name="q" class="form-control" placeholder="Search" />
- </div>
-  <input type="hidden" name="check_keywords" value="yes" />
-  <input type="hidden" name="area" value="default" />
-</form>
+            
+              <div class="version">
+                3.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
           
         </div>
-    </div>
-  </div>
 
-<div class="container">
-  <div class="row">
-    <div class="col-md-12 content">
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../generated/setup.html">Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../generated/usage.html">Usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../generated/apps.html">Apps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../generated/requirements.html">Requirements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../generated/advanced.html">Advanced</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../generated/pydarkstar.html">Code</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
       
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">pydarkstar</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../index.html">Module code</a> &raquo;</li>
+        
+      <li>sqlalchemy.orm.instrumentation</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
   <h1>Source code for sqlalchemy.orm.instrumentation</h1><div class="highlight"><pre>
 <span></span><span class="c1"># orm/instrumentation.py</span>
-<span class="c1"># Copyright (C) 2005-2017 the SQLAlchemy authors and contributors</span>
+<span class="c1"># Copyright (C) 2005-2019 the SQLAlchemy authors and contributors</span>
 <span class="c1"># &lt;see AUTHORS file&gt;</span>
 <span class="c1">#</span>
 <span class="c1"># This module is part of SQLAlchemy and is released under</span>
@@ -189,9 +184,12 @@
 <span class="sd">&quot;&quot;&quot;</span>
 
 
-<span class="kn">from</span> <span class="nn">.</span> <span class="k">import</span> <span class="n">exc</span><span class="p">,</span> <span class="n">collections</span><span class="p">,</span> <span class="n">interfaces</span><span class="p">,</span> <span class="n">state</span>
-<span class="kn">from</span> <span class="nn">..</span> <span class="k">import</span> <span class="n">util</span>
 <span class="kn">from</span> <span class="nn">.</span> <span class="k">import</span> <span class="n">base</span>
+<span class="kn">from</span> <span class="nn">.</span> <span class="k">import</span> <span class="n">collections</span>
+<span class="kn">from</span> <span class="nn">.</span> <span class="k">import</span> <span class="n">exc</span>
+<span class="kn">from</span> <span class="nn">.</span> <span class="k">import</span> <span class="n">interfaces</span>
+<span class="kn">from</span> <span class="nn">.</span> <span class="k">import</span> <span class="n">state</span>
+<span class="kn">from</span> <span class="nn">..</span> <span class="k">import</span> <span class="n">util</span>
 
 
 <span class="n">_memoized_key_collection</span> <span class="o">=</span> <span class="n">util</span><span class="o">.</span><span class="n">group_expirable_memoized_property</span><span class="p">()</span>
@@ -218,14 +216,18 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">local_attrs</span> <span class="o">=</span> <span class="p">{}</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">originals</span> <span class="o">=</span> <span class="p">{}</span>
 
-        <span class="bp">self</span><span class="o">.</span><span class="n">_bases</span> <span class="o">=</span> <span class="p">[</span><span class="n">mgr</span> <span class="k">for</span> <span class="n">mgr</span> <span class="ow">in</span> <span class="p">[</span>
-            <span class="n">manager_of_class</span><span class="p">(</span><span class="n">base</span><span class="p">)</span>
-            <span class="k">for</span> <span class="n">base</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">class_</span><span class="o">.</span><span class="vm">__bases__</span>
-            <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">base</span><span class="p">,</span> <span class="nb">type</span><span class="p">)</span>
-        <span class="p">]</span> <span class="k">if</span> <span class="n">mgr</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_bases</span> <span class="o">=</span> <span class="p">[</span>
+            <span class="n">mgr</span>
+            <span class="k">for</span> <span class="n">mgr</span> <span class="ow">in</span> <span class="p">[</span>
+                <span class="n">manager_of_class</span><span class="p">(</span><span class="n">base</span><span class="p">)</span>
+                <span class="k">for</span> <span class="n">base</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">class_</span><span class="o">.</span><span class="vm">__bases__</span>
+                <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">base</span><span class="p">,</span> <span class="nb">type</span><span class="p">)</span>
+            <span class="p">]</span>
+            <span class="k">if</span> <span class="n">mgr</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span>
+        <span class="p">]</span>
 
-        <span class="k">for</span> <span class="n">base</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_bases</span><span class="p">:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">base</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">base_</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_bases</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">base_</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">dispatch</span><span class="o">.</span><span class="n">_events</span><span class="o">.</span><span class="n">_new_classmanager_instance</span><span class="p">(</span><span class="n">class_</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span>
         <span class="c1"># events._InstanceEventsHold.populate(class_, self)</span>
@@ -237,12 +239,13 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">manage</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_instrument_init</span><span class="p">()</span>
 
-        <span class="k">if</span> <span class="s1">&#39;__del__&#39;</span> <span class="ow">in</span> <span class="n">class_</span><span class="o">.</span><span class="vm">__dict__</span><span class="p">:</span>
-            <span class="n">util</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="s2">&quot;__del__() method on class </span><span class="si">%s</span><span class="s2"> will &quot;</span>
-                      <span class="s2">&quot;cause unreachable cycles and memory leaks, &quot;</span>
-                      <span class="s2">&quot;as SQLAlchemy instrumentation often creates &quot;</span>
-                      <span class="s2">&quot;reference cycles.  Please remove this method.&quot;</span> <span class="o">%</span>
-                      <span class="n">class_</span><span class="p">)</span>
+        <span class="k">if</span> <span class="s2">&quot;__del__&quot;</span> <span class="ow">in</span> <span class="n">class_</span><span class="o">.</span><span class="vm">__dict__</span><span class="p">:</span>
+            <span class="n">util</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span>
+                <span class="s2">&quot;__del__() method on class </span><span class="si">%s</span><span class="s2"> will &quot;</span>
+                <span class="s2">&quot;cause unreachable cycles and memory leaks, &quot;</span>
+                <span class="s2">&quot;as SQLAlchemy instrumentation often creates &quot;</span>
+                <span class="s2">&quot;reference cycles.  Please remove this method.&quot;</span> <span class="o">%</span> <span class="n">class_</span>
+            <span class="p">)</span>
 
     <span class="k">def</span> <span class="nf">__hash__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="nb">id</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
@@ -252,7 +255,7 @@
 
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">is_mapped</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">return</span> <span class="s1">&#39;mapper&#39;</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__dict__</span>
+        <span class="k">return</span> <span class="s2">&quot;mapper&quot;</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__dict__</span>
 
     <span class="nd">@_memoized_key_collection</span>
     <span class="k">def</span> <span class="nf">_all_key_set</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
@@ -260,14 +263,19 @@
 
     <span class="nd">@_memoized_key_collection</span>
     <span class="k">def</span> <span class="nf">_collection_impl_keys</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">return</span> <span class="nb">frozenset</span><span class="p">([</span>
-            <span class="n">attr</span><span class="o">.</span><span class="n">key</span> <span class="k">for</span> <span class="n">attr</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">values</span><span class="p">()</span> <span class="k">if</span> <span class="n">attr</span><span class="o">.</span><span class="n">impl</span><span class="o">.</span><span class="n">collection</span><span class="p">])</span>
+        <span class="k">return</span> <span class="nb">frozenset</span><span class="p">(</span>
+            <span class="p">[</span><span class="n">attr</span><span class="o">.</span><span class="n">key</span> <span class="k">for</span> <span class="n">attr</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">values</span><span class="p">()</span> <span class="k">if</span> <span class="n">attr</span><span class="o">.</span><span class="n">impl</span><span class="o">.</span><span class="n">collection</span><span class="p">]</span>
+        <span class="p">)</span>
 
     <span class="nd">@_memoized_key_collection</span>
     <span class="k">def</span> <span class="nf">_scalar_loader_impls</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">return</span> <span class="nb">frozenset</span><span class="p">([</span>
-            <span class="n">attr</span><span class="o">.</span><span class="n">impl</span> <span class="k">for</span> <span class="n">attr</span> <span class="ow">in</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">values</span><span class="p">()</span> <span class="k">if</span> <span class="n">attr</span><span class="o">.</span><span class="n">impl</span><span class="o">.</span><span class="n">accepts_scalar_loader</span><span class="p">])</span>
+        <span class="k">return</span> <span class="nb">frozenset</span><span class="p">(</span>
+            <span class="p">[</span>
+                <span class="n">attr</span><span class="o">.</span><span class="n">impl</span>
+                <span class="k">for</span> <span class="n">attr</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">values</span><span class="p">()</span>
+                <span class="k">if</span> <span class="n">attr</span><span class="o">.</span><span class="n">impl</span><span class="o">.</span><span class="n">accepts_scalar_loader</span>
+            <span class="p">]</span>
+        <span class="p">)</span>
 
     <span class="nd">@util</span><span class="o">.</span><span class="n">memoized_property</span>
     <span class="k">def</span> <span class="nf">mapper</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
@@ -291,6 +299,15 @@
                 <span class="n">val</span> <span class="o">=</span> <span class="n">supercls</span><span class="o">.</span><span class="vm">__dict__</span><span class="p">[</span><span class="n">key</span><span class="p">]</span>
                 <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">val</span><span class="p">,</span> <span class="n">interfaces</span><span class="o">.</span><span class="n">InspectionAttr</span><span class="p">):</span>
                     <span class="k">yield</span> <span class="n">key</span><span class="p">,</span> <span class="n">val</span>
+
+    <span class="k">def</span> <span class="nf">_get_class_attr_mro</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;return an attribute on the class without tripping it.&quot;&quot;&quot;</span>
+
+        <span class="k">for</span> <span class="n">supercls</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">class_</span><span class="o">.</span><span class="vm">__mro__</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">supercls</span><span class="o">.</span><span class="vm">__dict__</span><span class="p">:</span>
+                <span class="k">return</span> <span class="n">supercls</span><span class="o">.</span><span class="vm">__dict__</span><span class="p">[</span><span class="n">key</span><span class="p">]</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">default</span>
 
     <span class="k">def</span> <span class="nf">_attr_has_impl</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Return True if the given attribute is fully initialized.</span>
@@ -324,11 +341,11 @@
         <span class="c1"># of such, since this adds method overhead.</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">original_init</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">class_</span><span class="o">.</span><span class="fm">__init__</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">new_init</span> <span class="o">=</span> <span class="n">_generate_init</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">class_</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">install_member</span><span class="p">(</span><span class="s1">&#39;__init__&#39;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">new_init</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">install_member</span><span class="p">(</span><span class="s2">&quot;__init__&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">new_init</span><span class="p">)</span>
 
     <span class="k">def</span> <span class="nf">_uninstrument_init</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">new_init</span><span class="p">:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">uninstall_member</span><span class="p">(</span><span class="s1">&#39;__init__&#39;</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">uninstall_member</span><span class="p">(</span><span class="s2">&quot;__init__&quot;</span><span class="p">)</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">new_init</span> <span class="o">=</span> <span class="kc">None</span>
 
     <span class="nd">@util</span><span class="o">.</span><span class="n">memoized_property</span>
@@ -389,8 +406,9 @@
                         <span class="k">yield</span> <span class="n">m</span>
 
     <span class="k">def</span> <span class="nf">post_configure_attribute</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">):</span>
-        <span class="n">_instrumentation_factory</span><span class="o">.</span><span class="n">dispatch</span><span class="o">.</span>\
-            <span class="n">attribute_instrument</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">class_</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="bp">self</span><span class="p">[</span><span class="n">key</span><span class="p">])</span>
+        <span class="n">_instrumentation_factory</span><span class="o">.</span><span class="n">dispatch</span><span class="o">.</span><span class="n">attribute_instrument</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">class_</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="bp">self</span><span class="p">[</span><span class="n">key</span><span class="p">]</span>
+        <span class="p">)</span>
 
     <span class="k">def</span> <span class="nf">uninstrument_attribute</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="n">propagated</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
         <span class="k">if</span> <span class="n">key</span> <span class="ow">not</span> <span class="ow">in</span> <span class="bp">self</span><span class="p">:</span>
@@ -422,9 +440,10 @@
 
     <span class="k">def</span> <span class="nf">install_descriptor</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="n">inst</span><span class="p">):</span>
         <span class="k">if</span> <span class="n">key</span> <span class="ow">in</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">STATE_ATTR</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">MANAGER_ATTR</span><span class="p">):</span>
-            <span class="k">raise</span> <span class="ne">KeyError</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%r</span><span class="s2">: requested attribute name conflicts with &quot;</span>
-                           <span class="s2">&quot;instrumentation attribute of the same name.&quot;</span> <span class="o">%</span>
-                           <span class="n">key</span><span class="p">)</span>
+            <span class="k">raise</span> <span class="ne">KeyError</span><span class="p">(</span>
+                <span class="s2">&quot;</span><span class="si">%r</span><span class="s2">: requested attribute name conflicts with &quot;</span>
+                <span class="s2">&quot;instrumentation attribute of the same name.&quot;</span> <span class="o">%</span> <span class="n">key</span>
+            <span class="p">)</span>
         <span class="nb">setattr</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">class_</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="n">inst</span><span class="p">)</span>
 
     <span class="k">def</span> <span class="nf">uninstall_descriptor</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">):</span>
@@ -432,9 +451,10 @@
 
     <span class="k">def</span> <span class="nf">install_member</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="n">implementation</span><span class="p">):</span>
         <span class="k">if</span> <span class="n">key</span> <span class="ow">in</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">STATE_ATTR</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">MANAGER_ATTR</span><span class="p">):</span>
-            <span class="k">raise</span> <span class="ne">KeyError</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%r</span><span class="s2">: requested attribute name conflicts with &quot;</span>
-                           <span class="s2">&quot;instrumentation attribute of the same name.&quot;</span> <span class="o">%</span>
-                           <span class="n">key</span><span class="p">)</span>
+            <span class="k">raise</span> <span class="ne">KeyError</span><span class="p">(</span>
+                <span class="s2">&quot;</span><span class="si">%r</span><span class="s2">: requested attribute name conflicts with &quot;</span>
+                <span class="s2">&quot;instrumentation attribute of the same name.&quot;</span> <span class="o">%</span> <span class="n">key</span>
+            <span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">originals</span><span class="o">.</span><span class="n">setdefault</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="nb">getattr</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">class_</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="kc">None</span><span class="p">))</span>
         <span class="nb">setattr</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">class_</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="n">implementation</span><span class="p">)</span>
 
@@ -449,7 +469,8 @@
     <span class="k">def</span> <span class="nf">initialize_collection</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="n">state</span><span class="p">,</span> <span class="n">factory</span><span class="p">):</span>
         <span class="n">user_data</span> <span class="o">=</span> <span class="n">factory</span><span class="p">()</span>
         <span class="n">adapter</span> <span class="o">=</span> <span class="n">collections</span><span class="o">.</span><span class="n">CollectionAdapter</span><span class="p">(</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">get_impl</span><span class="p">(</span><span class="n">key</span><span class="p">),</span> <span class="n">state</span><span class="p">,</span> <span class="n">user_data</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">get_impl</span><span class="p">(</span><span class="n">key</span><span class="p">),</span> <span class="n">state</span><span class="p">,</span> <span class="n">user_data</span>
+        <span class="p">)</span>
         <span class="k">return</span> <span class="n">adapter</span><span class="p">,</span> <span class="n">user_data</span>
 
     <span class="k">def</span> <span class="nf">is_instrumented</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="n">search</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
@@ -493,15 +514,15 @@
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">instance</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">STATE_ATTR</span><span class="p">):</span>
             <span class="k">return</span> <span class="kc">False</span>
-        <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">class_</span> <span class="ow">is</span> <span class="ow">not</span> <span class="n">instance</span><span class="o">.</span><span class="vm">__class__</span> <span class="ow">and</span> \
-                <span class="bp">self</span><span class="o">.</span><span class="n">is_mapped</span><span class="p">:</span>
+        <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">class_</span> <span class="ow">is</span> <span class="ow">not</span> <span class="n">instance</span><span class="o">.</span><span class="vm">__class__</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">is_mapped</span><span class="p">:</span>
             <span class="c1"># this will create a new ClassManager for the</span>
             <span class="c1"># subclass, without a mapper.  This is likely a</span>
             <span class="c1"># user error situation but allow the object</span>
             <span class="c1"># to be constructed, so that it is usable</span>
             <span class="c1"># in a non-ORM context at least.</span>
-            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_subclass_manager</span><span class="p">(</span><span class="n">instance</span><span class="o">.</span><span class="vm">__class__</span><span class="p">)</span><span class="o">.</span>\
-                <span class="n">_new_state_if_none</span><span class="p">(</span><span class="n">instance</span><span class="p">)</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_subclass_manager</span><span class="p">(</span>
+                <span class="n">instance</span><span class="o">.</span><span class="vm">__class__</span>
+            <span class="p">)</span><span class="o">.</span><span class="n">_new_state_if_none</span><span class="p">(</span><span class="n">instance</span><span class="p">)</span>
         <span class="k">else</span><span class="p">:</span>
             <span class="n">state</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_state_constructor</span><span class="p">(</span><span class="n">instance</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">_state_setter</span><span class="p">(</span><span class="n">instance</span><span class="p">,</span> <span class="n">state</span><span class="p">)</span>
@@ -521,8 +542,11 @@
     <span class="n">__nonzero__</span> <span class="o">=</span> <span class="fm">__bool__</span>
 
     <span class="k">def</span> <span class="nf">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">return</span> <span class="s1">&#39;&lt;</span><span class="si">%s</span><span class="s1"> of </span><span class="si">%r</span><span class="s1"> at </span><span class="si">%x</span><span class="s1">&gt;&#39;</span> <span class="o">%</span> <span class="p">(</span>
-            <span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">class_</span><span class="p">,</span> <span class="nb">id</span><span class="p">(</span><span class="bp">self</span><span class="p">))</span>
+        <span class="k">return</span> <span class="s2">&quot;&lt;</span><span class="si">%s</span><span class="s2"> of </span><span class="si">%r</span><span class="s2"> at </span><span class="si">%x</span><span class="s2">&gt;&quot;</span> <span class="o">%</span> <span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span><span class="p">,</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">class_</span><span class="p">,</span>
+            <span class="nb">id</span><span class="p">(</span><span class="bp">self</span><span class="p">),</span>
+        <span class="p">)</span>
 
 
 <span class="k">class</span> <span class="nc">_SerializeManager</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
@@ -546,8 +570,8 @@
                 <span class="s2">&quot;Cannot deserialize object of type </span><span class="si">%r</span><span class="s2"> - &quot;</span>
                 <span class="s2">&quot;no mapper() has &quot;</span>
                 <span class="s2">&quot;been configured for this class within the current &quot;</span>
-                <span class="s2">&quot;Python process!&quot;</span> <span class="o">%</span>
-                <span class="bp">self</span><span class="o">.</span><span class="n">class_</span><span class="p">)</span>
+                <span class="s2">&quot;Python process!&quot;</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">class_</span><span class="p">,</span>
+            <span class="p">)</span>
         <span class="k">elif</span> <span class="n">manager</span><span class="o">.</span><span class="n">is_mapped</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">manager</span><span class="o">.</span><span class="n">mapper</span><span class="o">.</span><span class="n">configured</span><span class="p">:</span>
             <span class="n">manager</span><span class="o">.</span><span class="n">mapper</span><span class="o">.</span><span class="n">_configure_all</span><span class="p">()</span>
 
@@ -597,6 +621,7 @@
         <span class="k">if</span> <span class="n">ClassManager</span><span class="o">.</span><span class="n">MANAGER_ATTR</span> <span class="ow">in</span> <span class="n">class_</span><span class="o">.</span><span class="vm">__dict__</span><span class="p">:</span>
             <span class="nb">delattr</span><span class="p">(</span><span class="n">class_</span><span class="p">,</span> <span class="n">ClassManager</span><span class="o">.</span><span class="n">MANAGER_ATTR</span><span class="p">)</span>
 
+
 <span class="c1"># this attribute is replaced by sqlalchemy.ext.instrumentation</span>
 <span class="c1"># when importred.</span>
 <span class="n">_instrumentation_factory</span> <span class="o">=</span> <span class="n">InstrumentationFactory</span><span class="p">()</span>
@@ -638,8 +663,9 @@
 <span class="sd">    applied directly to the class, i.e. no descriptors are required.</span>
 
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="k">return</span> <span class="n">manager_of_class</span><span class="p">(</span><span class="n">instance</span><span class="o">.</span><span class="vm">__class__</span><span class="p">)</span><span class="o">.</span>\
-        <span class="n">is_instrumented</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">search</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">manager_of_class</span><span class="p">(</span><span class="n">instance</span><span class="o">.</span><span class="vm">__class__</span><span class="p">)</span><span class="o">.</span><span class="n">is_instrumented</span><span class="p">(</span>
+        <span class="n">key</span><span class="p">,</span> <span class="n">search</span><span class="o">=</span><span class="kc">True</span>
+    <span class="p">)</span>
 
 
 <span class="k">def</span> <span class="nf">_generate_init</span><span class="p">(</span><span class="n">class_</span><span class="p">,</span> <span class="n">class_manager</span><span class="p">):</span>
@@ -668,16 +694,17 @@
     <span class="n">func_text</span> <span class="o">=</span> <span class="n">func_body</span> <span class="o">%</span> <span class="n">func_vars</span>
 
     <span class="k">if</span> <span class="n">util</span><span class="o">.</span><span class="n">py2k</span><span class="p">:</span>
-        <span class="n">func</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">original__init__</span><span class="p">,</span> <span class="s1">&#39;im_func&#39;</span><span class="p">,</span> <span class="n">original__init__</span><span class="p">)</span>
-        <span class="n">func_defaults</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">func</span><span class="p">,</span> <span class="s1">&#39;func_defaults&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+        <span class="n">func</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">original__init__</span><span class="p">,</span> <span class="s2">&quot;im_func&quot;</span><span class="p">,</span> <span class="n">original__init__</span><span class="p">)</span>
+        <span class="n">func_defaults</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">func</span><span class="p">,</span> <span class="s2">&quot;func_defaults&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
     <span class="k">else</span><span class="p">:</span>
-        <span class="n">func_defaults</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">original__init__</span><span class="p">,</span> <span class="s1">&#39;__defaults__&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
-        <span class="n">func_kw_defaults</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">original__init__</span><span class="p">,</span> <span class="s1">&#39;__kwdefaults__&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+        <span class="n">func_defaults</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">original__init__</span><span class="p">,</span> <span class="s2">&quot;__defaults__&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+        <span class="n">func_kw_defaults</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">original__init__</span><span class="p">,</span> <span class="s2">&quot;__kwdefaults__&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
 
     <span class="n">env</span> <span class="o">=</span> <span class="nb">locals</span><span class="p">()</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
     <span class="n">exec</span><span class="p">(</span><span class="n">func_text</span><span class="p">,</span> <span class="n">env</span><span class="p">)</span>
-    <span class="fm">__init__</span> <span class="o">=</span> <span class="n">env</span><span class="p">[</span><span class="s1">&#39;__init__&#39;</span><span class="p">]</span>
+    <span class="fm">__init__</span> <span class="o">=</span> <span class="n">env</span><span class="p">[</span><span class="s2">&quot;__init__&quot;</span><span class="p">]</span>
     <span class="fm">__init__</span><span class="o">.</span><span class="vm">__doc__</span> <span class="o">=</span> <span class="n">original__init__</span><span class="o">.</span><span class="vm">__doc__</span>
+    <span class="fm">__init__</span><span class="o">.</span><span class="n">_sa_original_init</span> <span class="o">=</span> <span class="n">original__init__</span>
 
     <span class="k">if</span> <span class="n">func_defaults</span><span class="p">:</span>
         <span class="fm">__init__</span><span class="o">.</span><span class="vm">__defaults__</span> <span class="o">=</span> <span class="n">func_defaults</span>
@@ -687,21 +714,43 @@
     <span class="k">return</span> <span class="fm">__init__</span>
 </pre></div>
 
-    </div>
-      
-  </div>
-</div>
-<footer class="footer">
-  <div class="container">
-    <p class="pull-right">
-      <a href="#">Back to top</a>
-      
-    </p>
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
     <p>
-        &copy; Copyright 2015, Adam Gagorik.<br/>
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.1.<br/>
+        &copy; Copyright 2019, Adam Gagorik
+
     </p>
   </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
 </footer>
-  </body>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
 </html>

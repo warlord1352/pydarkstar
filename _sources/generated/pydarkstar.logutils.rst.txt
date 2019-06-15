@@ -2,5 +2,5 @@ logutils
 ==========================
 
 .. automodule:: pydarkstar.logutils
-    :members:
-    :undoc-members:
+   :members:
+   :undoc-members:

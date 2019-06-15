@@ -2,5 +2,5 @@ auction.manager
 =================================
 
 .. automodule:: pydarkstar.auction.manager
-    :members:
-    :undoc-members:
+   :members:
+   :undoc-members:
