@@ -1,5 +1,5 @@
 # ah
-name: Zissou
+name: AH_Bot
 
 # basic
 verbose: true
@@ -15,9 +15,9 @@ backup: true
 
 # sql
 hostname: 127.0.0.1
-database: dspdb
+database: tpzdb
 username: root
-password: ????
+password: flames
 fail: true
 
 # broker
