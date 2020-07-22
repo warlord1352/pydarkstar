@@ -26,6 +26,6 @@ tick: 30
 
 # scrub
 itemids: []
-stock01: 5
-stock12: 5
+stock01: 12
+stock12: 12
 urls: []
