@@ -10,7 +10,7 @@ data: ['items.csv']
 
 # output
 stub: items
-overwrite: false
+overwrite: true
 backup: true
 
 # sql
